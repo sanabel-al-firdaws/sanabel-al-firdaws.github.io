@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1703994764520,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1703994662193,
+          "path": "src/content/docs/ar/aqida/intro.mdoc",
+          "title": "مقدمة كتاب العقيدة"
+        },
+        {
+          "type": "group",
+          "ctime": 1703994720229,
+          "items": [
+            {
+              "type": "file",
+              "ctime": 1703995039100,
+              "path": "src/content/docs/ar/aqida/al-islam/arkan.mdoc",
+              "title": "أركان الإسلام "
+            },
+            {
+              "type": "file",
+              "ctime": 1703994681070,
+              "path": "src/content/docs/ar/aqida/al-islam/intro.mdoc",
+              "title": "مقدمة باب الإسلام "
+            }
+          ],
+          "title": "باب الإسلام"
+        },
+        {
+          "type": "group",
+          "ctime": 1703994735606,
+          "items": [
+            {
+              "type": "file",
+              "ctime": 1703994598285,
+              "path": "src/content/docs/ar/aqida/al-ehsan/intro.mdoc",
+              "title": "مقدمة باب الإحسان "
+            }
+          ],
+          "title": "باب الإحسان"
+        },
+        {
+          "type": "group",
+          "ctime": 1703994753567,
+          "items": [
+            {
+              "type": "file",
+              "ctime": 1703994631760,
+              "path": "src/content/docs/ar/aqida/al-eman/intro.mdoc",
+              "title": "مقدمة باب الإيمان"
+            }
+          ],
+          "title": "باب الإيمان"
+        }
+      ],
+      "title": "كتاب العقيدة"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "main": {
+    "id": "41b3dc66d30556d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "460ef1a19ae454eb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f72a65045985732",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/content/docs/ar/arabic/intro.mdoc",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bed1173ab7b14920",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "bf213cf3c9d54f3e",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "b58d394af03c0ee3",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": true,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "e8fa197509a1599f",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "e27a31b57017174b",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "82f3df1295cca51f",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "c23788698f1026e4",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "src/content/docs/ar/arabic/intro.mdoc",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "0f56df78cec5b7e1",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "src/content/docs/ar/arabic/intro.mdoc",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "0746b3e48a60bb45",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "src/content/docs/ar/arabic/intro.mdoc"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "1f72a65045985732",
+  "lastOpenFiles": [
+    "src/content/docs/ar/aqida/al-islam/arkan.mdoc",
+    "src/fonts/uthmanic_hafs_v20.ttf",
+    "src/fonts/font-face.css",
+    "src/fonts/HafsSmart_08.ttf",
+    "src/fonts/AmiriQuran-Regular.ttf",
+    "src/content/docs/intro.mdoc",
+    "src/content/docs/index.mdoc",
+    "src/content/docs/en/theme.mdx",
+    "src/content/docs/en/intro.mdoc",
+    "src/content/docs/en/index.mdoc",
+    "src/content/docs/en/hadith/two.mdoc",
+    "_dorar-hadith-api-1/README.md",
+    "/_dorar-hadith-api-1/README.md",
+    "/README.md",
+    "README.md",
+    "().md",
+    "test/Untitled.canvas",
+    "src/assets/houston.webp",
+    "public/pwa-64x64.png",
+    "public/pwa-512x512.png",
+    "public/pwa-192x192.png",
+    "public/maskable-icon-512x512.png",
+    "public/favicon.svg",
+    "public/apple-touch-icon-180x180.png"
+  ]
+}

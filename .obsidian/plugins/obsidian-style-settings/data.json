@@ -1,0 +1,11 @@
+{
+  "ITS@@radius-s": 7,
+  "ITS@@accent@@dark": "#377F88",
+  "ITS@@lite-accent@@dark": "#6CAFE0",
+  "ITS@@dark-accent@@dark": "#215165",
+  "ITS@@deep-dark-accent@@dark": "#10273F",
+  "ITS@@scrollbar-width": 4,
+  "ITS@@hide-scrollbar": false,
+  "ITS@@minimalist-workspace": false,
+  "ITS@@writing": true
+}
