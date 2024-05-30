@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/docs/ar/arabic/intro.mdoc",
+                "file": "src/content/docs/ar/arabic/intro.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "477bd9ce70110fd8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/content/docs/ar/arabic/ajoromia/الآجرومية.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "src/content/docs/ar/arabic/intro.mdoc",
+            "file": "src/content/docs/ar/arabic/ajoromia/الآجرومية.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "src/content/docs/ar/arabic/intro.mdoc",
+            "file": "src/content/docs/ar/arabic/ajoromia/الآجرومية.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +127,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "src/content/docs/ar/arabic/intro.mdoc"
+            "file": "src/content/docs/ar/arabic/ajoromia/الآجرومية.md"
           }
         }
       }
@@ -131,8 +144,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1f72a65045985732",
+  "active": "bf213cf3c9d54f3e",
   "lastOpenFiles": [
+    "src/content/docs/ar/arabic/intro.md",
+    "src/content/docs/ar/arabic/ajoromia/الآجرومية.md",
+    "src/content/docs/ar/arabic/ajoromia/الآجرومية.md",
+    "src/content/docs/ar/arabic/ajoromia",
     "src/content/docs/ar/aqida/al-islam/arkan.mdoc",
     "src/fonts/uthmanic_hafs_v20.ttf",
     "src/fonts/font-face.css",
@@ -141,9 +158,6 @@
     "src/content/docs/intro.mdoc",
     "src/content/docs/index.mdoc",
     "src/content/docs/en/theme.mdx",
-    "src/content/docs/en/intro.mdoc",
-    "src/content/docs/en/index.mdoc",
-    "src/content/docs/en/hadith/two.mdoc",
     "_dorar-hadith-api-1/README.md",
     "/_dorar-hadith-api-1/README.md",
     "/README.md",
