@@ -64,7 +64,7 @@ export default defineConfig({
       github: 'https://github.com/sanabel-al-firdaws/sanabel-al-firdaws.github.io/',
     },
     sidebar: [{
-      label: 'كتاب العقيدة',
+      label: 'كتاب اللغة العربية',
       translations: {
         'en': 'The Book Of Aqida'
       },
