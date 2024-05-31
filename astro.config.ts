@@ -71,6 +71,48 @@ export default defineConfig({
       collapsed: true,
       items: [{
         collapsed: true,
+        label: 'مقدمة كتاب اللغة العربية',
+        translations: {
+          'en': 'the intro for Arabic book'
+        },
+        link: '/arabic/intro/'
+      }, {
+        collapsed: true,
+        label: 'الآجرومية',
+        translations: {
+          'en': 'The Ajoromia'
+        },
+        autogenerate: {
+          directory: 'arabic/al-ajoromia'
+        }
+      }, {
+        collapsed: true,
+        label: 'ألفية ابن مالك',
+        translations: {
+          'en': 'The Alfiyya of Ibn Malik'
+        },
+        autogenerate: {
+          directory: 'arabic/al-alfiyya'
+        }
+      }, {
+        collapsed: true,
+        label: 'الصرف الصغير',
+        translations: {
+          'en': 'the tiny sarf'
+        },
+        autogenerate: {
+          directory: 'arabic/al-sarf'
+        }
+      }]
+    },
+    {
+      label: 'كتاب العقيدة',
+      translations: {
+        'en': 'The Book Of Aqida'
+      },
+      collapsed: true,
+      items: [{
+        collapsed: true,
         label: 'مقدمة كتاب العقيدة',
         translations: {
           'en': 'Intro for the book of Aqida'
@@ -104,16 +146,6 @@ export default defineConfig({
           directory: 'aqida/al-ehsan'
         }
       }]
-    }, {
-      collapsed: true,
-      label: 'كتاب الأحاديث',
-      translations: {
-        'en': 'The Book Of Hadith'
-      },
-      autogenerate: {
-        directory: 'hadith'
-      }
-    
     }
     // {
     // 	label: 'Reference',
