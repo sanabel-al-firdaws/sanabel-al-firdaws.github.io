@@ -17,15 +17,7 @@ const links = Object.entries(config.social || {}) as [Platform, SocialConfig][];
 					<Icon name={platform} />
 				</a>
 			))}
-			<a href="/admin/index.html" rel="cms-ar" class="sl-flex" title="عدل على محتوى الموقع">
-				<span>العربية </span>
-					<Icon name="pen" />
-			</a>
-			<a href="/admin-en/index.html" rel="cms-en" class="sl-flex" title="Make Edits To The Website"  >
-			<span>English</span>
-			<Icon name="pen" />
-			
-			</a>
+
 		</>
 	)
 }
