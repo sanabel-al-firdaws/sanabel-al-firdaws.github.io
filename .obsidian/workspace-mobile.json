@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/docs/ar/arabic/al-sarf/الصرف.md",
+                "file": "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "src/content/docs/ar/arabic/al-sarf/الصرف.md",
+            "file": "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "src/content/docs/ar/arabic/al-sarf/الصرف.md",
+            "file": "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +114,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "src/content/docs/ar/arabic/al-sarf/الصرف.md"
+            "file": "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md"
           }
         }
       }
@@ -133,10 +133,18 @@
   },
   "active": "653e22fe03f27a70",
   "lastOpenFiles": [
+    "README.md",
+    "src/content/docs/ar/arabic/al-sarf/al-sarf.md",
+    "src/content/docs/ar/arabic/al-alfiyya/al-alfiyya.md",
+    "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
+    "/package-lock.json",
+    "/src/content/docs/ar/arabic/al-sarf/al-sarf.md",
+    "/src/content/docs/ar/arabic/al-alfiyya/al-alfiyya.md",
+    "/src/content/docs/ar/arabic/al-ajoromia/ajoromia.md",
+    "src/content/docs/ar/arabic/al-sarf/الصرف.md",
     "src/content/docs/ar/arabic/intro.md",
     "src/content/docs/ar/arabic/al-alfiyya/الألفية.md",
     "src/content/docs/ar/arabic/al-ajoromia/الآجرومية.md",
-    "src/content/docs/ar/arabic/al-sarf/الصرف.md",
     "/src/content/docs/ar/arabic/al-sarf/الصرف.md",
     "/src/content/docs/ar/arabic/al-alfiyya/الألفية.md",
     "/src/content/docs/ar/arabic/al-ajoromia/الآجرومية.md",
@@ -150,7 +158,6 @@
     "/src/content/docs/ar/arabic/al-ajoromia",
     "webmanifest.json",
     "tsconfig.json",
-    "src/styles/custom.css",
     "src/assets/houston.webp",
     "public/pwa-64x64.png",
     "public/pwa-512x512.png",
@@ -158,7 +165,6 @@
     "public/maskable-icon-512x512.png",
     "public/favicon.svg",
     "public/apple-touch-icon-180x180.png",
-    "_dorar-hadith-api-1/README.md",
-    "README.md"
+    "_dorar-hadith-api-1/README.md"
   ]
 }
