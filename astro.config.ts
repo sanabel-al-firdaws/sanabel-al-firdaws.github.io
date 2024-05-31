@@ -64,9 +64,10 @@ export default defineConfig({
       github: 'https://github.com/sanabel-al-firdaws/sanabel-al-firdaws.github.io/',
     },
     sidebar: [{
+      
       label: 'كتاب اللغة العربية',
       translations: {
-        'en': 'The Book Of Aqida'
+        'en': 'The Book of Arabic'
       },
       collapsed: true,
       items: [{
@@ -146,7 +147,18 @@ export default defineConfig({
           directory: 'aqida/al-ehsan'
         }
       }]
+    },
+    {
+
+    label: 'درر وفوائد منوعة',
+    translations: {
+      'en': 'dorrar and benefits'
+    },
+    collapsed: true,
+    autogenerate: {
+      directory: 'dorrar'
     }
+  },
     // {
     // 	label: 'Reference',
     // 	collapsed: true,
