@@ -1,48 +1,35 @@
 {
   "main": {
-    "id": "41b3dc66d30556d8",
+    "id": "254651369978558a",
     "type": "split",
     "children": [
       {
-        "id": "460ef1a19ae454eb",
+        "id": "f5e16589d60a305c",
         "type": "tabs",
         "children": [
           {
-            "id": "1f72a65045985732",
+            "id": "653e22fe03f27a70",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/docs/ar/arabic/intro.md",
+                "file": "src/content/docs/ar/arabic/al-sarf/الصرف.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "477bd9ce70110fd8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/content/docs/ar/arabic/ajoromia/الآجرومية.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "bed1173ab7b14920",
+    "id": "05caaa6a75fdf751",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "bf213cf3c9d54f3e",
+        "id": "5fb9f53dfc0b8942",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -52,13 +39,13 @@
         }
       },
       {
-        "id": "b58d394af03c0ee3",
+        "id": "c7d6547d84ef1824",
         "type": "leaf",
         "state": {
           "type": "search",
           "state": {
             "query": "",
-            "matchingCase": true,
+            "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
             "extraContext": false,
@@ -67,7 +54,7 @@
         }
       },
       {
-        "id": "e8fa197509a1599f",
+        "id": "a8765cbd07580eeb",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -78,7 +65,7 @@
         }
       },
       {
-        "id": "e27a31b57017174b",
+        "id": "776a55340dddbab1",
         "type": "leaf",
         "state": {
           "type": "bookmarks",
@@ -89,16 +76,16 @@
     "currentTab": 0
   },
   "right": {
-    "id": "82f3df1295cca51f",
+    "id": "e8aefaa43844efbd",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "c23788698f1026e4",
+        "id": "80ca96a55bb5dd43",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
-            "file": "src/content/docs/ar/arabic/ajoromia/الآجرومية.md",
+            "file": "src/content/docs/ar/arabic/al-sarf/الصرف.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -110,24 +97,24 @@
         }
       },
       {
-        "id": "0f56df78cec5b7e1",
+        "id": "3eea324b49b4e78d",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "src/content/docs/ar/arabic/ajoromia/الآجرومية.md",
+            "file": "src/content/docs/ar/arabic/al-sarf/الصرف.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
         }
       },
       {
-        "id": "0746b3e48a60bb45",
+        "id": "f4f352b8a1c7e024",
         "type": "leaf",
         "state": {
           "type": "outline",
           "state": {
-            "file": "src/content/docs/ar/arabic/ajoromia/الآجرومية.md"
+            "file": "src/content/docs/ar/arabic/al-sarf/الصرف.md"
           }
         }
       }
@@ -144,32 +131,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bf213cf3c9d54f3e",
+  "active": "653e22fe03f27a70",
   "lastOpenFiles": [
     "src/content/docs/ar/arabic/intro.md",
+    "src/content/docs/ar/arabic/al-alfiyya/الألفية.md",
+    "src/content/docs/ar/arabic/al-ajoromia/الآجرومية.md",
+    "src/content/docs/ar/arabic/al-sarf/الصرف.md",
+    "/src/content/docs/ar/arabic/al-sarf/الصرف.md",
+    "/src/content/docs/ar/arabic/al-alfiyya/الألفية.md",
+    "/src/content/docs/ar/arabic/al-ajoromia/الآجرومية.md",
+    "/astro.config.ts",
+    "src/content/docs/ar/arabic/al-sarf",
+    "src/content/docs/ar/arabic/al-alfiyya",
     "src/content/docs/ar/arabic/ajoromia/الآجرومية.md",
-    "src/content/docs/ar/arabic/ajoromia/الآجرومية.md",
-    "src/content/docs/ar/arabic/ajoromia",
-    "src/content/docs/ar/aqida/al-islam/arkan.mdoc",
-    "src/fonts/uthmanic_hafs_v20.ttf",
-    "src/fonts/font-face.css",
-    "src/fonts/HafsSmart_08.ttf",
-    "src/fonts/AmiriQuran-Regular.ttf",
-    "src/content/docs/intro.mdoc",
-    "src/content/docs/index.mdoc",
-    "src/content/docs/en/theme.mdx",
-    "_dorar-hadith-api-1/README.md",
-    "/_dorar-hadith-api-1/README.md",
-    "/README.md",
-    "README.md",
-    "().md",
-    "test/Untitled.canvas",
+    "src/content/docs/ar/arabic/al-ajoromia",
+    "/src/content/docs/ar/arabic/al-sarf",
+    "/src/content/docs/ar/arabic/al-alfiyya",
+    "/src/content/docs/ar/arabic/al-ajoromia",
+    "webmanifest.json",
+    "tsconfig.json",
+    "src/styles/custom.css",
     "src/assets/houston.webp",
     "public/pwa-64x64.png",
     "public/pwa-512x512.png",
     "public/pwa-192x192.png",
     "public/maskable-icon-512x512.png",
     "public/favicon.svg",
-    "public/apple-touch-icon-180x180.png"
+    "public/apple-touch-icon-180x180.png",
+    "_dorar-hadith-api-1/README.md",
+    "README.md"
   ]
 }
