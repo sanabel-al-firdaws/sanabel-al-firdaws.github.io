@@ -1,7 +1,7 @@
 ---
-title: احذر من السرورية و الإخوان 
+title: احذر من السرورية و الإخوان
 filename: intro
-lastUpdated: 2024-02-18
+lastUpdated: 2024-06-01
 sidebar:
   order: 1
 ---
