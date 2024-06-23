@@ -133,6 +133,7 @@
   },
   "active": "653e22fe03f27a70",
   "lastOpenFiles": [
+    "/src/styles/custom.css",
     "src/content/docs/ar/dorrar/intro.md",
     "src/content/docs/ar/dorrar/othr-bil-jahl.md",
     "2024-06-01.md",
@@ -168,7 +169,6 @@
     "/src/content/docs/ar/arabic/al-ajoromia/ajoromia.md",
     "src/content/docs/ar/arabic/al-sarf/الصرف.md",
     "src/content/docs/ar/arabic/al-alfiyya/الألفية.md",
-    "src/content/docs/ar/arabic/al-ajoromia/الآجرومية.md",
     "src/assets/houston.webp",
     "public/pwa-64x64.png",
     "public/pwa-512x512.png",
