@@ -117,9 +117,17 @@
             "file": "README.md"
           }
         }
+      },
+      {
+        "id": "67bc751c3218f53a",
+        "type": "leaf",
+        "state": {
+          "type": "git-view",
+          "state": {}
+        }
       }
     ],
-    "currentTab": 0
+    "currentTab": 3
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -134,6 +142,7 @@
   "active": "653e22fe03f27a70",
   "lastOpenFiles": [
     "src/content/docs/ar/dorrar/othr-bil-jahl.md",
+    "README.md",
     "/package.json",
     "/astro.config.ts",
     "/src/styles/custom.css",
@@ -160,7 +169,6 @@
     "/src/content/docs/en/arabic/al-alfiyya/al-alfiyya.md",
     "/src/content/docs/en/arabic/al-ajoromia/al-ajoromia.md",
     "/src/content/docs/ar/dorrar/intro.md",
-    "README.md",
     "src/content/docs/ar/arabic/al-sarf/al-sarf.md",
     "src/content/docs/ar/arabic/al-alfiyya/al-alfiyya.md",
     "/src/content/docs/ar/arabic/al-sarf/al-sarf.md",
