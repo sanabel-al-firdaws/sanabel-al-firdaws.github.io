@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/docs/ar/dorrar/othr-bil-jahl.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "src/content/docs/ar/dorrar/othr-bil-jahl.md",
+            "file": "README.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "src/content/docs/ar/dorrar/othr-bil-jahl.md",
+            "file": "README.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +114,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "src/content/docs/ar/dorrar/othr-bil-jahl.md"
+            "file": "README.md"
           }
         }
       }
@@ -133,11 +133,11 @@
   },
   "active": "653e22fe03f27a70",
   "lastOpenFiles": [
+    "src/content/docs/ar/dorrar/othr-bil-jahl.md",
     "/package.json",
     "/astro.config.ts",
     "/src/styles/custom.css",
     "src/content/docs/ar/dorrar/intro.md",
-    "src/content/docs/ar/dorrar/othr-bil-jahl.md",
     "2024-06-01.md",
     "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
     "/src/content/docs/ar/arabic/intro.md",
@@ -154,7 +154,6 @@
     "/src/content/docs/en/aqida/al-eman/arkan.mdoc",
     "src/content/docs/en/arabic/al-ajoromia/al-ajoromia.md",
     "/src/content/docs/index.mdoc",
-    "/src/content/docs/en/index.mdoc",
     "/src/content/docs/en/dorrar/intro.md",
     "/src/content/docs/en/arabic/intro.md",
     "/src/content/docs/en/arabic/al-sarf/al-sarf.md",
