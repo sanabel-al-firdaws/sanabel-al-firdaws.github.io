@@ -1,5 +1,4 @@
 /*- all things equal -*/
-body {
 s { text-decoration:none; } //strike-through
 em { font-style: normal; font-weight: bold; } //italic emphasis
 
@@ -7,6 +6,8 @@ em { font-style: normal; font-weight: bold; } //italic emphasis
 // colors
 s { color: green };
 em { color: blue };
+body {
+
 
   --h1-size: 1em;
   --h2-size: 1em;
