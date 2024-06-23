@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "254651369978558a",
+    "id": "f8608dba33df789d",
     "type": "split",
     "children": [
       {
-        "id": "f5e16589d60a305c",
+        "id": "55a7a7759ce4bc25",
         "type": "tabs",
         "children": [
           {
-            "id": "653e22fe03f27a70",
+            "id": "0cd337d65713ab00",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "src/content/docs/ar/dorrar/othr-bil-jahl.md",
                 "mode": "source",
                 "source": true
               }
@@ -25,11 +25,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "05caaa6a75fdf751",
+    "id": "3fa62a1fd22a30d0",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "5fb9f53dfc0b8942",
+        "id": "6358f838f6dafe5c",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -39,7 +39,7 @@
         }
       },
       {
-        "id": "c7d6547d84ef1824",
+        "id": "f9191b0b48c8847d",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -54,7 +54,7 @@
         }
       },
       {
-        "id": "a8765cbd07580eeb",
+        "id": "8017fe5cde16c53f",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -65,7 +65,7 @@
         }
       },
       {
-        "id": "776a55340dddbab1",
+        "id": "c3e382e702b641cc",
         "type": "leaf",
         "state": {
           "type": "bookmarks",
@@ -76,16 +76,16 @@
     "currentTab": 0
   },
   "right": {
-    "id": "e8aefaa43844efbd",
+    "id": "a902cacd2a8d06e7",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "80ca96a55bb5dd43",
+        "id": "83f1d538ed06f9dc",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
-            "file": "README.md",
+            "file": "src/content/docs/ar/dorrar/othr-bil-jahl.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -97,37 +97,29 @@
         }
       },
       {
-        "id": "3eea324b49b4e78d",
+        "id": "4de5161b113aa97e",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "README.md",
+            "file": "src/content/docs/ar/dorrar/othr-bil-jahl.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
         }
       },
       {
-        "id": "f4f352b8a1c7e024",
+        "id": "7f099969f47090b5",
         "type": "leaf",
         "state": {
           "type": "outline",
           "state": {
-            "file": "README.md"
+            "file": "src/content/docs/ar/dorrar/othr-bil-jahl.md"
           }
-        }
-      },
-      {
-        "id": "67bc751c3218f53a",
-        "type": "leaf",
-        "state": {
-          "type": "git-view",
-          "state": {}
         }
       }
     ],
-    "currentTab": 3
+    "currentTab": 0
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -139,49 +131,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "653e22fe03f27a70",
-  "lastOpenFiles": [
-    "src/content/docs/ar/dorrar/othr-bil-jahl.md",
-    "README.md",
-    "/package.json",
-    "/astro.config.ts",
-    "/src/styles/custom.css",
-    "src/content/docs/ar/dorrar/intro.md",
-    "2024-06-01.md",
-    "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
-    "/src/content/docs/ar/arabic/intro.md",
-    "src/content/docs/ar/arabic/intro.md",
-    "src/content/docs/ar/intro.mdoc",
-    "src/content/docs/ar/index.mdoc",
-    "src/content/docs/en/arabic/al-alfiyya/al-alfiyya.md",
-    "src/content/docs/en/arabic/al-sarf/al-sarf.md",
-    "src/content/docs/en/arabic/intro.md",
-    "src/content/docs/en/dorrar/intro.md",
-    "src/content/docs/en/aqida/al-ehsan/intro.mdoc",
-    "src/content/docs/en/aqida/al-eman/arkan.mdoc",
-    "src/content/docs/ar/aqida/intro.mdoc",
-    "/src/content/docs/en/aqida/al-eman/arkan.mdoc",
-    "src/content/docs/en/arabic/al-ajoromia/al-ajoromia.md",
-    "/src/content/docs/index.mdoc",
-    "/src/content/docs/en/dorrar/intro.md",
-    "/src/content/docs/en/arabic/intro.md",
-    "/src/content/docs/en/arabic/al-sarf/al-sarf.md",
-    "/src/content/docs/en/arabic/al-alfiyya/al-alfiyya.md",
-    "/src/content/docs/en/arabic/al-ajoromia/al-ajoromia.md",
-    "/src/content/docs/ar/dorrar/intro.md",
-    "src/content/docs/ar/arabic/al-sarf/al-sarf.md",
-    "src/content/docs/ar/arabic/al-alfiyya/al-alfiyya.md",
-    "/src/content/docs/ar/arabic/al-sarf/al-sarf.md",
-    "/src/content/docs/ar/arabic/al-alfiyya/al-alfiyya.md",
-    "/src/content/docs/ar/arabic/al-ajoromia/ajoromia.md",
-    "src/content/docs/ar/arabic/al-sarf/الصرف.md",
-    "src/content/docs/ar/arabic/al-alfiyya/الألفية.md",
-    "src/assets/houston.webp",
-    "public/pwa-64x64.png",
-    "public/pwa-512x512.png",
-    "public/pwa-192x192.png",
-    "public/maskable-icon-512x512.png",
-    "public/favicon.svg",
-    "public/apple-touch-icon-180x180.png"
-  ]
+  "active": "0cd337d65713ab00",
+  "lastOpenFiles": []
 }
