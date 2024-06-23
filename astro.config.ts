@@ -4,11 +4,18 @@ import markdoc from "@astrojs/markdoc";
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
+import remarkMath from 'remark-math';
+import rehypeMathJax from 'rehype-mathjax';
 
 import lit from "@astrojs/lit";
 
 // https://astro.build/config
 export default defineConfig({
+    // Configure `remark-math` and `rehype-mathjax` plugins:
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeMathJax],
+  },
   site: 'https://sanabel-al-firdaws.github.io',
   // base: '/<project-name>',
   integrations: [AstroPWA({
