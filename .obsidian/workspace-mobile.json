@@ -15,7 +15,7 @@
               "state": {
                 "file": "src/content/docs/ar/dorrar/othr-bil-jahl.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -133,6 +133,9 @@
   },
   "active": "1160ba5dc09f77f3",
   "lastOpenFiles": [
+    "/src/styles/custom.css",
+    "/package.json",
+    "/astro.config.ts",
     "webmanifest.json",
     "tsconfig.json",
     "src/styles/custom.css",
@@ -141,9 +144,6 @@
     "src/fonts/HafsSmart_08.ttf",
     "src/fonts/AmiriQuran-Regular.ttf",
     "src/env.d.ts",
-    "src/content/docs/intro.mdoc",
-    "src/content/docs/index.mdoc",
-    "src/content/docs/en/theme.mdx",
     "src/content/docs/en/dorrar/intro.md",
     "src/content/docs/en/arabic/intro.md",
     "src/content/docs/en/arabic/al-sarf/al-sarf.md",
