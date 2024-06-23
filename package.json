@@ -10,9 +10,7 @@
     "generate-pwa-assets": "pwa-assets-generator --preset minimal public/favicon.svg"
   },
   "dependencies": {
-   "rehype-mathjax": "^5.0.0",
-     "remark-math": "^6.0.0",
-
+   
     "@astrojs/check": "^0.7.0",
     "@astrojs/lit": "^4.0.1",
     "@astrojs/markdoc": "^0.11.0",
