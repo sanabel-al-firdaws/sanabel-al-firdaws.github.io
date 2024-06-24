@@ -4,7 +4,7 @@ import markdoc from "@astrojs/markdoc";
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
-import starlightBlog from 'starlight-blog'
+
 
 
 import lit from "@astrojs/lit";
@@ -28,7 +28,7 @@ export default defineConfig({
     },
     manifest: (manifest as Partial<ManifestOptions>)
   }), starlight({
-    plugins: [starlightBlog()],
+
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 6
