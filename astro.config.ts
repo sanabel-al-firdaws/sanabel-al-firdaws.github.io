@@ -156,11 +156,22 @@ export default defineConfig({
     translations: {
       'en': 'dorrar and benefits'
     },
-    collapsed: true,
     autogenerate: {
       directory: 'dorrar'
-    }
-  },
+    },
+    collapsed: true,
+    items: [ {
+      collapsed: true,
+      label: 'كشف الشبهات',
+      translations: {
+        'en': 'Kshf Al Shoboha'
+      },
+      autogenerate: {
+        directory: 'dorrar/kshf-al-shobohat'
+      }
+    },
+    ]
+  },// kshf-al-shobohat
     // {
     // 	label: 'Reference',
     // 	collapsed: true,
