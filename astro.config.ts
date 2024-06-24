@@ -162,12 +162,22 @@ export default defineConfig({
     collapsed: true,
     items: [ {
       collapsed: true,
-      label: 'كشف الشبهات',
+      label: 'مدونة كشف الشبهات',
       translations: {
         'en': 'Kshf Al Shoboha'
       },
       autogenerate: {
         directory: 'dorrar/kshf-al-shobohat'
+      }
+    },
+    {
+      collapsed: true,
+      label: 'مقالات منوعة',
+      translations: {
+        'en': 'Uniqe Articles'
+      },
+      autogenerate: {
+        directory: 'dorrar/articles'
       }
     },
     ]
