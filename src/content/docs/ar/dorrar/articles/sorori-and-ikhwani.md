@@ -6,16 +6,16 @@ sidebar:
   order: 1
 ---
 يب يب يب يب
-<span class="i"> 
+<span class="a"> 
 لا تفعل
 </span>  
 
 يب يب يب يب
-<span class="a"> 
+<span class="s"> 
 لا تفعل كذا
 </span>  
 هم هم هم هم
-<span class="b"> 
+<span class="d"> 
 لا تفعل
 </span>  
 
