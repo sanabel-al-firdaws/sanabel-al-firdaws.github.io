@@ -4,7 +4,7 @@
 
 :root{
 
-      b,strong {
+      .i {
 	    color: var(--sl-color-accent-high);
       }
 	--sl-color-accent-low: #232424;
