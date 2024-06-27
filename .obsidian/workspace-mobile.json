@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1160ba5dc09f77f3",
+            "id": "3b07d38607ea9a4d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -117,9 +117,25 @@
             "file": "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md"
           }
         }
+      },
+      {
+        "id": "dbc6a9059c9528bc",
+        "type": "leaf",
+        "state": {
+          "type": "git-history-view",
+          "state": {}
+        }
+      },
+      {
+        "id": "d7f4e6459b3a21dd",
+        "type": "leaf",
+        "state": {
+          "type": "git-view",
+          "state": {}
+        }
       }
     ],
-    "currentTab": 0
+    "currentTab": 4
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -131,36 +147,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1160ba5dc09f77f3",
+  "active": "3b07d38607ea9a4d",
   "lastOpenFiles": [
-    "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
-    "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
-    "src/content/docs/ar/arabic/intro.md",
-    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl4.md",
-    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl3.md",
-    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl2.md",
-    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl.md",
-    "/src/styles/custom.css",
-    "/src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl.md",
-    "/src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
-    "/package.json",
-    "/package-lock.json",
-    "/astro.config.ts",
-    "src/content/docs/ar/dorrar/othr-bil-jahl.md",
-    "src/content/docs/ar/dorrar/kshf-al-shobohat",
-    "src/content/docs/ar/dorrar/articles",
-    "/src/content/docs/ar/dorrar/kshf-al-shobohat",
-    "/src/content/docs/ar/dorrar/articles",
     "webmanifest.json",
     "tsconfig.json",
+    "src/styles/custom.css",
+    "src/fonts/uthmanic_hafs_v20.ttf",
+    "src/fonts/font-face.css",
+    "src/fonts/HafsSmart_08.ttf",
+    "src/fonts/AmiriQuran-Regular.ttf",
+    "src/env.d.ts",
+    "src/content/docs/intro.mdoc",
+    "src/content/docs/index.mdoc",
+    "src/content/docs/en/theme.mdx",
     "src/content/docs/en/dorrar/intro.md",
     "src/content/docs/en/arabic/intro.md",
     "src/content/docs/en/arabic/al-sarf/al-sarf.md",
     "src/content/docs/en/arabic/al-alfiyya/al-alfiyya.md",
     "src/content/docs/en/arabic/al-ajoromia/al-ajoromia.md",
-    "src/content/docs/ar/dorrar/intro.md",
+    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl4.md",
+    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl3.md",
+    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl2.md",
+    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl.md",
+    "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
+    "src/content/docs/ar/arabic/intro.md",
     "src/content/docs/ar/arabic/al-sarf/al-sarf.md",
     "src/content/docs/ar/arabic/al-alfiyya/al-alfiyya.md",
+    "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
     "src/assets/houston.webp",
     "public/pwa-64x64.png",
     "public/pwa-512x512.png",
@@ -169,6 +182,10 @@
     "public/favicon.svg",
     "public/apple-touch-icon-180x180.png",
     "_dorar-hadith-api-1/README.md",
-    "README.md"
+    "README.md",
+    "/src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
+    "/src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl.md",
+    "src/content/docs/ar/dorrar/othr-bil-jahl.md",
+    "src/content/docs/ar/dorrar/intro.md"
   ]
 }
