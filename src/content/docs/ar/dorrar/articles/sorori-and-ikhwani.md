@@ -11,14 +11,10 @@ sidebar:
 </span>  
 
 يب يب يب يب
-<span class="s"> 
+<span class="b"> 
 لا تفعل كذا
 </span>  
 هم هم هم هم
-<span class="d"> 
-لا تفعل
-</span>  
-
 
  
 
