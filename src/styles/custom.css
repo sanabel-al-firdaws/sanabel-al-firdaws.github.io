@@ -4,11 +4,11 @@
 
 :root{
 
-      .a {
-	    color: var(--sl-color-accent-high);
+      .r {
+	    color: var(--sl-color-red);
       }
-      .b {
-	    color: var(--sl-color-gray-1);
+      .o {
+	    color: var(--sl-color-orange);
       }
       
 	
