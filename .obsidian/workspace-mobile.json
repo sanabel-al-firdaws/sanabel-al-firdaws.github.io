@@ -15,7 +15,7 @@
               "state": {
                 "file": "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
                 "mode": "source",
-                "source": false
+                "source": true
               }
             }
           }
@@ -134,8 +134,8 @@
   "active": "1160ba5dc09f77f3",
   "lastOpenFiles": [
     "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
-    "src/content/docs/ar/arabic/intro.md",
     "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
+    "src/content/docs/ar/arabic/intro.md",
     "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl4.md",
     "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl3.md",
     "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl2.md",
