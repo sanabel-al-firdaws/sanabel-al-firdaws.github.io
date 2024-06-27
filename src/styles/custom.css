@@ -7,6 +7,13 @@
       .i {
 	    color: var(--sl-color-accent-high);
       }
+      .a {
+	    color: var(--sl-color-gray-1);
+      }
+      .b {
+	    color: var(--sl-color-gray-2);
+      } 
+	
 	--sl-color-accent-low: #232424;
 	--sl-color-accent: #666b6a;
 	--sl-color-accent-high: #c7c9c9;
