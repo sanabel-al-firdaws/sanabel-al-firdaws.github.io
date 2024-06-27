@@ -149,6 +149,7 @@
   },
   "active": "3b07d38607ea9a4d",
   "lastOpenFiles": [
+    "/src/styles/custom.css",
     "webmanifest.json",
     "tsconfig.json",
     "src/styles/custom.css",
@@ -159,7 +160,6 @@
     "src/env.d.ts",
     "src/content/docs/intro.mdoc",
     "src/content/docs/index.mdoc",
-    "src/content/docs/en/theme.mdx",
     "src/content/docs/en/dorrar/intro.md",
     "src/content/docs/en/arabic/intro.md",
     "src/content/docs/en/arabic/al-sarf/al-sarf.md",
