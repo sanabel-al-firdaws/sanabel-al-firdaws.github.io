@@ -6,12 +6,12 @@ sidebar:
   order: 1
 ---
 يب يب يب يب
-<span class="a"> 
+<span class="r"> 
 لا تفعل
 </span>  
 
 يب يب يب يب
-<span class="b"> 
+<span class="o"> 
 لا تفعل كذا
 </span>هم هم هم هم
 
