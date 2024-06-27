@@ -6,7 +6,6 @@ import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
 
 
-
 import lit from "@astrojs/lit";
 
 // https://astro.build/config
@@ -28,9 +27,8 @@ export default defineConfig({
     },
     manifest: (manifest as Partial<ManifestOptions>)
   }), starlight({
-
     tableOfContents: {
-      minHeadingLevel: 2,
+      minHeadingLevel: 1,
       maxHeadingLevel: 6
     },
     customCss: [

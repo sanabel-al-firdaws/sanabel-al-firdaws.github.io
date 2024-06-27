@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl4.md",
-                "mode": "source",
+                "file": "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -85,7 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl4.md",
+            "file": "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl4.md",
+            "file": "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +114,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl4.md"
+            "file": "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md"
           }
         }
       }
@@ -133,11 +133,13 @@
   },
   "active": "1160ba5dc09f77f3",
   "lastOpenFiles": [
+    "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
+    "src/content/docs/ar/arabic/intro.md",
+    "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
+    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl4.md",
     "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl3.md",
     "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl2.md",
     "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl.md",
-    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl4.md",
-    "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
     "/src/styles/custom.css",
     "/src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl.md",
     "/src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
@@ -157,10 +159,8 @@
     "src/content/docs/en/arabic/al-alfiyya/al-alfiyya.md",
     "src/content/docs/en/arabic/al-ajoromia/al-ajoromia.md",
     "src/content/docs/ar/dorrar/intro.md",
-    "src/content/docs/ar/arabic/intro.md",
     "src/content/docs/ar/arabic/al-sarf/al-sarf.md",
     "src/content/docs/ar/arabic/al-alfiyya/al-alfiyya.md",
-    "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
     "src/assets/houston.webp",
     "public/pwa-64x64.png",
     "public/pwa-512x512.png",
