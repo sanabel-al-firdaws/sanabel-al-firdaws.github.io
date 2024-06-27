@@ -7,4 +7,4 @@ sidebar:
 ---
 
 
-<span style="color: red;"> كلام مهم </span>  يب
+<span style="color: var(--sl-color-text-accent);"> كلام مهم </span>  يب
