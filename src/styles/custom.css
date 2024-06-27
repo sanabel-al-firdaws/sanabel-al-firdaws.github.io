@@ -4,13 +4,13 @@
 
 :root{
 
-      .i {
+      .a {
 	    color: var(--sl-color-accent-high);
       }
-      .a {
+      .s {
 	    color: var(--sl-color-gray-1);
       }
-      .b {
+      .d {
 	    color: var(--sl-color-gray-2);
       } 
 	
