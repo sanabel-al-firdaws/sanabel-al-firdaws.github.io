@@ -139,6 +139,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-kanban:Create new board": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -149,8 +150,8 @@
   },
   "active": "3b07d38607ea9a4d",
   "lastOpenFiles": [
-    "/src/content/docs/ar/theme.mdx",
     "/src/styles/custom.css",
+    "/src/content/docs/ar/theme.mdx",
     "src/content/docs/ar/intro.mdoc",
     "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
     "webmanifest.json",
