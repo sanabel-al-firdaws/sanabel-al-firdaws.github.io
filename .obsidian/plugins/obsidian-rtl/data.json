@@ -5,6 +5,6 @@
   "defaultDirection": "ltr",
   "rememberPerFile": false,
   "setNoteTitleDirection": false,
-  "setYamlDirection": false,
+  "setYamlDirection": true,
   "statusBar": true
 }
