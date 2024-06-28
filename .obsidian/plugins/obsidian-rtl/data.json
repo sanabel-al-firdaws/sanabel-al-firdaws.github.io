@@ -1,0 +1,10 @@
+{
+  "fileDirections": {
+    "src/content/docs/en/aqida/intro.mdoc": "auto"
+  },
+  "defaultDirection": "ltr",
+  "rememberPerFile": false,
+  "setNoteTitleDirection": false,
+  "setYamlDirection": false,
+  "statusBar": true
+}

@@ -1,4 +1,6 @@
 [
-  "obsidian-style-settings",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-kanban",
+  "obsidian-custom-file-extensions-plugin",
+  "obsidian-style-settings"
 ]

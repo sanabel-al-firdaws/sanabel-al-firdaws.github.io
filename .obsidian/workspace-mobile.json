@@ -1,33 +1,21 @@
 {
   "main": {
-    "id": "f8608dba33df789d",
+    "id": "07f36eef2c0442b5",
     "type": "split",
     "children": [
       {
-        "id": "55a7a7759ce4bc25",
+        "id": "529269facbb05c9b",
         "type": "tabs",
         "children": [
           {
-            "id": "0cd337d65713ab00",
+            "id": "3b07d38607ea9a4d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
                 "mode": "source",
                 "source": true
-              }
-            }
-          },
-          {
-            "id": "2423112636716539",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/content/docs/ar/dorrar/othr-bil-jahl.md",
-                "mode": "source",
-                "source": false
               }
             }
           }
@@ -37,11 +25,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "3fa62a1fd22a30d0",
+    "id": "911977fa88f1006e",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "6358f838f6dafe5c",
+        "id": "73c17d2b3809be2e",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -51,7 +39,7 @@
         }
       },
       {
-        "id": "f9191b0b48c8847d",
+        "id": "d5bacffdac0f4c7f",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -66,7 +54,7 @@
         }
       },
       {
-        "id": "8017fe5cde16c53f",
+        "id": "9a48ab6bf6ee990e",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -77,7 +65,7 @@
         }
       },
       {
-        "id": "c3e382e702b641cc",
+        "id": "8f9c825a316fcfc6",
         "type": "leaf",
         "state": {
           "type": "bookmarks",
@@ -88,50 +76,66 @@
     "currentTab": 0
   },
   "right": {
-    "id": "a902cacd2a8d06e7",
+    "id": "b8335d1d10ce5d29",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "83f1d538ed06f9dc",
+        "id": "9643fccc71c208dc",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
-            "file": "README.md",
+            "file": "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
             "showSearch": false,
             "searchQuery": "",
-            "backlinkCollapsed": true,
+            "backlinkCollapsed": false,
             "unlinkedCollapsed": true
           }
         }
       },
       {
-        "id": "4de5161b113aa97e",
+        "id": "0dad9a221f10d2d4",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "README.md",
+            "file": "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
         }
       },
       {
-        "id": "7f099969f47090b5",
+        "id": "ca80ad3d751f6918",
         "type": "leaf",
         "state": {
           "type": "outline",
           "state": {
-            "file": "README.md"
+            "file": "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md"
           }
+        }
+      },
+      {
+        "id": "dbc6a9059c9528bc",
+        "type": "leaf",
+        "state": {
+          "type": "git-history-view",
+          "state": {}
+        }
+      },
+      {
+        "id": "d7f4e6459b3a21dd",
+        "type": "leaf",
+        "state": {
+          "type": "git-view",
+          "state": {}
         }
       }
     ],
-    "currentTab": 0
+    "currentTab": 4
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -143,11 +147,45 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0cd337d65713ab00",
+  "active": "3b07d38607ea9a4d",
   "lastOpenFiles": [
-    "src/content/docs/ar/dorrar/othr-bil-jahl.md",
-    "conflict-files-obsidian-git.md",
+    "src/content/docs/ar/intro.mdoc",
+    "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
+    "/src/styles/custom.css",
+    "webmanifest.json",
+    "tsconfig.json",
+    "src/styles/custom.css",
+    "src/fonts/uthmanic_hafs_v20.ttf",
+    "src/fonts/font-face.css",
+    "src/fonts/HafsSmart_08.ttf",
+    "src/fonts/AmiriQuran-Regular.ttf",
+    "src/env.d.ts",
+    "src/content/docs/intro.mdoc",
+    "src/content/docs/en/dorrar/intro.md",
+    "src/content/docs/en/arabic/intro.md",
+    "src/content/docs/en/arabic/al-sarf/al-sarf.md",
+    "src/content/docs/en/arabic/al-alfiyya/al-alfiyya.md",
+    "src/content/docs/en/arabic/al-ajoromia/al-ajoromia.md",
+    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl4.md",
+    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl3.md",
+    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl2.md",
+    "src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl.md",
+    "src/content/docs/ar/arabic/intro.md",
+    "src/content/docs/ar/arabic/al-sarf/al-sarf.md",
+    "src/content/docs/ar/arabic/al-alfiyya/al-alfiyya.md",
+    "src/content/docs/ar/arabic/al-ajoromia/al-ajoromia.md",
+    "src/assets/houston.webp",
+    "public/pwa-64x64.png",
+    "public/pwa-512x512.png",
+    "public/pwa-192x192.png",
+    "public/maskable-icon-512x512.png",
+    "public/favicon.svg",
+    "public/apple-touch-icon-180x180.png",
+    "_dorar-hadith-api-1/README.md",
     "README.md",
+    "/src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
+    "/src/content/docs/ar/dorrar/kshf-al-shobohat/othr-bil-jahl.md",
+    "src/content/docs/ar/dorrar/othr-bil-jahl.md",
     "src/content/docs/ar/dorrar/intro.md"
   ]
 }

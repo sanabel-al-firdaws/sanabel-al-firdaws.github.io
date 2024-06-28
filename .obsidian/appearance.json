@@ -1,4 +1,10 @@
 {
+  "accentColor": "",
   "cssTheme": "ITS Theme",
-  "theme": "obsidian"
+  "baseFontSizeAction": false,
+  "theme": "obsidian",
+  "baseFontSize": 14,
+  "enabledCssSnippets": [
+    "test"
+  ]
 }

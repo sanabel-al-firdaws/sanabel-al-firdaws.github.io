@@ -4,7 +4,19 @@
 
 :root{
 
-
+      .r {
+	    color: var(--sl-color-red);
+      }
+      .o {
+	    color: var(--sl-color-orange);
+      }
+      .b {
+	    color: var(--sl-color-blue-high);
+      }
+      .g {
+	    color: var(--sl-color-green);
+      }
+	
 	--sl-color-accent-low: #232424;
 	--sl-color-accent: #666b6a;
 	--sl-color-accent-high: #c7c9c9;

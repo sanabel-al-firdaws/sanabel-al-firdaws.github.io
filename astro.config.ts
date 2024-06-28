@@ -4,18 +4,13 @@ import markdoc from "@astrojs/markdoc";
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
-import remarkMath from 'remark-math';
-import rehypeMathJax from 'rehype-mathjax';
+
 
 import lit from "@astrojs/lit";
 
 // https://astro.build/config
 export default defineConfig({
-    // Configure `remark-math` and `rehype-mathjax` plugins:
-  markdown: {
-    remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeMathJax],
-  },
+    
   site: 'https://sanabel-al-firdaws.github.io',
   // base: '/<project-name>',
   integrations: [AstroPWA({
@@ -161,11 +156,32 @@ export default defineConfig({
     translations: {
       'en': 'dorrar and benefits'
     },
-    collapsed: true,
     autogenerate: {
       directory: 'dorrar'
-    }
-  },
+    },
+    collapsed: true,
+    items: [ {
+      collapsed: true,
+      label: 'مدونة كشف الشبهات',
+      translations: {
+        'en': 'Kshf Al Shoboha'
+      },
+      autogenerate: {
+        directory: 'dorrar/kshf-al-shobohat'
+      }
+    },
+    {
+      collapsed: true,
+      label: 'مقالات منوعة',
+      translations: {
+        'en': 'Uniqe Articles'
+      },
+      autogenerate: {
+        directory: 'dorrar/articles'
+      }
+    },
+    ]
+  },// kshf-al-shobohat
     // {
     // 	label: 'Reference',
     // 	collapsed: true,
