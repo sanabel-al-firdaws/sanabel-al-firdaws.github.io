@@ -16,6 +16,7 @@
       .s {
 	    color: var(--sl-color-text-accent);
       } 
+	--sl-text-code-sm: var(--sl-text-base)
 	
 	--sl-color-accent-low: #232424;
 	--sl-color-accent: #666b6a;
