@@ -8,10 +8,10 @@
 	    color: var(--sl-color-red);
       }
       .o {
-	    color: var(--sl-color-orange-high);
+	    color: var(--sl-color-orange);
       }
       .g {
-	    color: var(--sl-color-green-high);
+	    color: var(--sl-color-green);
       }
       .s {
 	    color: var(--sl-color-text-accent);
