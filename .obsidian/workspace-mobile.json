@@ -149,6 +149,7 @@
   },
   "active": "3b07d38607ea9a4d",
   "lastOpenFiles": [
+    "/src/content/docs/ar/theme.mdx",
     "/src/styles/custom.css",
     "src/content/docs/ar/intro.mdoc",
     "src/content/docs/ar/dorrar/articles/sorori-and-ikhwani.md",
@@ -160,7 +161,6 @@
     "src/fonts/HafsSmart_08.ttf",
     "src/fonts/AmiriQuran-Regular.ttf",
     "src/env.d.ts",
-    "src/content/docs/intro.mdoc",
     "src/content/docs/en/dorrar/intro.md",
     "src/content/docs/en/arabic/intro.md",
     "src/content/docs/en/arabic/al-sarf/al-sarf.md",
