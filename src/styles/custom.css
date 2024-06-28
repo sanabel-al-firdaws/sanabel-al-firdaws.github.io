@@ -5,7 +5,7 @@
 :root{
 
       .r {
-	    color: var(--sl-color-red-high);
+	    color: var(--sl-color-red);
       }
       .o {
 	    color: var(--sl-color-orange-high);
