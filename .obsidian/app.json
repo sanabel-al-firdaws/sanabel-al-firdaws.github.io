@@ -2,6 +2,7 @@
   "mobileToolbarCommands": [
     "editor:undo",
     "editor:redo",
+    "obsidian-git:push",
     "editor:insert-wikilink",
     "editor:insert-embed",
     "editor:insert-tag",
@@ -19,9 +20,7 @@
     "editor:toggle-checklist-status",
     "editor:indent-list",
     "editor:unindent-list",
-    "editor:configure-toolbar",
-    "obsidian-git:commit-specified-message",
-    "obsidian-git:push2"
+    "editor:configure-toolbar"
   ],
   "mobilePullAction": "obsidian-git:commit-specified-message",
   "rightToLeft": false
