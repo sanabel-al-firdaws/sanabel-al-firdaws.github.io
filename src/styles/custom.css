@@ -10,12 +10,12 @@
       .o {
 	    color: var(--sl-color-orange-high);
       }
-      .b {
-	    color: var(--sl-color-blue-high);
-      }
       .g {
 	    color: var(--sl-color-green-high);
       }
+      .s {
+	    color: var(--sl-color-text-accent);
+      } 
 	
 	--sl-color-accent-low: #232424;
 	--sl-color-accent: #666b6a;
