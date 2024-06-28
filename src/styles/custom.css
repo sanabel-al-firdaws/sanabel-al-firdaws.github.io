@@ -5,16 +5,16 @@
 :root{
 
       .r {
-	    color: var(--sl-color-red);
+	    color: var(--sl-color-red-high);
       }
       .o {
-	    color: var(--sl-color-orange);
+	    color: var(--sl-color-orange-high);
       }
       .b {
 	    color: var(--sl-color-blue-high);
       }
       .g {
-	    color: var(--sl-color-green);
+	    color: var(--sl-color-green-high);
       }
 	
 	--sl-color-accent-low: #232424;
