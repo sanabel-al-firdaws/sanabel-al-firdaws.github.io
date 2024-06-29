@@ -82,7 +82,7 @@ const {
 				const theme = 'light' in preview.dataset ? dark : light;
 				var r = document.querySelector(':root') as HTMLInputElement | null;
 				Object.entries(theme).forEach(([key, color]) => {
-					preview.style.setProperty(`--sl-color-${key}`, color);
+					preview.style.setProperty(`--c-sl-color-${key}`, color);
 					r?.style.setProperty(`--c-sl-color-${key}`, color);
 					localStorage.setItem(`--c-sl-color-${key}`, color);
 				});
