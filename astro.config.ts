@@ -41,7 +41,8 @@ export default defineConfig({
       ThemeProvider: './src/components/starlight/ThemeProvider.astro',
       // EditLink: './src/components/starlight/EditLink.astro',
       ThemeSelect: './src/components/starlight/ThemeSelect.astro',
-      SocialIcons:'./src/components/starlight/SocialIcons.astro'
+      SocialIcons:'./src/components/starlight/SocialIcons.astro',
+      Pagination: './src/components/starlight/Pagination.astro',
     },
     title: 'سنابل الفردوس',
     description: 'موقع يهتم بنشر العلم النافع',
