@@ -23,5 +23,11 @@
     "editor:configure-toolbar"
   ],
   "mobilePullAction": "obsidian-git:commit-specified-message",
-  "rightToLeft": false
+  "rightToLeft": false,
+  "userIgnoreFilters": [
+    "/[aA][tT][tT][aA][cC][hH][mM][eE][nN][tT][sS]/",
+    "/[fF][oO][nN][tT][sS]/",
+    "/[sS][tT][yY][lL][eE][sS]/",
+    "/_[dD][oO][rR][aA][rR]-[hH][aA][dD][iI][tT][hH]-[aA][pP][iI]-1/"
+  ]
 }
