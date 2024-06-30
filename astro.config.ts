@@ -4,6 +4,7 @@ import starlight from '@astrojs/starlight';
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
+import starlightBlog from 'starlight-blog';
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,6 +25,11 @@ export default defineConfig({
     },
     manifest: (manifest as Partial<ManifestOptions>)
   }), starlight({
+    plugins: [  starlightBlog({
+      title: "سنابل",
+      postCount: 10,
+      
+    }),],
     tableOfContents: {
       minHeadingLevel: 1,
       maxHeadingLevel: 6
@@ -37,7 +43,7 @@ export default defineConfig({
       // Override the default `SocialIcons` component.
       ThemeProvider: './src/components/starlight/ThemeProvider.astro',
       // EditLink: './src/components/starlight/EditLink.astro',
-      ThemeSelect: './src/components/starlight/ThemeSelect.astro',
+      ThemeSelect: './src/components/blog-override/ThemeSelect.astro',
       SocialIcons:'./src/components/starlight/SocialIcons.astro',
       Pagination: './src/components/starlight/Pagination.astro',
     },

@@ -6,3 +6,4 @@
 /// <reference path="@astrojs/starlight/virtual.d.ts" />
 /// <reference types="@astrojs/starlight/schema" />
 /// <reference types="../node_modules/lucid-color-picker/lucid-color-picker.d.ts" />
+/// <reference types="../node_modules/starlight-blog/virtual.d.ts" />
