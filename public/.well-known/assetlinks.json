@@ -3,6 +3,6 @@
       "target": {
         "namespace": "android_app",
         "package_name": "io.github.sanabel_al_firdaws.twa",
-        "sha256_cert_fingerprints": ["EE:0A:ED:03:F8:8B:AF:BF:1F:02:0B:9B:04:0E:26:CB:6E:7C:EA:69:30:21:12:82:7A:90:ED:A9:B6:05:34:8B"]
+        "sha256_cert_fingerprints": ["43:EA:F4:9A:8F:FD:55:73:44:C4:D2:38:74:32:0A:A0:99:85:54:AF:DA:EC:96:77:EE:AC:09:0F:D7:AD:AF:78"]
       }
     }]
