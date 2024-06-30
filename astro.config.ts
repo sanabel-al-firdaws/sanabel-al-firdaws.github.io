@@ -3,7 +3,7 @@ import starlight from '@astrojs/starlight';
 import markdoc from "@astrojs/markdoc";
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
-
+import manifest from "./webmanifest.json";
 
 
 import lit from "@astrojs/lit";
@@ -25,7 +25,7 @@ export default defineConfig({
     experimental: {
       directoryAndTrailingSlashHandler: true
     },
-    manifest: false
+    manifest: (manifest as Partial<ManifestOptions>)
   }), starlight({
     tableOfContents: {
       minHeadingLevel: 1,
