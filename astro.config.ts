@@ -129,7 +129,7 @@ export default defineConfig({
       }]
     },
 
-    ]
+    
   },// kshf-al-shobohat
     // {
     // 	label: 'Reference',
