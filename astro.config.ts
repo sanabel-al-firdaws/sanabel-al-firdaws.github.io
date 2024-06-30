@@ -25,7 +25,7 @@ export default defineConfig({
     experimental: {
       directoryAndTrailingSlashHandler: true
     },
-    manifest:  false
+    manifest: (manifest as Partial<ManifestOptions>)
   }), starlight({
     tableOfContents: {
       minHeadingLevel: 1,
