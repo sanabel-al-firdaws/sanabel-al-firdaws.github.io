@@ -5,8 +5,25 @@ import { pwaInfo } from "virtual:pwa-info";
 
 
 ---
-
-{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
+<script is:inline>
+	const manifest = {
+	  name: 'Sanabel Al Firdaws | سنابل الفردوس',
+	  short_name: 'Sanabel Al Firdaws',
+	  orientation : "any",
+      display : "fullscreen",
+      theme_color: "#001b29",
+      background_color: "#001b29",
+	  icons: [
+    { src: `${window.location.origin}/pwa-192x192.png`, sizes: '192x192', type: 'image/png' },
+  ],
+	  start_url: window.location.href
+	};
+	const link = document.createElement('link');
+	link.rel = 'manifest';
+	link.href = `data:application/json;base64,${btoa(JSON.stringify(manifest))}`;
+	document.head.appendChild(link);
+</script>
+<!-- {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />} -->
 <script>
     import { registerSW } from "virtual:pwa-register";
 
@@ -20,45 +37,7 @@ import { pwaInfo } from "virtual:pwa-info";
       },
     });
   </script>
-<script is:inline>
-	const manifest = {
-	  name: 'Sanabel Al Firdaws | سنابل الفردوس',
-	  short_name: 'Sanabel Al Firdaws',
-	  orientation : "any",
-      display : "fullscreen",
-      theme_color: "#001b29",
-      background_color: "#001b29",
-	  icons: [
-    {
-      src: "pwa-64x64.png",
-      sizes: "64x64",
-      type: "image/png"
-    },
-    {
-      src: "pwa-192x192.png",
-      sizes: "192x192",
-      type: "image/png"
-    },
-    {
-      src: "pwa-512x512.png",
-      sizes: "512x512",
-      type: "image/png",
-      purpose: "any"
-    },
-    {
-      src: "maskable-icon-512x512.png",
-      sizes: "512x512",
-      type: "image/png",
-      purpose: "maskable"
-    }
-  ],
-	  start_url: window.location.href
-	};
-	const link = document.createElement('link');
-	link.rel = 'manifest';
-	link.href = `data:application/json;base64,${btoa(JSON.stringify(manifest))}`;
-	document.head.appendChild(link);
-</script>
+
 {/* This is intentionally inlined to avoid FOUC. */}
 <script is:inline>
 	  const c_sl_color_accent_low = localStorage.getItem('--c-sl-color-accent-low');
