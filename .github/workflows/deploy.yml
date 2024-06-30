@@ -4,8 +4,7 @@ on:
   push:
   #  paths:
   # - 'src/content/docs/_run.md'
-  # - 'src/content/docs/ar/_run.md'
-  # - 'src/content/docs/en/_run.md'
+
   # Trigger the workflow every time you push to the `main` branch
   # Using a different branch name? Replace `main` with your branch’s name
   # push:

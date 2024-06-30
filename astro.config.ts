@@ -46,16 +46,12 @@ export default defineConfig({
     // titleDelimiter: '-',
     defaultLocale: 'ar',
     locales: {
-      ar: {
+      root: {
         label: "العربية",
         lang: "ar",
         dir: 'rtl'
       },
-      en: {
-        label: "English",
-        lang: "en",
-        dir: 'ltr'
-      }
+
     },
     editLink: {
       baseUrl: 'https://github.com/sanabel-al-firdaws/sanabel-al-firdaws.github.io/edit/main/'
@@ -66,41 +62,29 @@ export default defineConfig({
     sidebar: [{
       
       label: 'كتاب اللغة العربية',
-      translations: {
-        'en': 'The Book of Arabic'
-      },
+    
       collapsed: true,
       items: [{
         collapsed: true,
         label: 'مقدمة كتاب اللغة العربية',
-        translations: {
-          'en': 'the intro for Arabic book'
-        },
         link: '/arabic/intro/'
       }, {
         collapsed: true,
         label: 'الآجرومية',
-        translations: {
-          'en': 'The Ajoromia'
-        },
         autogenerate: {
           directory: 'arabic/al-ajoromia'
         }
       }, {
         collapsed: true,
         label: 'ألفية ابن مالك',
-        translations: {
-          'en': 'The Alfiyya of Ibn Malik'
-        },
+      
         autogenerate: {
           directory: 'arabic/al-alfiyya'
         }
       }, {
         collapsed: true,
         label: 'الصرف الصغير',
-        translations: {
-          'en': 'the tiny sarf'
-        },
+   
         autogenerate: {
           directory: 'arabic/al-sarf'
         }
@@ -108,41 +92,31 @@ export default defineConfig({
     },
     {
       label: 'كتاب العقيدة',
-      translations: {
-        'en': 'The Book Of Aqida'
-      },
+
       collapsed: true,
       items: [{
         collapsed: true,
         label: 'مقدمة كتاب العقيدة',
-        translations: {
-          'en': 'Intro for the book of Aqida'
-        },
+
         link: '/aqida/intro/'
       }, {
         collapsed: true,
         label: 'باب الإسلام',
-        translations: {
-          'en': 'Islam Chapter'
-        },
+
         autogenerate: {
           directory: 'aqida/al-islam'
         }
       }, {
         collapsed: true,
         label: 'باب الإيمان',
-        translations: {
-          'en': 'Eman Chapter'
-        },
+
         autogenerate: {
           directory: 'aqida/al-eman'
         }
       }, {
         collapsed: true,
         label: 'باب الإحسان',
-        translations: {
-          'en': 'Ehsan Chapter'
-        },
+
         autogenerate: {
           directory: 'aqida/al-ehsan'
         }
@@ -151,9 +125,7 @@ export default defineConfig({
     {
 
     label: 'درر وفوائد منوعة',
-    translations: {
-      'en': 'dorrar and benefits'
-    },
+
     autogenerate: {
       directory: 'dorrar'
     },
@@ -161,9 +133,7 @@ export default defineConfig({
     items: [ {
       collapsed: true,
       label: 'مدونة كشف الشبهات',
-      translations: {
-        'en': 'Kshf Al Shoboha'
-      },
+
       autogenerate: {
         directory: 'dorrar/kshf-al-shobohat'
       }
@@ -171,9 +141,7 @@ export default defineConfig({
     {
       collapsed: true,
       label: 'مقالات منوعة',
-      translations: {
-        'en': 'Uniqe Articles'
-      },
+
       autogenerate: {
         directory: 'dorrar/articles'
       }
