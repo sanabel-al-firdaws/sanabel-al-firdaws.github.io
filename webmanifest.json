@@ -2,7 +2,6 @@
     "$schema": "https://json.schemastore.org/web-manifest-combined.json",
     "id": "sanabel-al-firdaws-starlight",
     "name": "Sanabel Al Firdaws | سنابل الفردوس",
-    "start_url": "/",
     "short_name": "Sanabel Al Firdaws",
     "description": "موقع يهتم بنشر العلم النافع",
     "orientation": "any",
