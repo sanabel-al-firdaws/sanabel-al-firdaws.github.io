@@ -1,9 +1,6 @@
 ---
 title: العذر بالجهل لأعيان الواقعين بالشرك الأكبر (1)
-filename: othr-bil-jahl
-lastUpdated: 2019-03-02
-sidebar:
-  order: 1
+date: 2019-03-02
 ---
 
 
