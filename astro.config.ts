@@ -128,30 +128,7 @@ export default defineConfig({
         }
       }]
     },
-    {
 
-    label: 'درر وفوائد منوعة',
-
-    autogenerate: {
-      directory: 'dorrar'
-    },
-    collapsed: true,
-    items: [ {
-      collapsed: true,
-      label: 'مدونة كشف الشبهات',
-
-      autogenerate: {
-        directory: 'dorrar/kshf-al-shobohat'
-      }
-    },
-    {
-      collapsed: true,
-      label: 'مقالات منوعة',
-
-      autogenerate: {
-        directory: 'dorrar/articles'
-      }
-    },
     ]
   },// kshf-al-shobohat
     // {
