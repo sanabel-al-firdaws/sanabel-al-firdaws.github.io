@@ -3,38 +3,30 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "  conc \" node \"_dorar-hadith-api-1/app.js\" \" \" astro dev \"   --success \"first\" --kill-others",
-    "build": " conc \" node \"_dorar-hadith-api-1/app.js\" \" \" astro build \"   --success \"first\" --kill-others",
+    "dev": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "generate-pwa-assets": "pwa-assets-generator --preset minimal public/favicon.svg"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "@astrojs/lit": "^4.3.0",
-    "@astrojs/markdoc": "^0.11.0",
+
     "@astrojs/starlight": "^0.24.4",
-    "@webcomponents/template-shadowroot": "^0.2.1",
+
     "astro": "^4.11.0",
-    "cors": "^2.8.5",
+
     "culori": "^3.3.0",
-    "express": "^4.17.3",
-    "express-rate-limit": "^6.9.0",
-    "html-entities": "^2.3.3",
-    "linkedom": "^0.14.25",
-    "lit": "^3.1.0",
-    "lucid-color-picker": "^0.1.0",
-    "node-cache": "^5.1.2",
-    "node-fetch": "^2.6.9",
-    "sharp": "^0.32.5",
+
+
+
+
     "theme-change": "^2.5.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@vite-pwa/assets-generator": "^0.2.2",
     "@vite-pwa/astro": "^0.4.0",
-    "concurrently": "^8.2.2",
-    "nodemon": "^2.0.15",
     "vite-plugin-pwa": "^0.20.0",
     "workbox-window": "^7.1.0"
   }

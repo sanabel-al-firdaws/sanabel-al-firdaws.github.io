@@ -1,12 +1,9 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import markdoc from "@astrojs/markdoc";
+
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
-
-
-import lit from "@astrojs/lit";
 
 // https://astro.build/config
 export default defineConfig({
@@ -194,5 +191,5 @@ export default defineConfig({
     // 	autogenerate: { directory: 'test' },
     // },
     ]
-  }), markdoc(), lit()]
+  })]
 });
