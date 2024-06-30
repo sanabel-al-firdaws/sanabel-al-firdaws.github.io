@@ -34,8 +34,8 @@
         --color-prettylights-syntax-sublimelinter-gutter-mark:#545d68;
         --color-prettylights-syntax-constant-other-reference-link:#96d0ff;
         --color-btn-text:var(--sl-color-gray-2);
-        --color-btn-bg:#373e47;
-        --color-btn-border:#cdd9e51a;
+        --color-btn-bg:var(--sl-color-gray-5);
+        --color-btn-border:var(--sl-color-gray-6);
         --color-btn-shadow:0 0 var(--sl-color-black);
         --color-btn-inset-shadow:0 0 var(--sl-color-black);
         --color-btn-hover-bg:var(--sl-color-gray-4);
