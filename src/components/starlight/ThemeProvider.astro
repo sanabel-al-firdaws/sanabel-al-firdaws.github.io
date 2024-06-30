@@ -5,6 +5,21 @@ import { pwaInfo } from "virtual:pwa-info";
 
 
 ---
+
+{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
+<script>
+    import { registerSW } from "virtual:pwa-register";
+
+    registerSW({
+      immediate: true,
+      onRegisteredSW(swScriptUrl) {
+        console.log("SW registered: ", swScriptUrl);
+      },
+      onOfflineReady() {
+        console.log("PWA application ready to work offline");
+      },
+    });
+  </script>
 <script is:inline>
 	const manifest = {
 	  name: 'Sanabel Al Firdaws | سنابل الفردوس',
@@ -44,21 +59,6 @@ import { pwaInfo } from "virtual:pwa-info";
 	link.href = `data:application/json;base64,${btoa(JSON.stringify(manifest))}`;
 	document.head.appendChild(link);
 </script>
-{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
-<script>
-    import { registerSW } from "virtual:pwa-register";
-
-    registerSW({
-      immediate: true,
-      onRegisteredSW(swScriptUrl) {
-        console.log("SW registered: ", swScriptUrl);
-      },
-      onOfflineReady() {
-        console.log("PWA application ready to work offline");
-      },
-    });
-  </script>
-
 {/* This is intentionally inlined to avoid FOUC. */}
 <script is:inline>
 	  const c_sl_color_accent_low = localStorage.getItem('--c-sl-color-accent-low');
