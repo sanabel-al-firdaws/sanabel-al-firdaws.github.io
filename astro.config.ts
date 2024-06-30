@@ -25,39 +25,7 @@ export default defineConfig({
     experimental: {
       directoryAndTrailingSlashHandler: true
     },
-    manifest: {
-      name: 'Sanabel Al Firdaws | سنابل الفردوس',
-      short_name: 'Sanabel Al Firdaws',
-      orientation : "any",
-        display : "fullscreen",
-        theme_color: "#001b29",
-        background_color: "#001b29",
-      icons: [
-      {
-        src: "pwa-64x64.png",
-        sizes: "64x64",
-        type: "image/png"
-      },
-      {
-        src: "pwa-192x192.png",
-        sizes: "192x192",
-        type: "image/png"
-      },
-      {
-        src: "pwa-512x512.png",
-        sizes: "512x512",
-        type: "image/png",
-        purpose: "any"
-      },
-      {
-        src: "maskable-icon-512x512.png",
-        sizes: "512x512",
-        type: "image/png",
-        purpose: "maskable"
-      }
-    ],
-      start_url: window.location.href
-    }
+    manifest: false
   }), starlight({
     tableOfContents: {
       minHeadingLevel: 1,

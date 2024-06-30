@@ -5,7 +5,7 @@ import { pwaInfo } from "virtual:pwa-info";
 
 
 ---
-<!-- <script>
+<script is:inline>
 	const manifest = {
 	  name: 'Sanabel Al Firdaws | سنابل الفردوس',
 	  short_name: 'Sanabel Al Firdaws',
@@ -43,7 +43,7 @@ import { pwaInfo } from "virtual:pwa-info";
 	link.rel = 'manifest';
 	link.href = `data:application/json;base64,${btoa(JSON.stringify(manifest))}`;
 	document.head.appendChild(link);
-</script> -->
+</script>
 {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
 <script>
     import { registerSW } from "virtual:pwa-register";
