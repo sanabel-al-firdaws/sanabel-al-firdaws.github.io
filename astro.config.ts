@@ -19,7 +19,7 @@ export default defineConfig({
     mode: "production",
     registerType: "autoUpdate",
     includeAssets: ["favicon.svg"],
-    workbox: {
+    injectManifest: {
       navigateFallback: "/404",
       globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,json}"]
       // runtimeCaching:  Cache quran Api responses
