@@ -22,7 +22,7 @@
     "editor:unindent-list",
     "editor:configure-toolbar"
   ],
-  "mobilePullAction": "obsidian-git:commit-specified-message",
+  "mobilePullAction": "",
   "rightToLeft": false,
   "userIgnoreFilters": [
     "/[aA][tT][tT][aA][cC][hH][mM][eE][nN][tT][sS]/",
