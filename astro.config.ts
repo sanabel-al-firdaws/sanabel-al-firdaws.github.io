@@ -34,7 +34,14 @@ export default defineConfig({
               starlightBlog({
       title: "سنابل",
       postCount: 10,
-      
+      authors: {
+    hideoo: {
+      name: 'عبدالحكيم الشنقيطي',
+      title: 'طالب علم',
+      picture: 'https://avatars.githubusercontent.com/u/136203274', // Images in the `public` directory are supported.
+      url: 'https://github.com/sanabel-al-firdaws',
+    },
+  },
     }),],
     tableOfContents: {
       minHeadingLevel: 1,
