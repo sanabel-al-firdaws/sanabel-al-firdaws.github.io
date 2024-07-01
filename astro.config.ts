@@ -5,7 +5,7 @@ import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
 import starlightBlog from 'starlight-blog';
-
+import starlightViewModes from "starlight-view-modes";
 // https://astro.build/config
 export default defineConfig({
     
@@ -29,7 +29,10 @@ export default defineConfig({
     },
     manifest: (manifest as Partial<ManifestOptions>)
     }), starlight({
-    plugins: [  starlightBlog({
+    plugins: [    starlightViewModes({
+                    // Configuration options go here.
+                }),
+              starlightBlog({
       title: "سنابل",
       postCount: 10,
       
