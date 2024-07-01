@@ -36,7 +36,7 @@ export default defineConfig({
       postCount: 10,
       authors: {
     hideoo: {
-      name: 'عبدالحكيم الشنقيطي',
+      name: 'عبدالحكيم_الشنقيطي',
       title: 'طالب علم',
       picture: 'https://avatars.githubusercontent.com/u/136203274', // Images in the `public` directory are supported.
       url: 'https://github.com/sanabel-al-firdaws',
