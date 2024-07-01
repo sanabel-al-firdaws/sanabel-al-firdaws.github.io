@@ -15,7 +15,19 @@ export default defineConfig({
     AstroPWA({
     strategies: 'injectManifest',
     srcDir: 'src',
-    filename: 'sw.ts'
+    filename: 'sw.ts',
+    mode: "production",
+    registerType: "autoUpdate",
+    includeAssets: ["favicon.svg"],
+    workbox: {
+      navigateFallback: "/404",
+      globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,json}"]
+      // runtimeCaching:  Cache quran Api responses
+    },
+    experimental: {
+      directoryAndTrailingSlashHandler: true
+    },
+    manifest: (manifest as Partial<ManifestOptions>)
     }), starlight({
     plugins: [  starlightBlog({
       title: "سنابل",
