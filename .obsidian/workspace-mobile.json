@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/docs/blog/articles/sorori-and-ikhwani.md",
+                "file": "src/content/docs/intro.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "src/content/docs/blog/articles/sorori-and-ikhwani.md",
+            "file": "src/content/docs/intro.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "src/content/docs/blog/articles/sorori-and-ikhwani.md",
+            "file": "src/content/docs/intro.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -114,7 +114,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "src/content/docs/blog/articles/sorori-and-ikhwani.md"
+            "file": "src/content/docs/intro.md"
           }
         }
       },
@@ -150,15 +150,17 @@
   },
   "active": "3b07d38607ea9a4d",
   "lastOpenFiles": [
+    "src/sw.ts",
+    "/src/sw.ts",
+    "/package.json",
+    "/astro.config.ts",
+    "src/content/docs/blog/articles/sorori-and-ikhwani.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl2.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl3.md",
-    "src/content/docs/blog/articles/sorori-and-ikhwani.md",
-    "/package.json",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl4.md",
     "src/content/docs/intro.md",
     "src/content/docs/blog/test/second.md",
-    "/astro.config.ts",
     "/src/content/docs/theme.mdx",
     "README.md",
     "src/content/docs/arabic/al-sarf/al-sarf.md",
@@ -184,7 +186,6 @@
     "/src/env.d.ts",
     "/src/content/docs/index.mdx",
     "/src/content/config.ts",
-    "/src/components/blog-override/ThemeSelect.astro",
     "src/assets/houston.webp",
     "public/pwa-64x64.png",
     "public/pwa-512x512.png",
