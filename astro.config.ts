@@ -18,7 +18,8 @@ export default defineConfig({
     filename: 'sw.ts',
     mode: "production",
     registerType: "autoUpdate",
-    includeAssets: ["favicon.svg"],
+    incudeAssets: ["favicon.svg"],
+    useCredentials: true ,  
     injectManifest: {
       globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,json}"]
       // runtimeCaching:  Cache quran Api responses
