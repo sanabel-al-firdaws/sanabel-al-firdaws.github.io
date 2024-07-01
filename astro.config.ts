@@ -11,20 +11,12 @@ export default defineConfig({
     
   site: 'https://sanabel-al-firdaws.github.io',
   // base: '/<project-name>',
-  integrations: [AstroPWA({
-    mode: "production",
-    registerType: "autoUpdate",
-    includeAssets: ["favicon.svg"],
-    workbox: {
-      navigateFallback: "/404",
-      globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,json}"]
-      // runtimeCaching:  Cache quran Api responses
-    },
-    experimental: {
-      directoryAndTrailingSlashHandler: true
-    },
-    manifest: (manifest as Partial<ManifestOptions>)
-  }), starlight({
+  integrations: [
+    AstroPWA({
+    strategies: 'injectManifest',
+    srcDir: 'src',
+    filename: 'sw.ts'
+    }), starlight({
     plugins: [  starlightBlog({
       title: "سنابل",
       postCount: 10,
