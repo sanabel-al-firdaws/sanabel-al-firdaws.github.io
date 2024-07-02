@@ -13,15 +13,14 @@ export default defineConfig({
   // base: '/<project-name>',
   integrations: [
     AstroPWA({
-    strategies: 'injectManifest',
-    srcDir: 'src',
-    filename: 'sw.ts',
     mode: "production",
     registerType: "autoUpdate",
     incudeAssets: ["favicon.svg"],
+    
     useCredentials: true ,  
-    injectManifest: {
-      globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,json}"]
+    workbox: {
+      globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,json}"],
+      navigateFallback: '/404'
       // runtimeCaching:  Cache quran Api responses
     },
     experimental: {
