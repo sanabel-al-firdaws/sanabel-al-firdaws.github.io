@@ -14,7 +14,7 @@ export default defineConfig({
     AstroPWA({
     mode: "production",
     registerType: "autoUpdate",
-    includeAssets: ["favicon.svg"],
+    includeAssets: ["favicon.ico","apple-touch-icon-180x180.png", "maskable-icon-512x512.png"],
     workbox: {
         navigateFallback: "/404",
         globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],

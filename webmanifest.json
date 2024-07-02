@@ -1,6 +1,6 @@
 {
-  "name": "Sanabel Al Firdaws | سنابل الفردوس",
-  "short_name": "Sanabel Al Firdaws",
+  "name": "سنابل الفردوس",
+  "short_name": "سنابل الفردوس",
   "start_url": "/",
   "display": "fullscreen",
   "background_color": "#001b29",
@@ -33,13 +33,6 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Sanabel Al Firdaws",
-      "url": "https://sanabel-al-firdaws.github.io/en/",
-      "description": ""
     }
   ]
 }
