@@ -17,7 +17,7 @@ const data = {
   debug: false,
   credentials: 'same-origin',
   networkTimeoutSeconds: 0,
-  fallback: 'index.html'
+  fallback: '/404'
 }
 
 const cacheName = cacheNames.runtime
