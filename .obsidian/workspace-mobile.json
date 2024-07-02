@@ -8,14 +8,14 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3b07d38607ea9a4d",
+            "id": "c4055e666526856e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "src/content/docs/intro.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -148,15 +148,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3b07d38607ea9a4d",
+  "active": "c4055e666526856e",
   "lastOpenFiles": [
+    "src/content/docs/intro.md",
     "/src/sw.ts",
     "/src/content/docs/blog/articles/sorori-and-ikhwani.md",
     "/src/content/docs/arabic/intro.md",
     "/package.json",
     "/astro.config.ts",
     "src/content/docs/blog/articles/sorori-and-ikhwani.md",
-    "src/content/docs/intro.md",
     "src/sw.ts",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl2.md",
