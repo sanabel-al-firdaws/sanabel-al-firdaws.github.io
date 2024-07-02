@@ -58,7 +58,7 @@ export default defineConfig({
       ThemeSelect: './src/components/blog-override/ThemeSelect.astro',
       SocialIcons:'./src/components/starlight/SocialIcons.astro',
       Pagination: './src/components/starlight/Pagination.astro',
-      Search: './src/components/starlight/Search.astro',
+      Search: './src/components/starlight/Search.astro'
     },
     title: 'سنابل الفردوس',
     description: 'موقع يهتم بنشر العلم النافع',
