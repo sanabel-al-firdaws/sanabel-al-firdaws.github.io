@@ -19,7 +19,7 @@ export default defineConfig({
         navigateFallback: "/404",
         globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
         runtimeCaching: [{
-          handler: 'NetworkOnly',
+          handler: 'NetworkFirst',
           urlPattern:  /\/pagefind\/*\/*.*/
         }]
       },
