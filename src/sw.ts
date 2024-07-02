@@ -76,6 +76,7 @@ self.addEventListener('install', (event: ExtendableEvent) => {
     })
   )
 })
+/*
 
 self.addEventListener('activate', (event: ExtendableEvent) => {
   // - clean up outdated runtime cache
@@ -100,6 +101,8 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
     })
   )
 })
+
+*/
 
 registerRoute(
   ({ url }) => manifestURLs.includes(url.href),
