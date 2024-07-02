@@ -109,7 +109,7 @@ registerRoute(
   buildStrategy()
 )
 
-setDefaultHandler(new NetworkOnly())
+setDefaultHandler(new NetworkFirst())
 
 // fallback to app-shell for document request
 setCatchHandler(({ event }): Promise<Response> => {
