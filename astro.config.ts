@@ -10,16 +10,13 @@ import starlightViewModes from "starlight-view-modes";
 export default defineConfig({
     
   site: 'https://sanabel-al-firdaws.github.io',
-  // base: '/<project-name>',
   integrations: [
     AstroPWA({
-    strategies: 'injectManifest',
-    srcDir: 'src',
-    filename: 'sw.ts',
     mode: "production",
     registerType: "autoUpdate",
-    incudeAssets: ["favicon.svg"],
-    injectManifest: {
+    includeAssets: ["favicon.svg"],
+    workbox: {
+        navigateFallback: "/404",
         globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
       },
       experimental: {
@@ -38,7 +35,7 @@ export default defineConfig({
     hakkem: {
       name: 'عبدالحكيم الشنقيطي',
       title: 'طالب علم',
-      picture: 'https://avatars.githubusercontent.com/u/136203274', // Images in the `public` directory are supported.
+      picture: '/profile.png', // Images in the `public` directory are supported.
       url: 'https://github.com/sanabel-al-firdaws',
     },
   },
