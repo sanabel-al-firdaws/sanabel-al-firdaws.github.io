@@ -23,7 +23,7 @@ import { pwaInfo } from "virtual:pwa-info";
 	link.href = `data:application/json;base64,${btoa(JSON.stringify(manifest))}`;
 	document.head.appendChild(link);
 </script> -->
-<script type="module">
+<script type="module" is:inline>
     await import('/pagefind/pagefind-highlight.js');
     new PagefindHighlight({ highlightParam: "highlight" });
 </script>
