@@ -14,7 +14,7 @@ export default defineConfig({
   // base: '/<project-name>',
   integrations: [
     AstroPWA({
-    mode: "development",
+    mode: "production",
     registerType: "autoUpdate",
     incudeAssets: ["favicon.svg"],
     workbox: {
