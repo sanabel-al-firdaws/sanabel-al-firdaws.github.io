@@ -17,6 +17,7 @@ export default defineConfig({
     registerType: "autoUpdate",
     incudeAssets: ["favicon.svg"],
     workbox: {
+      sourcemap: true ,
       globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,json}"],
       navigateFallback: '/'
       // runtimeCaching:  Cache quran Api responses
