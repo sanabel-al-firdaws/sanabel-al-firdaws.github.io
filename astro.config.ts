@@ -18,7 +18,7 @@ export default defineConfig({
     incudeAssets: ["favicon.svg"],
     workbox: {
       globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,json}"],
-      navigateFallback: '/404'
+      navigateFallback: '/'
       // runtimeCaching:  Cache quran Api responses
     },
     experimental: {
