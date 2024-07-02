@@ -23,10 +23,6 @@ import { pwaInfo } from "virtual:pwa-info";
 	link.href = `data:application/json;base64,${btoa(JSON.stringify(manifest))}`;
 	document.head.appendChild(link);
 </script> -->
-<script type="module" is:inline>
-    await import('/pagefind/pagefind-highlight.js');
-    new PagefindHighlight({ highlightParam: "highlight" });
-</script>
 {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
 <script>
     import { registerSW } from "virtual:pwa-register";
@@ -112,6 +108,10 @@ if (c_sl_color_black !== null) {
 	// 👆 you could import the CDN directly instead of these two lines
   </script>
 
+<script type="module">
+    await import('/pagefind/pagefind-highlight.js');
+    new PagefindHighlight({ highlightParam: "highlight" });
+</script>
 
 <template id="theme-icons">
 	<Icon name="sun" class="light" />
