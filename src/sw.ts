@@ -122,5 +122,3 @@ setCatchHandler(({ event }): Promise<Response> => {
 
 // this is necessary, since the new service worker will keep on skipWaiting state
 // and then, caches will not be cleared since it is not activated
-self.skipWaiting()
-clientsClaim()
