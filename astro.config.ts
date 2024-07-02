@@ -18,6 +18,7 @@ export default defineConfig({
     workbox: {
         navigateFallback: "/404",
         globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
+        sourcemap: true
       },
       experimental: {
         directoryAndTrailingSlashHandler: true,
