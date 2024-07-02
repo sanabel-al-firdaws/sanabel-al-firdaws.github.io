@@ -18,9 +18,12 @@ export default defineConfig({
     registerType: "autoUpdate",
     incudeAssets: ["favicon.svg"],
     workbox: {
-      globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,json}"],
-      // runtimeCaching:  Cache quran Api responses
-    },
+        navigateFallback: "/",
+        globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
+      },
+      experimental: {
+        directoryAndTrailingSlashHandler: true,
+      },
     
     manifest: (manifest as Partial<ManifestOptions>)
     }), starlight({
