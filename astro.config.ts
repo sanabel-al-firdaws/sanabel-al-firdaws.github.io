@@ -10,7 +10,7 @@ import starlightViewModes from "starlight-view-modes";
 export default defineConfig({
     
   site: 'https://sanabel-al-firdaws.github.io',
-  base: "./",
+  
   // base: '/<project-name>',
   integrations: [
     AstroPWA({
@@ -22,7 +22,7 @@ export default defineConfig({
         globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
       },
       experimental: {
-        directoryAndTrailingSlashHandler: false,
+        directoryAndTrailingSlashHandler: true,
       },
     
     manifest: (manifest as Partial<ManifestOptions>)
