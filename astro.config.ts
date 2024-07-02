@@ -12,7 +12,7 @@ export default defineConfig({
   site: 'https://sanabel-al-firdaws.github.io',
   integrations: [
     AstroPWA({
-    mode: "development", ///production
+    mode: "production", ///production
     registerType: "autoUpdate",
     includeAssets: ["favicon.ico","apple-touch-icon-180x180.png", "maskable-icon-512x512.png"],
     workbox: {
