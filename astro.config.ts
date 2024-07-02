@@ -16,8 +16,6 @@ export default defineConfig({
     mode: "production",
     registerType: "autoUpdate",
     incudeAssets: ["favicon.svg"],
-    
-    useCredentials: true ,  
     workbox: {
       globPatterns: ["**/*.{css,js,html,svg,png,ico,txt,json}"],
       navigateFallback: '/404'
