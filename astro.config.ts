@@ -12,14 +12,18 @@ export default defineConfig({
   site: 'https://sanabel-al-firdaws.github.io',
   integrations: [
     AstroPWA({
-    mode: "production",
+    mode: "development", ///production
     registerType: "autoUpdate",
     includeAssets: ["favicon.ico","apple-touch-icon-180x180.png", "maskable-icon-512x512.png"],
     workbox: {
         navigateFallback: "/404",
         globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
-        sourcemap: true
+        runtimeCaching: [{
+          handler: 'NetworkOnly',
+          urlPattern: "/pagefind/**" ,
+        }]
       },
+
       experimental: {
         directoryAndTrailingSlashHandler: true,
       },
