@@ -25,7 +25,7 @@ export default defineConfig({
       },
 
       experimental: {
-        directoryAndTrailingSlashHandler: true,
+        directoryAndTrailingSlashHandler: false,
       },
     
     manifest: (manifest as Partial<ManifestOptions>)
