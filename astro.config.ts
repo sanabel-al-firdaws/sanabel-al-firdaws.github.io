@@ -20,12 +20,12 @@ export default defineConfig({
         globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
         runtimeCaching: [{
           handler: 'NetworkOnly',
-          urlPattern:  /^\/pagefind/ 
+          urlPattern:  /\/pagefind\/*\/*.*/
         }]
       },
 
       experimental: {
-        directoryAndTrailingSlashHandler: false,
+        directoryAndTrailingSlashHandler: true,
       },
     
     manifest: (manifest as Partial<ManifestOptions>)
