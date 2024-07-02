@@ -135,7 +135,7 @@
         }
       }
     ],
-    "currentTab": 2
+    "currentTab": 4
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -150,16 +150,18 @@
   },
   "active": "3b07d38607ea9a4d",
   "lastOpenFiles": [
-    "src/sw.ts",
     "/src/sw.ts",
+    "/src/content/docs/blog/articles/sorori-and-ikhwani.md",
+    "/src/content/docs/arabic/intro.md",
     "/package.json",
     "/astro.config.ts",
     "src/content/docs/blog/articles/sorori-and-ikhwani.md",
+    "src/content/docs/intro.md",
+    "src/sw.ts",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl2.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl3.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl4.md",
-    "src/content/docs/intro.md",
     "src/content/docs/blog/test/second.md",
     "/src/content/docs/theme.mdx",
     "README.md",
@@ -180,12 +182,9 @@
     "/src/content/docs/aqida/al-eman/intro.md",
     "/src/content/docs/aqida/intro.md",
     "/src/content/docs/aqida/al-islam/arkan.md",
-    "/src/content/docs/aqida/al-eman/arkan.md",
-    "/src/content/docs/aqida/al-ehsan/intro.md",
     "src/components/blog-override/ThemeSelect.astro",
     "/src/env.d.ts",
     "/src/content/docs/index.mdx",
-    "/src/content/config.ts",
     "src/assets/houston.webp",
     "public/pwa-64x64.png",
     "public/pwa-512x512.png",
