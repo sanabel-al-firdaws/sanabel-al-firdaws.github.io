@@ -22,7 +22,7 @@ export default defineConfig({
         globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
       },
       experimental: {
-        directoryAndTrailingSlashHandler: false,
+        directoryAndTrailingSlashHandler: true,
       },
     
     manifest: (manifest as Partial<ManifestOptions>)
