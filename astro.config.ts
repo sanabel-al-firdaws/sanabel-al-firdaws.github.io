@@ -14,11 +14,13 @@ export default defineConfig({
   // base: '/<project-name>',
   integrations: [
     AstroPWA({
+    strategies: 'injectManifest',
+    srcDir: 'src',
+    filename: 'sw.ts',
     mode: "production",
     registerType: "autoUpdate",
     incudeAssets: ["favicon.svg"],
-    workbox: {
-        navigateFallback: "/404",
+    injectManifest: {
         globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
       },
       experimental: {
