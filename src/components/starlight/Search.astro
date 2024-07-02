@@ -126,8 +126,9 @@ const pagefindTranslations = {
 				onIdle(async () => {
 					// @ts-expect-error — Missing types for @pagefind/default-ui package.
 					const { PagefindUI } = await import('@pagefind/default-ui');
-					new PagefindUI({
+					new PagefindUI({ 
 						element: '#starlight__search',
+                                                highlightParam: "#:~:text",
 						baseUrl: import.meta.env.BASE_URL,
 						bundlePath: import.meta.env.BASE_URL.replace(/\/$/, '') + '/pagefind/',
 						showImages: false,
