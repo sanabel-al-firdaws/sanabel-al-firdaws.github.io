@@ -17,7 +17,8 @@ export default defineConfig({
     includeAssets: ["favicon.ico","apple-touch-icon-180x180.png", "maskable-icon-512x512.png"],
     workbox: {
         globPatterns: ["**/*.{css,json,js,html,svg,png,ico,txt}"],
-        skipWaiting: true
+        skipWaiting: true,
+        clientsClaim: true, 
       },
 
       experimental: {
