@@ -62,6 +62,8 @@ export default defineConfig({
       Search: './src/components/starlight/Search.astro'
     },
     title: 'سنابل الفردوس',
+    lastUpdated: true,
+    credits: true,
     description: 'موقع يهتم بنشر العلم النافع',
     // titleDelimiter: '-',
     defaultLocale: 'ar',
