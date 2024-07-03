@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
+    "@astrojs/starlight": "^0.24.4",
     "astro": "^4.11.0",
     "culori": "^3.3.0",
     "starlight-blog": "^0.9.1",
@@ -22,6 +23,10 @@
     "@vite-pwa/astro": "^0.4.0",
     "vite-plugin-pwa": "^0.20.0",
     "workbox-window": "^7.1.0",
+    "workbox-core": "^7.1.0",
+    "workbox-routing": "^7.1.0",
+    "workbox-strategies": "^7.1.0",
+    "workbox-build": "^7.1.0",
     "starlight-view-modes": "^0.6.0"
   }
 }

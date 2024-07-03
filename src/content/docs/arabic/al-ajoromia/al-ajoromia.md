@@ -1,7 +1,6 @@
 ---
 title: الآجرومية
 filename: intro
-lastUpdated: 2024-06-01
 sidebar:
   order: 1
 ---

@@ -16,9 +16,10 @@ export default defineConfig({
     registerType: "autoUpdate",
     includeAssets: ["favicon.ico","apple-touch-icon-180x180.png", "maskable-icon-512x512.png"],
     workbox: {
-        navigateFallback: "/404",
-        globPatterns: ["**/*.*"],
-       
+        globPatterns: ["**/*.{css,json,js,html,svg,png,ico,txt}"],
+        skipWaiting: true,
+        clientsClaim: true,
+        cleanupOutdatedCaches: true
       },
 
       experimental: {
@@ -61,6 +62,7 @@ export default defineConfig({
       Search: './src/components/starlight/Search.astro'
     },
     title: 'سنابل الفردوس',
+    lastUpdated: true,
     description: 'موقع يهتم بنشر العلم النافع',
     // titleDelimiter: '-',
     defaultLocale: 'ar',
