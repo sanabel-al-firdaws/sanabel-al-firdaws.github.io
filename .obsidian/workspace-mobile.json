@@ -8,15 +8,11 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c4055e666526856e",
+            "id": "1b3ee912b5e4dcd4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/content/docs/intro.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "src/content/docs/intro.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "src/content/docs/intro.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -113,9 +107,7 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {
-            "file": "src/content/docs/intro.md"
-          }
+          "state": {}
         }
       },
       {
@@ -148,14 +140,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c4055e666526856e",
+  "active": "1b3ee912b5e4dcd4",
   "lastOpenFiles": [
+    "node_modules/@astrojs/starlight/README.md",
     "src/content/docs/intro.md",
-    "/src/sw.ts",
-    "/src/content/docs/blog/articles/sorori-and-ikhwani.md",
+    "src/components/starlight/Search.astro",
+    "public/robots.txt",
+    "public/profile.png",
+    "/webmanifest.json",
+    "/src/content/docs/intro.md",
     "/src/content/docs/arabic/intro.md",
+    "/src/content/docs/arabic/al-alfiyya/al-alfiyya.md",
+    "/src/content/docs/arabic/al-ajoromia/al-ajoromia.md",
+    "/src/components/starlight/Search.astro",
+    "/src/components/starlight/Pagination.astro",
+    "/public/robots.txt",
+    "/public/profile.png",
     "/package.json",
     "/astro.config.ts",
+    "/src/sw.ts",
+    "/src/content/docs/blog/articles/sorori-and-ikhwani.md",
     "src/content/docs/blog/articles/sorori-and-ikhwani.md",
     "src/sw.ts",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl.md",
@@ -163,7 +167,6 @@
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl3.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl4.md",
     "src/content/docs/blog/test/second.md",
-    "/src/content/docs/theme.mdx",
     "README.md",
     "src/content/docs/arabic/al-sarf/al-sarf.md",
     "src/content/docs/arabic/al-alfiyya/al-alfiyya.md",
@@ -173,18 +176,10 @@
     "src/content/docs/aqida/al-islam/arkan.md",
     "src/content/docs/aqida/al-eman/arkan.md",
     "src/content/docs/aqida/al-ehsan/intro.md",
-    "src/content/docs/theme.mdx",
-    "src/content/docs/index.mdx",
     "src/content/docs/blog/first.md",
     "/src/content/docs/arabic/al-sarf/al-sarf.md",
-    "/src/content/docs/arabic/al-alfiyya/al-alfiyya.md",
     "/src/content/docs/aqida/al-islam/intro.md",
     "/src/content/docs/aqida/al-eman/intro.md",
-    "/src/content/docs/aqida/intro.md",
-    "/src/content/docs/aqida/al-islam/arkan.md",
-    "src/components/blog-override/ThemeSelect.astro",
-    "/src/env.d.ts",
-    "/src/content/docs/index.mdx",
     "src/assets/houston.webp",
     "public/pwa-64x64.png",
     "public/pwa-512x512.png",
