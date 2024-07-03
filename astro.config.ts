@@ -63,7 +63,6 @@ export default defineConfig({
     },
     title: 'سنابل الفردوس',
     lastUpdated: true,
-    credits: true,
     description: 'موقع يهتم بنشر العلم النافع',
     // titleDelimiter: '-',
     defaultLocale: 'ar',
