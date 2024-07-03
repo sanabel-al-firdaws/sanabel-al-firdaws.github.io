@@ -13,11 +13,11 @@ declare let self: ServiceWorkerGlobalScope
 declare type ExtendableEvent = any
 
 const data = {
-  race: true,
+  race: false,
   debug: false,
   credentials: 'same-origin',
   networkTimeoutSeconds: 0,
-  fallback: 'index.html'
+  fallback: '/404'
 }
 
 const cacheName = cacheNames.runtime
@@ -76,6 +76,7 @@ self.addEventListener('install', (event: ExtendableEvent) => {
     })
   )
 })
+/*
 
 self.addEventListener('activate', (event: ExtendableEvent) => {
   // - clean up outdated runtime cache
@@ -100,7 +101,7 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
     })
   )
 })
-
+*/
 registerRoute(
   ({ url }) => manifestURLs.includes(url.href),
   buildStrategy()
