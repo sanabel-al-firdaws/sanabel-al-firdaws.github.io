@@ -17,7 +17,7 @@ const data = {
   debug: false,
   credentials: 'same-origin',
   networkTimeoutSeconds: 0,
-  fallback: '/404'
+  fallback: 'index.html'
 }
 
 const cacheName = cacheNames.runtime
@@ -76,7 +76,6 @@ self.addEventListener('install', (event: ExtendableEvent) => {
     })
   )
 })
-/*
 
 self.addEventListener('activate', (event: ExtendableEvent) => {
   // - clean up outdated runtime cache
@@ -102,7 +101,6 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
   )
 })
 
-*/
 registerRoute(
   ({ url }) => manifestURLs.includes(url.href),
   buildStrategy()
