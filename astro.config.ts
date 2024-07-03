@@ -20,7 +20,7 @@ export default defineConfig({
         globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
         runtimeCaching: [{
           handler: 'NetworkFirst',
-          urlPattern:  /\/pagefind\/**\/*.*/
+          urlPattern:  /\/pagefind\/*\/*.*/
         }]
       },
 
