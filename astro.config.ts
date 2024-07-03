@@ -13,14 +13,11 @@ export default defineConfig({
   integrations: [
     AstroPWA({
     mode: "production", ///production
-    strategies: 'injectManifest',
-    srcDir: 'src',
-    filename: 'sw.ts',
     registerType: "autoUpdate",
     includeAssets: ["favicon.ico","apple-touch-icon-180x180.png", "maskable-icon-512x512.png"],
-    injectManifest: {
-        injectionPoint: undefined,
-        globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
+    workbox: {
+        globPatterns: ["**/*.{css,json,js,html,svg,png,ico,txt}"],
+        offlineStrategy: "NetworkOnly"
       },
 
       experimental: {
