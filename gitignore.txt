@@ -1,6 +1,0 @@
-dist
-.astro/
-.obsidian
-.trash
-.vscode
-
