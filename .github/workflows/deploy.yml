@@ -31,6 +31,8 @@ jobs:
       #   run: npm run rename
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         with:
