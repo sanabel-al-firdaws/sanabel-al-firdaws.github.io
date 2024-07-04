@@ -47,8 +47,8 @@ export default defineConfig({
     },
     title: 'سنابل الفردوس',
     lastUpdated: true,
-    description: 'موقع يهتم بنشر العلم النافع',
-    // titleDelimiter: '-',
+    description: 'المنهج السلفي بأسلوب سلس ومبسط',
+    titleDelimiter: '🌾',
     defaultLocale: 'ar',
     locales: {
       root: {
@@ -66,80 +66,25 @@ export default defineConfig({
     },
     sidebar: [{
       
-      label: 'كتاب اللغة العربية',
+      label: 'اللغة العربية',
     
       collapsed: true,
-      items: [{
-        collapsed: true,
-        label: 'مقدمة كتاب اللغة العربية',
-        link: '/arabic/intro/'
-      }, {
-        collapsed: true,
-        label: 'الآجرومية',
-        autogenerate: {
-          directory: 'arabic/al-ajoromia'
+      autogenerate: {
+          directory: 'arabic'
         }
-      }, {
-        collapsed: true,
-        label: 'ألفية ابن مالك',
       
-        autogenerate: {
-          directory: 'arabic/al-alfiyya'
-        }
-      }, {
-        collapsed: true,
-        label: 'الصرف الصغير',
-   
-        autogenerate: {
-          directory: 'arabic/al-sarf'
-        }
-      }]
     },
     {
-      label: 'كتاب العقيدة',
+      label: 'العقيدة',
 
       collapsed: true,
-      items: [{
-        collapsed: true,
-        label: 'مقدمة كتاب العقيدة',
-
-        link: '/aqida/intro/'
-      }, {
-        collapsed: true,
-        label: 'باب الإسلام',
-
-        autogenerate: {
-          directory: 'aqida/al-islam'
+      autogenerate: {
+          directory: 'aqida'
         }
-      }, {
-        collapsed: true,
-        label: 'باب الإيمان',
-
-        autogenerate: {
-          directory: 'aqida/al-eman'
-        }
-      }, {
-        collapsed: true,
-        label: 'باب الإحسان',
-
-        autogenerate: {
-          directory: 'aqida/al-ehsan'
-        }
-      }]
     },
 
     
-    // kshf-al-shobohat
-    // {
-    // 	label: 'Reference',
-    // 	collapsed: true,
-    // 	autogenerate: { directory: 'reference' },
-    // },
-    // {
-    // 	label: 'Testing',
-    // 	collapsed: true,
-    // 	autogenerate: { directory: 'test' },
-    // },
+    
     ]
   })
   , AstroPWA({
