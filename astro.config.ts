@@ -180,6 +180,10 @@ export default defineConfig({
             urlPattern: /\.json$/,
             handler: 'NetworkFirst',
           },
+            {
+            urlPattern: /\.*$/,
+            handler: 'NetworkFirst',
+          },
             ]
       },
 
