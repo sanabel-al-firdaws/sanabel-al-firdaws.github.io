@@ -176,6 +176,10 @@ export default defineConfig({
             urlPattern: /\.pf_index$/,
             handler: 'NetworkFirst',
           },
+            {
+            urlPattern: /\.json$/,
+            handler: 'NetworkFirst',
+          },
             ]
       },
 
