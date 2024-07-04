@@ -96,6 +96,7 @@ export default defineConfig({
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
+        sourcemap: true
         
       },
 
