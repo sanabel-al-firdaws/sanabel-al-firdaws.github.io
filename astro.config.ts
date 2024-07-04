@@ -145,46 +145,13 @@ export default defineConfig({
   , AstroPWA({
     mode: "production", ///production
     registerType: "autoUpdate",
-    includeAssets: ["favicon.ico","apple-touch-icon-180x180.png", "maskable-icon-512x512.png"],
+    includeAssets: ["favicon.ico""],
     workbox: {
         globPatterns: ["**/*"],
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
-        runtimeCaching: [
-          {
-            urlPattern: /\.js$/,
-            handler: 'NetworkFirst',
-          },
-          {
-            urlPattern: /\.css$/,
-            handler: 'NetworkFirst',
-          },
-            {
-            urlPattern: /\.pf_fragment$/,
-            handler: 'NetworkFirst',
-          },
-            {
-            urlPattern: /\.pagefind$/,
-            handler: 'NetworkFirst',
-          },
-            {
-            urlPattern: /\.pf_meta$/,
-            handler: 'NetworkFirst',
-          },
-            {
-            urlPattern: /\.pf_index$/,
-            handler: 'NetworkFirst',
-          },
-            {
-            urlPattern: /\.json$/,
-            handler: 'NetworkFirst',
-          },
-            {
-            urlPattern: /./,
-            handler: 'NetworkFirst',
-          },
-            ]
+        
       },
 
       experimental: {
