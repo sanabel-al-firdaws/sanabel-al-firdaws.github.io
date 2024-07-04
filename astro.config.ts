@@ -11,18 +11,7 @@ export default defineConfig({
     
   site: 'https://sanabel-al-firdaws.github.io',
   integrations: [
-    AstroPWA({
-    mode: "production", ///production
-    registerType: "autoUpdate",
-    includeAssets: ["favicon.ico","apple-touch-icon-180x180.png", "maskable-icon-512x512.png"],
-    
-
-      experimental: {
-        directoryAndTrailingSlashHandler: true,
-      },
-    
-    manifest: (manifest as Partial<ManifestOptions>)
-    }), starlight({
+    starlight({
     plugins: [    starlightViewModes({
                     // Configuration options go here.
                 }),
@@ -152,5 +141,22 @@ export default defineConfig({
     // 	autogenerate: { directory: 'test' },
     // },
     ]
-  })]
+  })
+  , AstroPWA({
+    mode: "production", ///production
+    registerType: "autoUpdate",
+    includeAssets: ["favicon.ico","apple-touch-icon-180x180.png", "maskable-icon-512x512.png"],
+    workbox: {
+        globPatterns: ["**/*.*"],
+        skipWaiting: true,
+        clientsClaim: true,
+        cleanupOutdatedCaches: true
+      },
+
+      experimental: {
+        directoryAndTrailingSlashHandler: true,
+      },
+    
+    manifest: (manifest as Partial<ManifestOptions>)
+    })]
 });
