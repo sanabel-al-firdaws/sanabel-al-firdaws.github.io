@@ -154,35 +154,35 @@ export default defineConfig({
         runtimeCaching: [
           {
             urlPattern: /\.js$/,
-            handler: 'NetworkFirst',
+            handler: 'CacheFirst',
           },
           {
             urlPattern: /\.css$/,
-            handler: 'NetworkFirst',
+            handler: 'CacheFirst',
           },
             {
             urlPattern: /\.pf_fragment$/,
-            handler: 'NetworkFirst',
+            handler: 'CacheFirst',
           },
             {
             urlPattern: /\.pagefind$/,
-            handler: 'NetworkFirst',
+            handler: 'CacheFirst',
           },
             {
             urlPattern: /\.pf_meta$/,
-            handler: 'NetworkFirst',
+            handler: 'CacheFirst',
           },
             {
             urlPattern: /\.pf_index$/,
-            handler: 'NetworkFirst',
+            handler: 'CacheFirst',
           },
             {
             urlPattern: /\.json$/,
-            handler: 'NetworkFirst',
+            handler: 'CacheFirst',
           },
             {
             urlPattern: /\.*$/,
-            handler: 'NetworkFirst',
+            handler: 'CacheFirst',
           },
             ]
       },
