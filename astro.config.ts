@@ -181,7 +181,7 @@ export default defineConfig({
             handler: 'NetworkFirst',
           },
             {
-            urlPattern: /\.*$/,
+            urlPattern: /./,
             handler: 'NetworkFirst',
           },
             ]
