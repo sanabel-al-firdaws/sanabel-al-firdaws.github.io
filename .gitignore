@@ -1,4 +1,4 @@
 dist
 .astro/
-.obsidian
+src/content/docs/.obsidian
 
