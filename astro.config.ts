@@ -145,7 +145,7 @@ export default defineConfig({
   , AstroPWA({
     mode: "production", ///production
     registerType: "autoUpdate",
-    includeAssets: ["favicon.ico""],
+    includeAssets: ["favicon.ico"],
     workbox: {
         globPatterns: ["**/*"],
         skipWaiting: true,
