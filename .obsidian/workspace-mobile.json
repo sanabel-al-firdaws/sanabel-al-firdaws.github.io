@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/docs/arabic/al-ajoromia.md",
-                "mode": "source",
+                "file": "src/content/docs/blog/articles/sorori-and-ikhwani.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -80,41 +80,12 @@
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "d769bb4879c5d396",
-        "type": "leaf",
-        "state": {
-          "type": "backlink",
-          "state": {
-            "file": "src/content/docs/arabic/al-ajoromia.md",
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical",
-            "showSearch": false,
-            "searchQuery": "",
-            "backlinkCollapsed": false,
-            "unlinkedCollapsed": true
-          }
-        }
-      },
-      {
-        "id": "c39ceb5bdec5d43d",
-        "type": "leaf",
-        "state": {
-          "type": "outgoing-link",
-          "state": {
-            "file": "src/content/docs/arabic/al-ajoromia.md",
-            "linksCollapsed": false,
-            "unlinkedCollapsed": true
-          }
-        }
-      },
-      {
         "id": "126c0bfa6b3f9262",
         "type": "leaf",
         "state": {
           "type": "outline",
           "state": {
-            "file": "src/content/docs/arabic/al-ajoromia.md"
+            "file": "src/content/docs/blog/articles/sorori-and-ikhwani.md"
           }
         }
       }
@@ -133,9 +104,13 @@
   },
   "active": "a8563442f87d0ae7",
   "lastOpenFiles": [
+    "src/content/docs/arabic/al-ajoromia.md",
+    "src/content/docs/arabic/intro.md",
+    "src/content/docs/theme.mdx",
+    "src/content/docs/intro.md",
+    "src/content/docs/index.mdx",
     "gitignore.txt",
     "src/content/docs/blog/articles/sorori-and-ikhwani.md",
-    "src/content/docs/intro.md",
     "README.md",
     "webmanifest.json",
     "tsconfig.json",
@@ -144,17 +119,12 @@
     "src/fonts/uthmanic_hafs_v20.ttf",
     "src/fonts/font-face.css",
     "src/fonts/HafsSmart_08.ttf",
-    "src/fonts/AmiriQuran-Regular.ttf",
-    "src/env.d.ts",
-    "src/content/docs/theme.mdx",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl4.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl3.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl2.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl.md",
-    "src/content/docs/arabic/intro.md",
     "src/content/docs/arabic/al-sarf.md",
     "src/content/docs/arabic/al-alfiyya.md",
-    "src/content/docs/arabic/al-ajoromia.md",
     "src/content/docs/aqida/sharh-al-sunnah-barbahari.md",
     "src/content/docs/aqida/intro.md",
     "src/content/docs/aqida/asol-al-sunnah.md",
