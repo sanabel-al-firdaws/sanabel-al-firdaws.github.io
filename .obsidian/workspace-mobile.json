@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "src/content/docs/blog/articles/sorori-and-ikhwani.md",
-                "mode": "preview",
+                "file": "src/content/docs/aqida/al-sharia.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -85,7 +85,36 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "src/content/docs/blog/articles/sorori-and-ikhwani.md"
+            "file": "src/content/docs/aqida/al-sharia.md"
+          }
+        }
+      },
+      {
+        "id": "1fe786b8605f29d1",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "src/content/docs/aqida/al-sharia.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "9b3a0af2153b5d04",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "src/content/docs/aqida/al-sharia.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
           }
         }
       }
@@ -104,30 +133,32 @@
   },
   "active": "a8563442f87d0ae7",
   "lastOpenFiles": [
+    "src/content/docs/aqida/intro.md",
+    "src/content/docs/aqida/sharh-al-sunnah-barbahari.md",
+    "src/content/docs/aqida/asol-al-sunnah.md",
+    "src/content/docs/aqida/al-sharia.md",
+    "src/content/docs/blog/articles/sorori-and-ikhwani.md",
+    "src/content/docs/aqida/Untitled.md",
+    "public/google8a2a16e62c6091bd.html",
+    "/public/robots.txt",
+    "/public/google8a2a16e62c6091bd.html",
+    "/package.json",
+    "/astro.config.ts",
     "src/content/docs/arabic/al-ajoromia.md",
     "src/content/docs/arabic/intro.md",
     "src/content/docs/theme.mdx",
     "src/content/docs/intro.md",
     "src/content/docs/index.mdx",
     "gitignore.txt",
-    "src/content/docs/blog/articles/sorori-and-ikhwani.md",
     "README.md",
     "webmanifest.json",
     "tsconfig.json",
-    "src/sw.ts",
-    "src/styles/custom.css",
-    "src/fonts/uthmanic_hafs_v20.ttf",
-    "src/fonts/font-face.css",
-    "src/fonts/HafsSmart_08.ttf",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl4.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl3.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl2.md",
     "src/content/docs/blog/kshf-al-shobohat/othr-bil-jahl.md",
     "src/content/docs/arabic/al-sarf.md",
     "src/content/docs/arabic/al-alfiyya.md",
-    "src/content/docs/aqida/sharh-al-sunnah-barbahari.md",
-    "src/content/docs/aqida/intro.md",
-    "src/content/docs/aqida/asol-al-sunnah.md",
     "src/assets/houston.webp",
     "public/pwa-64x64.png",
     "public/pwa-512x512.png",
