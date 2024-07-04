@@ -156,6 +156,26 @@ export default defineConfig({
             urlPattern: /\.js$/,
             handler: 'NetworkFirst',
           },
+          {
+            urlPattern: /\.css$/,
+            handler: 'NetworkFirst',
+          },
+            {
+            urlPattern: /\.pf_fragment$/,
+            handler: 'NetworkFirst',
+          },
+            {
+            urlPattern: /\.pagefind$/,
+            handler: 'NetworkFirst',
+          },
+            {
+            urlPattern: /\.pf_meta$/,
+            handler: 'NetworkFirst',
+          },
+            {
+            urlPattern: /\.pf_index$/,
+            handler: 'NetworkFirst',
+          },
             ]
       },
 
