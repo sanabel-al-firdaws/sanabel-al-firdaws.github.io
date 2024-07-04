@@ -156,6 +156,7 @@ export default defineConfig({
             urlPattern: /\.js$/,
             handler: 'NetworkFirst',
           },
+            ]
       },
 
       experimental: {
