@@ -1,0 +1,11 @@
+{
+  "livePreview": false,
+  "strictLineBreaks": false,
+  "propertiesInDocument": "visible",
+  "foldHeading": false,
+  "foldIndent": false,
+  "rightToLeft": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "src/content/docs",
+  "mobilePullAction": "obsidian-git:push"
+}
