@@ -147,42 +147,42 @@ export default defineConfig({
     registerType: "autoUpdate",
     includeAssets: ["favicon.ico","apple-touch-icon-180x180.png", "maskable-icon-512x512.png"],
     workbox: {
-        globPatterns: ["**/*"],
+        
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
         runtimeCaching: [
           {
             urlPattern: /\.js$/,
-            handler: 'CacheFirst',
+            handler: 'NetworkFirst',
           },
           {
             urlPattern: /\.css$/,
-            handler: 'CacheFirst',
+            handler: 'NetworkFirst',
           },
             {
             urlPattern: /\.pf_fragment$/,
-            handler: 'CacheFirst',
+            handler: 'NetworkFirst',
           },
             {
             urlPattern: /\.pagefind$/,
-            handler: 'CacheFirst',
+            handler: 'NetworkFirst',
           },
             {
             urlPattern: /\.pf_meta$/,
-            handler: 'CacheFirst',
+            handler: 'NetworkFirst',
           },
             {
             urlPattern: /\.pf_index$/,
-            handler: 'CacheFirst',
+            handler: 'NetworkFirst',
           },
             {
             urlPattern: /\.json$/,
-            handler: 'CacheFirst',
+            handler: 'NetworkFirst',
           },
             {
             urlPattern: /\.*$/,
-            handler: 'CacheFirst',
+            handler: 'NetworkFirst',
           },
             ]
       },
