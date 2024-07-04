@@ -1,7 +1,6 @@
 ---
 title: ألفية ابن مالك
 filename: intro
-lastUpdated: 2024-02-18
 sidebar:
   order: 1
 ---
