@@ -1,21 +1,27 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { rehypeHeadingIds } from '@astrojs/markdown-remark'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
 import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
-import { rehypeAutolink } from './plugins/rehype-autolink';
-import rehypeSlug from 'rehype-slug';
+
 // https://astro.build/config
 export default defineConfig({
-      markdown: {
+markdown: {
     rehypePlugins: [
-			rehypeSlug,
-			// This adds links to headings
-			...rehypeAutolink(),
-		],
+      rehypeHeadingIds,
+      [
+        rehypeAutolinkHeadings,
+        {
+          // Wrap the heading text in a link.
+          behavior: 'wrap',
+        },
+      ],
+    ],
   },
   site: 'https://sanabel-al-firdaws.github.io',
   integrations: [
@@ -51,8 +57,7 @@ export default defineConfig({
       ThemeSelect: './src/components/blog-override/ThemeSelect.astro',
       SocialIcons:'./src/components/starlight/SocialIcons.astro',
       Pagination: './src/components/starlight/Pagination.astro',
-      Search: './src/components/starlight/Search.astro',
-      MarkdownContent: './src/components/starlight/MarkdownContent.astro'
+      Search: './src/components/starlight/Search.astro'
     },
     title: 'سنابل الفردوس',
     lastUpdated: true,
