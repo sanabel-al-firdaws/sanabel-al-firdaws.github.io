@@ -33,7 +33,7 @@
     "workbox-build": "^7.1.0",
     "starlight-view-modes": "^0.6.0",
     "hast-util-to-string": "^3.0.0",
-    "hastscript": "^8.0.0",
+    "hastscript": "^8.0.0"
     
   }
 }
