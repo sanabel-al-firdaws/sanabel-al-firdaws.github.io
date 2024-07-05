@@ -1,12 +1,7 @@
 import type { RehypePlugins } from 'astro';
-import type { Root } from 'hast';
 import { toString } from 'hast-util-to-string';
 import { h } from 'hastscript';
-import { escape } from 'html-escaper';
-import { resolve as nodeResolve } from 'node:path';
 import rehypeAutolinkHeadings, { type Options as AutolinkOptions } from 'rehype-autolink-headings';
-import type { Transformer } from 'unified';
-import { visit } from 'unist-util-visit';
 
 const AnchorLinkIcon = h(
 	'span',
