@@ -26,7 +26,7 @@ const autolinkConfig: AutolinkOptions = {
 	properties: { class: 'anchor-link' },
 	behavior: 'after',
 	group: ({ tagName }) => h('div', { tabIndex: -1, class: `heading-wrapper level-${tagName}` }),
-	content: AnchorLinkIcon, heading,
+	content: AnchorLinkIcon, heading
 };
 
 
