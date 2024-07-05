@@ -15,7 +15,7 @@ export default defineConfig({
     title: 'سنابل الفردوس',
     lastUpdated: true,
     description: 'المنهج السلفي بأسلوب سلس ومبسط',
-    titleDelimiter: '🌾',
+    titleDelimiter: '🌿',
     defaultLocale: 'ar',
     locales: {
       root: {
