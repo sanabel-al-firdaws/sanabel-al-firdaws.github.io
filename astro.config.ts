@@ -57,7 +57,8 @@ export default defineConfig({
       ThemeSelect: './src/components/blog-override/ThemeSelect.astro',
       SocialIcons:'./src/components/starlight/SocialIcons.astro',
       Pagination: './src/components/starlight/Pagination.astro',
-      Search: './src/components/starlight/Search.astro'
+      Search: './src/components/starlight/Search.astro',
+      MarkdownContent: './src/components/starlight/MarkdownContent.astro'
     },
     title: 'سنابل الفردوس',
     lastUpdated: true,
