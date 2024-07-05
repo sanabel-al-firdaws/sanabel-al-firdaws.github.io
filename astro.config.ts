@@ -85,7 +85,7 @@ properties: {
     },
     sidebar: [{
       
-      label: 'اللغة العربية',
+      label: 'اللُّغَةُ الْعَرَبِيَّةُ',
     
       collapsed: true,
       autogenerate: {
@@ -94,14 +94,21 @@ properties: {
       
     },
     {
-      label: 'العقيدة',
+      label: 'الْقُرْآنُ الْكَرِيمُ',
+
+      collapsed: true,
+      autogenerate: {
+          directory: 'quran'
+        }
+    },
+    {
+      label: 'الْعَقِيدَةُ',
 
       collapsed: true,
       autogenerate: {
           directory: 'aqida'
         }
     },
-
     
     
     ]
@@ -115,7 +122,7 @@ properties: {
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
-        sourcemap: true
+        sourcemap: false
         
       },
 
