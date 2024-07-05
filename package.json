@@ -19,7 +19,6 @@
     "theme-change": "^2.5.0",
     "typescript": "^5.3.3",
     "rehype-autolink-headings": "^7.1.0",
-    "rehype-slug": "^6.0.0"
     
   },
   "devDependencies": {
@@ -27,13 +26,7 @@
     "@vite-pwa/astro": "^0.4.0",
     "vite-plugin-pwa": "^0.20.0",
     "workbox-window": "^7.1.0",
-    "workbox-core": "^7.1.0",
-    "workbox-routing": "^7.1.0",
-    "workbox-strategies": "^7.1.0",
-    "workbox-build": "^7.1.0",
-    "starlight-view-modes": "^0.6.0",
-    "hast-util-to-string": "^3.0.0",
-    "hastscript": "^8.0.0"
+    "starlight-view-modes": "^0.6.0"
     
   }
 }
