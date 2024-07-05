@@ -18,7 +18,7 @@
     "starlight-blog": "^0.10.0",
     "theme-change": "^2.5.0",
     "typescript": "^5.3.3",
-    "rehype-autolink-headings": "^7.1.0",
+    "rehype-autolink-headings": "^7.1.0"
     
   },
   "devDependencies": {
