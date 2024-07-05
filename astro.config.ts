@@ -8,15 +8,15 @@ import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import { rehypeAutolink } from './plugins/rehype-autolink';
-
+import rehypeSlug from 'rehype-slug';
 // https://astro.build/config
 export default defineConfig({
       markdown: {
     rehypePlugins: [
-      rehypeHeadingIds,
-      ...rehypeAutolink()
-      
-    ],
+			rehypeSlug,
+			// This adds links to headings
+			...rehypeAutolink(),
+		],
   },
   site: 'https://sanabel-al-firdaws.github.io',
   integrations: [
