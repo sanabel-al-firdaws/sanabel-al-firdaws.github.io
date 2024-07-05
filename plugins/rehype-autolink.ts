@@ -5,7 +5,7 @@ import rehypeAutolinkHeadings, { type Options as AutolinkOptions } from 'rehype-
 
 const AnchorLinkIcon = h(
 	'span',
-	{ ariaHidden: 'true', class: 'anchor-icon' },
+	{ ariaHidden: 'true', class: 'icon icon-link' },
 	h(
 		'svg',
 		{ width: 16, height: 16, viewBox: '0 0 24 24' },
@@ -23,8 +23,7 @@ const AnchorLinkIcon = h(
  * This set-up was informed by https://amberwilson.co.uk/blog/are-your-anchor-links-accessible/
  */
 const autolinkConfig: AutolinkOptions = {
-	behavior: 'wrap',
-	content: `<span class="icon icon-link"></span>`
+	behavior: 'wrap'
 };
 
 
