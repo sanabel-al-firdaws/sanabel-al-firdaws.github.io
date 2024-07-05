@@ -7,20 +7,15 @@ import manifest from "./webmanifest.json";
 import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import { rehypeAutolink } from './plugins/rehype-autolink';
 
 // https://astro.build/config
 export default defineConfig({
       markdown: {
     rehypePlugins: [
       rehypeHeadingIds,
-      [
-        rehypeAutolinkHeadings,
-        {
-          // Wrap the heading text in a link.
-          behavior: 'wrap',
-        },
-      ],
+      ...rehypeAutolink()
+      
     ],
   },
   site: 'https://sanabel-al-firdaws.github.io',
