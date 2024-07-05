@@ -12,6 +12,19 @@ export default defineConfig({
   site: 'https://sanabel-al-firdaws.github.io',
   integrations: [
     starlight({
+    title: 'سنابل الفردوس',
+    lastUpdated: true,
+    description: 'المنهج السلفي بأسلوب سلس ومبسط',
+    titleDelimiter: '🌾',
+    defaultLocale: 'ar',
+    locales: {
+      root: {
+        label: "العربية",
+        lang: "ar",
+        dir: 'rtl'
+      },
+
+    },
     plugins: [    starlightViewModes({
                     // Configuration options go here.
                 }),
@@ -45,19 +58,7 @@ export default defineConfig({
       Pagination: './src/components/starlight/Pagination.astro',
       Search: './src/components/starlight/Search.astro'
     },
-    title: 'سنابل الفردوس',
-    lastUpdated: true,
-    description: 'المنهج السلفي بأسلوب سلس ومبسط',
-    titleDelimiter: '🌾',
-    defaultLocale: 'ar',
-    locales: {
-      root: {
-        label: "العربية",
-        lang: "ar",
-        dir: 'rtl'
-      },
-
-    },
+    
     editLink: {
       baseUrl: 'https://github.com/sanabel-al-firdaws/sanabel-al-firdaws.github.io/edit/main/'
     },
