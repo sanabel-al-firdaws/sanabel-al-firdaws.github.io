@@ -23,6 +23,14 @@
     font-size: var(--sl-text-code-sm);
     color: var(--sl-color-gray-1);
 } 
+.sl-markdown-content summary:not(:where(.not-content *)) {
+    color: var(--sl-color-gray-1);
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    margin-inline-start: -0.5rem;
+    padding-inline-start: 0.5rem;
+}
 :root{
 
       .r {
