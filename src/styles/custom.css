@@ -1,4 +1,210 @@
 
+
+/* Typography */
+:is(h1, h2, h3, h4, h5, h6),
+.content > section > .heading-wrapper {
+	margin-bottom: 1rem;
+	font-weight: bold;
+	line-height: 1.3;
+}
+
+:is(h1, h2, h3, h4, h5, h6) + *,
+.content > section > .heading-wrapper + * {
+	margin-top: 0;
+}
+
+h1,
+h2 {
+	max-width: 40ch;
+}
+
+:is(h2):not(:first-child),
+.heading-wrapper:not(:first-child):is(.level-h2) {
+	margin-top: 4rem;
+}
+
+:is(h3, h4):not(:first-child),
+.heading-wrapper:not(:first-child):is(.level-h3, .level-h4) {
+	margin-top: 3rem;
+}
+
+:is(h5, h6):not(:first-child),
+.heading-wrapper:not(:first-child):is(.level-h5, .level-h6) {
+	margin-top: 2rem;
+}
+
+:is(h1, h2, h3, h4, h5, h6, .heading-wrapper)
+	+ :is(h1, h2, h3, h4, h5, h6, .heading-wrapper):not(:first-child) {
+	margin-top: 0;
+}
+
+:is(h1, h2, h3, h4, h5) code {
+	--border-radius: 4px;
+	--padding-block: 0.1rem;
+	--padding-inline: 0.4rem;
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 2.5rem; /* 40px */
+	font-weight: 900;
+}
+
+@media (min-width: 37.75em) {
+	h1 {
+		font-size: 3rem; /* 48px */
+	}
+}
+
+h2 {
+	font-size: 1.875rem; /* 30px */
+}
+
+h3 {
+	font-size: 1.5rem; /* 24px */
+}
+
+h4 {
+	font-size: 1.25rem; /* 20px */
+}
+
+h5 {
+	font-size: 1rem; /* 16px */
+}
+
+.heading-wrapper {
+	--icon-size-x: 2rem;
+	--icon-size-y: 1.5rem;
+	margin-inline-end: var(--icon-size-x);
+}
+
+.heading-wrapper:not(:first-child) {
+	margin-block: 0;
+}
+
+.heading-wrapper > * {
+	display: inline;
+	margin-bottom: 0;
+}
+
+.heading-wrapper > .anchor-link {
+	position: relative;
+	display: inline-flex;
+	margin-inline-end: calc(-1 * var(--icon-size-x));
+	width: var(--icon-size-x);
+	height: var(--icon-size-y);
+	color: var(--theme-text-light);
+	text-decoration: none;
+	justify-content: center;
+	vertical-align: baseline;
+}
+
+/* Float anchor links to the left of headings on larger screens. */
+@media (min-width: 50em) {
+	.heading-wrapper {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		align-items: baseline;
+		margin-inline-start: calc(-1 * var(--icon-size-x));
+	}
+
+	.heading-wrapper > .anchor-link {
+		margin-inline-end: 0;
+	}
+}
+
+.heading-wrapper > .anchor-link {
+	opacity: 0.5;
+}
+
+@media (hover: hover) {
+	.heading-wrapper > .anchor-link {
+		opacity: 0;
+	}
+}
+
+.heading-wrapper:hover > .anchor-link,
+.anchor-link:focus {
+	opacity: 1;
+}
+
+p,
+.content ul,
+.content ol {
+	line-height: 1.75;
+}
+
+p,
+.content ul {
+	color: var(--theme-text-light);
+}
+
+small,
+.text_small {
+	font-size: 0.833rem;
+}
+
+a {
+	color: var(--theme-accent-secondary);
+	text-underline-offset: 0.08em;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+article > section :is(ul, ol) > * + * {
+	margin-top: 0.25rem;
+}
+
+article > section nav :is(ul, ol) > * + * {
+	margin-top: inherit;
+}
+
+article > section li > :is(p, pre, .expressive-code, blockquote):not(:first-child) {
+	margin-top: 1rem;
+}
+
+article > section nav :is(ul, ol) {
+	padding-inline-start: inherit;
+}
+
+article > section nav {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+article > section ::marker {
+	font-weight: bold;
+	color: var(--theme-text-light);
+}
+
+article > section iframe {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+}
+
+a > code {
+	position: relative;
+	color: var(--theme-text-accent);
+	text-underline-offset: var(--padding-block);
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: 2px solid currentColor;
+	outline-offset: 0.25em;
+}
+
+strong {
+	font-weight: 600;
+	color: inherit;
+}
+
 :root{
 
       .r {
