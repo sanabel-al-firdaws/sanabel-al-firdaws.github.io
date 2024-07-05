@@ -19,6 +19,9 @@ markdown: {
         {
           // Wrap the heading text in a link.
           behavior: 'wrap',
+properties: {
+  className: ['section_heading'],
+},
         
 	}
 
