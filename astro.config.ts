@@ -12,7 +12,12 @@ import starlightViewModes from "starlight-view-modes";
 export default defineConfig({
 markdown: {
     rehypePlugins: [
-      slug,
+     [ slug,
+      {
+	   enableCustomId: true,
+	   removeAccents: true
+      }
+     ],
       [
         rehypeAutolinkHeadings,
         {
