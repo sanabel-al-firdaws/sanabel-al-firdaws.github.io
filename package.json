@@ -19,7 +19,7 @@
     "theme-change": "^2.5.0",
     "typescript": "^5.3.3",
     "rehype-autolink-headings": "^7.1.0",
-    "remark-color-text": "^0.4.1"
+    "rehype-slug-custom-id": "^2.0.0"
   },
   "devDependencies": {
     "@vite-pwa/assets-generator": "^0.2.2",
