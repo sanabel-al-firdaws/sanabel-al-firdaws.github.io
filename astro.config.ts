@@ -15,7 +15,6 @@ markdown: {
      [ slug,
       {
 	   enableCustomId: true,
-	   removeAccents: true
       }
      ],
       [
