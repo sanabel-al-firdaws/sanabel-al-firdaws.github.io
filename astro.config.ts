@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import color from 'remark-color-text';
+import plugin from 'remark-color-text';
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
@@ -12,7 +12,7 @@ import starlightViewModes from "starlight-view-modes";
 // https://astro.build/config
 export default defineConfig({
 markdown: {
-    remarkPlugins:[color],
+    remarkPlugins:[plugin],
     rehypePlugins: [
       rehypeHeadingIds,
       [
