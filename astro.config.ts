@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import slug from 'rehype-slug-custom-id';
+import remarkCustomHeaderId from 'remark-custom-header-id';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
@@ -12,11 +12,8 @@ import starlightViewModes from "starlight-view-modes";
 export default defineConfig({
 markdown: {
     rehypePlugins: [
-     [ slug,
-      {
-	   enableCustomId: true,
-      }
-     ],
+      remarkCustomHeaderId,
+      
       [
         rehypeAutolinkHeadings,
         {
