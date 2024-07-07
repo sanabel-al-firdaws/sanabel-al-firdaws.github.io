@@ -19,7 +19,7 @@
     "theme-change": "^2.5.0",
     "typescript": "^5.3.3",
     "rehype-autolink-headings": "^7.1.0",
-    "remark-custom-header-id": "^1.0.0"
+    "sanabel-al-firdaws/remark-custom-header-id": "^1.0.0"
   },
   "devDependencies": {
     "@vite-pwa/assets-generator": "^0.2.2",
