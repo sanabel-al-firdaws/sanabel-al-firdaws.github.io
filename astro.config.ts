@@ -7,7 +7,7 @@ import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
 import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
-import remarkMark  from 'remark-mark-highlight';
+import { remarkMark } from 'remark-mark-highlight';
 // https://astro.build/config
 export default defineConfig({
 markdown: {
