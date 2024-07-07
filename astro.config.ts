@@ -125,8 +125,8 @@ properties: {
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
-        sourcemap: false
-        
+        sourcemap: false,
+        navigateFallback: '/404' 
       },
 
       experimental: {
