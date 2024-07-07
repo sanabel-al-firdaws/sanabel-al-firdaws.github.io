@@ -8,4 +8,4 @@ title: عَنِ الْمَوْقِعِ
 
 
  
-![testing](/_Excalidraw/test.svg)
+![testing](/test.svg)
