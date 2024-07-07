@@ -3,7 +3,7 @@ mark {
     margin-block: -.125rem;
     padding: .125rem .375rem;
     font-size: var(--sl-text-code-sm);
-    color: var(--sl-color-accent-hight);
+    color: var(--sl-color-accent-high);
 }
 /* Style the Markdown heading links. */
 
