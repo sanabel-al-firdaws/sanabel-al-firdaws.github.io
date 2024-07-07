@@ -11,8 +11,11 @@ import starlightViewModes from "starlight-view-modes";
 // https://astro.build/config
 export default defineConfig({
 markdown: {
+    remarkPlugins: [
+	   remarkCustomHeaderId 
+    ],
     rehypePlugins: [
-      remarkCustomHeaderId,
+      
       
       [
         rehypeAutolinkHeadings,
