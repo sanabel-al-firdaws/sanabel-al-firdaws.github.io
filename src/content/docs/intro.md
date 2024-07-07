@@ -9,3 +9,21 @@ title: عَنِ الْمَوْقِعِ
 flowchart 
 Start ---> Stop
 ```
+
+```mermaid 
+
+flowchart 
+S---> S
+```
+
+```mermaid 
+
+flowchart 
+Start ---> Stop
+```
+
+```mermaid 
+
+flowchart 
+Start ---> Stop
+```
