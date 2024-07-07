@@ -8,15 +8,19 @@ import manifest from "./webmanifest.json";
 import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
+import { rehypeShiki } from '@astrojs/markdown-remark'
+import rehypeMermaid from 'rehype-mermaid'
+
 // https://astro.build/config
 export default defineConfig({
 markdown: {
+ syntaxHighlight: false,
     remarkPlugins: [
 	   remarkCustomHeaderId ,remarkMark
     ],
     rehypePlugins: [
       
-      
+      rehypeMermaid,rehypeShiki
       [
         rehypeAutolinkHeadings,
         {
@@ -29,6 +33,7 @@ properties: {
 	}
 
       ],
+	
     ],
   },
   site: 'https://sanabel-al-firdaws.github.io',
