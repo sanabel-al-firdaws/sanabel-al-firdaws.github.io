@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import remarkCustomHeaderId from 'sanabel-al-firdaws/remark-custom-header-id';
+import remarkCustomHeaderId from 'remark-custom-header-id';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
