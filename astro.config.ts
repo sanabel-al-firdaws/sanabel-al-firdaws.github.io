@@ -8,19 +8,16 @@ import manifest from "./webmanifest.json";
 import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
-import { rehypeShiki } from '@astrojs/markdown-remark'
-import rehypeMermaid from 'rehype-mermaid'
-
+import { mermaid } from "./src/plugins/mermaid";
 // https://astro.build/config
 export default defineConfig({
 markdown: {
- syntaxHighlight: false,
+ 
     remarkPlugins: [
-	   remarkCustomHeaderId ,remarkMark
+	   remarkCustomHeaderId ,remarkMark,mermaid 
     ],
     rehypePlugins: [
       
-      rehypeMermaid,rehypeShiki
       [
         rehypeAutolinkHeadings,
         {
