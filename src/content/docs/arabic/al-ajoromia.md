@@ -184,3 +184,7 @@ sidebar:
 
 # علامات الفعل [alamat-al-feal]
 
+# قد [qad]
+
+
+# سوف [sawfa]
