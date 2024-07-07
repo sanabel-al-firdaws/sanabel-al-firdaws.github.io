@@ -19,6 +19,7 @@
     "theme-change": "^2.5.0",
     "typescript": "^5.3.3",
     "rehype-autolink-headings": "^7.1.0",
+    "remark-mark-highlight": "^0.1.0",
     "remark-custom-header-id": "sanabel-al-firdaws/remark-custom-header-id"
   },
   "devDependencies": {
