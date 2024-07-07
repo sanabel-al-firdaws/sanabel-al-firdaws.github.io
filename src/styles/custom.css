@@ -1,3 +1,10 @@
+.mark {
+    background-color: var(--sl-color-accent-low);
+    margin-block: -.125rem;
+    padding: .125rem .375rem;
+    font-size: var(--sl-text-code-sm);
+    color: var(--sl-color-accent-hight);
+}
 /* Style the Markdown heading links. */
 
 .sl-markdown-content :is(h1, h2, h3, h4, h5, h6) > a {
