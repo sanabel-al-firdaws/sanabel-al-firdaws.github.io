@@ -131,6 +131,12 @@ properties: {
     includeAssets: ["favicon.ico"],
     workbox: {
         globPatterns: ['/**/*'],
+	globIgnores: [
+            '**/node_modules/**/*',
+            'sw.js',
+            'workbox-*.js',
+            '**/boot/efi/**/*', // the code to ignore caching the icon file
+          ],
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
