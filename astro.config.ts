@@ -34,7 +34,7 @@ properties: {
 	
     ],
   },
-  site: 'https://sanabel-al-firdaws.github.io',
+  site: 'https://sanabel-al-firdaws.github.io/',
   integrations: [
     starlight({
     plugins: [
