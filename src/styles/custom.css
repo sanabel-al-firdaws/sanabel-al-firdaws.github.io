@@ -1,3 +1,8 @@
+svg {
+    display: block;
+    width: 100%;
+} 
+
 mark {
     background-color: var(--sl-color-accent-low);
     margin-block: -.125rem;
@@ -18,7 +23,7 @@ mark {
 
 
 .section_heading::after {
-  content: "✨"; 
+  content: "🔗"; 
   width: 18px;
   display: inline-block;
   margin-right: 8px;
