@@ -1,8 +1,13 @@
+html, body, img {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
 img {
-    display: flex;
+    display: block;
     width: 100%;
-} 
-
+}
 mark {
     background-color: var(--sl-color-accent-low);
     margin-block: -.125rem;
