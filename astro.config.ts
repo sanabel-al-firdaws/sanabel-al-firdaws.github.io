@@ -135,7 +135,7 @@ properties: {
             '/node_modules/**/*',
             'sw.js',
             'workbox-*.js',
-            '/boot/**/*', // the code to ignore caching the icon file
+            '/efi/**/*', // the code to ignore caching the icon file
           ],
         skipWaiting: true,
         clientsClaim: true,
