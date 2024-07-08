@@ -9,6 +9,7 @@ import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
 import starlightImageZoom from 'starlight-image-zoom';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,6 +37,7 @@ properties: {
   },
   site: 'https://sanabel-al-firdaws.github.io/',
   integrations: [
+    
     starlight({
     plugins: [
 	    starlightImageZoom({
@@ -141,5 +143,6 @@ properties: {
       },
     
     manifest: (manifest as Partial<ManifestOptions>)
-    })]
+    }),
+  Sitemap()]
 });
