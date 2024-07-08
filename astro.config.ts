@@ -130,13 +130,8 @@ properties: {
     registerType: "autoUpdate",
     includeAssets: ["favicon.ico"],
     workbox: {
-        globPatterns: ['/**/*'],
-	globIgnores: [
-            '/node_modules/**/*',
-            'sw.js',
-            'workbox-*.js',
-            '/efi/**/*', // the code to ignore caching the icon file
-          ],
+        globPatterns: ['../../dist/**/*'],
+	
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
