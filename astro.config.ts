@@ -8,6 +8,8 @@ import manifest from "./webmanifest.json";
 import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
+import starlightImageZoom from 'starlight-image-zoom';
+
 // https://astro.build/config
 export default defineConfig({
 markdown: {
@@ -35,7 +37,11 @@ properties: {
   site: 'https://sanabel-al-firdaws.github.io',
   integrations: [
     starlight({
-    plugins: [    starlightViewModes({
+    plugins: [
+	    starlightImageZoom({
+          // Configuration options go here.
+        }),
+	    starlightViewModes({
                     // Configuration options go here.
                 }),
               starlightBlog({
