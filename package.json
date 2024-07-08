@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "bunx --bun astro build",
+    "build": " astro build",
     "preview": "astro preview",
     "astro": "astro",
     "generate-pwa-assets": "pwa-assets-generator --preset minimal public/favicon.svg"
