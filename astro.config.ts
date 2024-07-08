@@ -130,7 +130,7 @@ properties: {
     registerType: "autoUpdate",
     includeAssets: ["favicon.ico"],
     workbox: {
-        globPatterns: ['../../dist/**/*'],
+        globPatterns: ['./**/*'],
 	
         skipWaiting: true,
         clientsClaim: true,
