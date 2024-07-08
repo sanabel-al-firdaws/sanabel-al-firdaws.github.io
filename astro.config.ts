@@ -9,7 +9,7 @@ import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
 import starlightImageZoom from 'starlight-image-zoom';
-import sitemap from '@astrojs/sitemap';
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -130,7 +130,7 @@ properties: {
     registerType: "autoUpdate",
     includeAssets: ["favicon.ico"],
     workbox: {
-        globPatterns: ['**/*.{js,css,html,json,png}'],
+        globPatterns: ['**/*.{js,css,json,png}'],
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
@@ -144,5 +144,5 @@ properties: {
     
     manifest: (manifest as Partial<ManifestOptions>)
     }),
-  Sitemap()]
+  ]
 });
