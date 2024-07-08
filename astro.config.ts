@@ -132,10 +132,10 @@ properties: {
     workbox: {
         globPatterns: ['/**/*'],
 	globIgnores: [
-            '**/node_modules/**/*',
+            '/node_modules/**/*',
             'sw.js',
             'workbox-*.js',
-            '**/boot/efi/**/*', // the code to ignore caching the icon file
+            '/boot/efi/**/*', // the code to ignore caching the icon file
           ],
         skipWaiting: true,
         clientsClaim: true,
