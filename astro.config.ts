@@ -76,7 +76,12 @@ properties: {
       Pagination: './src/components/starlight/Pagination.astro',
       Search: './src/components/starlight/Search.astro'
     },
-    title: 'سنابل سلفية',
+    title: 'سنابل الفردوس',
+    logo: {
+    src: './src/assets/my-logo.svg',
+    replacesTitle: true,
+    },
+
     lastUpdated: true,
     description: 'المنهج السلفي بأسلوب سلس ومبسط',
    // titleDelimiter: '',
