@@ -76,7 +76,7 @@ properties: {
       Pagination: './src/components/starlight/Pagination.astro',
       Search: './src/components/starlight/Search.astro'
     },
-    title: 'سنابل الفردوس',
+    title: 'سنابل سلفية',
     lastUpdated: true,
     description: 'المنهج السلفي بأسلوب سلس ومبسط',
    // titleDelimiter: '',
