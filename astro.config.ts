@@ -77,10 +77,10 @@ properties: {
       Search: './src/components/starlight/Search.astro'
     },
     title: 'سنابل الفردوس',
-    logo: {
-    src: './src/assets/my-logo.svg',
-    replacesTitle: true,
-    },
+    // logo: {
+    //   src: './src/assets/my-logo.svg',
+    // replacesTitle: true,
+    //  },
 
     lastUpdated: true,
     description: 'المنهج السلفي بأسلوب سلس ومبسط',
