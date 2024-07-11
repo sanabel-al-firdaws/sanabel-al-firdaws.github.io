@@ -18,11 +18,13 @@ mark {
 }
 
 
-.section_heading::hover::after {
-  content: "#"; 
-  width: 18px;
-  display: inline-block;
-  margin-right: 8px;
+.section_heading::after {
+    &:hover {
+    content: "#"; 
+    width: 18px;
+    display: inline-block;
+    margin-right: 8px;
+    }
 }
 .sl-markdown-content code:not(:where(.not-content *)) {
     background-color: var(--sl-color-bg-inline-code);
