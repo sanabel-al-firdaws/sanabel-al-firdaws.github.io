@@ -129,7 +129,24 @@ properties: {
         }
     },
     
-    
+    {
+          label: 'Blog',
+          translations: {
+            'zh-CN': '博客',
+          },
+          collapsed: true,
+          items: [
+            {
+              label: 'كل المقالات',
+              link: '/blog/',
+            },
+            {
+              label: 'آخر المقالات',
+              collapsed: true,
+              autogenerate: { directory: 'blog', sort: 'date', order: 'descending' },
+            },
+          ],
+        },
     ]
   }),
    starlightUtils({
