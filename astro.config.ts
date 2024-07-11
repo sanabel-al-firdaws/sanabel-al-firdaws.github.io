@@ -9,6 +9,7 @@ import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
 import starlightImageZoom from 'starlight-image-zoom';
+import starlightUtils from "@lorenzo_lewis/starlight-utils";
 
 
 // https://astro.build/config
@@ -40,6 +41,7 @@ properties: {
     
     starlight({
     plugins: [
+	    
 	    starlightImageZoom({
           // Configuration options go here.
         }),
@@ -129,7 +131,12 @@ properties: {
     
     
     ]
-  })
+  }),
+   starlightUtils({
+          multiSidebar: {
+            switcherStyle: 'horizontalList',
+          },
+        })
   , AstroPWA({
     mode: "production", ///production
     registerType: "autoUpdate",
