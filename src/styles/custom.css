@@ -18,7 +18,7 @@ mark {
 }
 
 
-.section_heading::hover:after {
+.section_heading::hover::after {
   content: "#"; 
   width: 18px;
   display: inline-block;
