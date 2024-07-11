@@ -130,15 +130,12 @@ properties: {
     },
     
     {
-          label: 'Blog',
-          translations: {
-            'zh-CN': '博客',
-          },
+          label: 'سنابل',
           collapsed: true,
           items: [
             {
               label: 'كل المقالات',
-              link: '/blog/',
+              link: '/blog',
             },
             {
               label: 'آخر المقالات',
@@ -150,10 +147,11 @@ properties: {
     ]
   }),
    starlightUtils({
-          multiSidebar: {
-            switcherStyle: 'horizontalList',
+          multiSidebar: true,
+          navLinks: {
+            leading: { useSidebarLabelled: "سنابل" },
           },
-        })
+        }),
   , AstroPWA({
     mode: "production", ///production
     registerType: "autoUpdate",
