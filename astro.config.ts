@@ -54,13 +54,13 @@ properties: {
                   },
                 }),
   starlightBlog({
-      title: "المدونة",
+      title: "الْمُدَوَّنَةُ",
       postCount: 10,
       authors: {
     hakkem: {
       name: 'عبدالحكيم الشنقيطي',
       title: 'طالب علم',
-      picture: '/profile.png', // Images in the `public` directory are supported.
+      picture: '/maskable-icon-512x512.png', // Images in the `public` directory are supported.
       url: 'https://github.com/sanabel-al-firdaws',
     },
   },
@@ -86,7 +86,7 @@ properties: {
       Pagination: './src/components/starlight/Pagination.astro',
       Search: './src/components/starlight/Search.astro'
     },
-    title: 'سنابل الفردوس',
+    title: 'سَنَابِلُ الْفِرْدَوْسِ',
     // logo: {
     //   src: './src/assets/my-logo.svg',
     // replacesTitle: true,
@@ -108,12 +108,14 @@ properties: {
       baseUrl: 'https://github.com/sanabel-al-firdaws/sanabel-al-firdaws.github.io/edit/main/'
     },
     social: {
+youtube: 'https://www.youtube.com/@%D8%B3%D9%86%D8%A7%D8%A8%D9%84-%D8%A7%D9%84%D9%81%D8%B1%D8%AF%D9%88%D8%B3',
+       telegram: 'https://t.me/abdullhakim_alshanqiti',
       github: 'https://github.com/sanabel-al-firdaws/sanabel-al-firdaws.github.io/',
     },
     sidebar: [
       {
       
-        label: 'شروح الكتب',
+        label: 'شُرُوحُ الْكُتُبِ',
       
         collapsed: true,
        items: [
@@ -144,30 +146,38 @@ properties: {
             }
         },
         
+        {
+          label: 'الرَّقَائِقُ وَالْآدَابُ',
+    
+          collapsed: true,
+          autogenerate: {
+              directory: 'raqaiq'
+            }
+        },
        ]
         
       },
       
     
     {
-          label: 'المدونة',
+          label: 'الْمُدَوَّنَةُ',
           collapsed: true,
           items: [
             {
-              label: 'كل المقالات',
+              label: 'كُلُّ الْمَقَالَاتِ',
               link: '/blog',
             },
             {
-              label: 'آخر المقالات',
+              label: 'أَحْدَثُ الْمَقَالَاتِ',
               collapsed: true,
-              autogenerate: { directory: 'blog/articles', sort: 'date', order: 'descending' },
+              autogenerate: { directory: 'blog', sort: 'date', order: 'descending' },
             },
               {
-              label: 'الأقسام',
+              label: 'الْأَقْسَامُ',
               collapsed: true,
               items: [
                 {
-                  label: 'شبهات الخوارج',
+                  label: 'شُبُهَاتُ الْخَوَارِجِ',
                   link: 'blog/tags/شبهات-الخوارج',
                 },
               ]
