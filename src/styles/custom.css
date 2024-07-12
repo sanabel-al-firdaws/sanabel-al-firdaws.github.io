@@ -18,12 +18,12 @@ mark {
 }
 
 
-.section_heading::before {
+.section_heading::after {
     
     content: "✨"; 
     width: 18px;
     display: inline-block;
-    margin-left: 6px;
+    margin-right: 6px;
     
 }
 .sl-markdown-content code:not(:where(.not-content *)) {
