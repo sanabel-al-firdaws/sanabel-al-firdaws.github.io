@@ -20,7 +20,7 @@ mark {
 
 .section_heading::after {
     
-    content: "✺"; 
+    content: "✵"; 
     width: 18px;
     display: inline-block;
     margin-right: 6px;
