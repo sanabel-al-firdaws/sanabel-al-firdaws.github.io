@@ -17,7 +17,7 @@
     "astro": "^4.11.5",
     "culori": "^3.3.0",
     "rehype-autolink-headings": "^7.1.0",
-    "remark-custom-header-id": "sanabel-al-firdaws/remark-custom-header-id",
+    "remark-custom-header-id": "github:sanabel-al-firdaws/remark-custom-header-id",
     "remark-mark-highlight": "^0.1.0",
     "starlight-blog": "file:packages/starlight-blog",
     "starlight-image-zoom": "^0.6.0",
