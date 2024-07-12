@@ -48,8 +48,13 @@ properties: {
 	    starlightViewModes({
                     // Configuration options go here.
                 }),
-              starlightBlog({
-      title: "سنابل",
+                starlightUtils({
+                  multiSidebar: {
+                    switcherStyle: 'horizontalList',
+                  },
+                }),
+  starlightBlog({
+      title: "المدونة",
       postCount: 10,
       authors: {
     hakkem: {
@@ -59,7 +64,10 @@ properties: {
       url: 'https://github.com/sanabel-al-firdaws',
     },
   },
-    }),],
+    }),
+  
+  
+  ],
     tableOfContents: {
       minHeadingLevel: 1,
       maxHeadingLevel: 6
@@ -102,35 +110,47 @@ properties: {
     social: {
       github: 'https://github.com/sanabel-al-firdaws/sanabel-al-firdaws.github.io/',
     },
-    sidebar: [{
+    sidebar: [
+      {
       
-      label: 'اللُّغَةُ الْعَرَبِيَّةُ',
-    
-      collapsed: true,
-      autogenerate: {
-          directory: 'arabic'
-        }
+        label: 'شروح الكتب',
       
-    },
-    {
-      label: 'الْقُرْآنُ الْكَرِيمُ',
-
-      collapsed: true,
-      autogenerate: {
-          directory: 'quran'
-        }
-    },
-    {
-      label: 'الْعَقِيدَةُ',
-
-      collapsed: true,
-      autogenerate: {
-          directory: 'aqida'
-        }
-    },
+        collapsed: true,
+       items: [
+        {
+      
+          label: 'اللُّغَةُ الْعَرَبِيَّةُ',
+        
+          collapsed: true,
+          autogenerate: {
+              directory: 'arabic'
+            }
+          
+        },
+        {
+          label: 'الْقُرْآنُ الْكَرِيمُ',
+    
+          collapsed: true,
+          autogenerate: {
+              directory: 'quran'
+            }
+        },
+        {
+          label: 'الْعَقِيدَةُ',
+    
+          collapsed: true,
+          autogenerate: {
+              directory: 'aqida'
+            }
+        },
+        
+       ]
+        
+      },
+      
     
     {
-          label: 'سنابل',
+          label: 'المدونة',
           collapsed: true,
           items: [
             {
@@ -140,18 +160,23 @@ properties: {
             {
               label: 'آخر المقالات',
               collapsed: true,
-              autogenerate: { directory: 'blog', sort: 'date', order: 'descending' },
+              autogenerate: { directory: 'blog/articles', sort: 'date', order: 'descending' },
             },
-          ],
+              {
+              label: 'الأقسام',
+              collapsed: true,
+              items: [
+                {
+                  label: 'شبهات الخوارج',
+                  link: 'blog/tags/شبهات-الخوارج',
+                },
+              ]
+            },],
         },
     ]
+    
   }),
-   starlightUtils({
-          multiSidebar: true,
-          navLinks: {
-            leading: { useSidebarLabelled: "سنابل" },
-          },
-        }),
+
   , AstroPWA({
     mode: "production", ///production
     registerType: "autoUpdate",

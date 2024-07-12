@@ -4,3 +4,4 @@ dist
 .trash
 .vscode
 
+node_modules
