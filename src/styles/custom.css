@@ -23,7 +23,7 @@ mark {
     content: "✨"; 
     width: 18px;
     display: inline-block;
-    margin-right: 6px;
+    margin-left: 6px;
     
 }
 .sl-markdown-content code:not(:where(.not-content *)) {
