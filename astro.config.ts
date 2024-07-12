@@ -91,7 +91,7 @@ properties: {
     //   src: './src/assets/my-logo.svg',
     // replacesTitle: true,
     //  },
-
+    credits: true,
     lastUpdated: true,
     description: 'المنهج السلفي بأسلوب سلس ومبسط',
    // titleDelimiter: '',
