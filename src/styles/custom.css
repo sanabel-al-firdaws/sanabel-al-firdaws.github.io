@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'custom font';
+    font-family: 'KFGQPC Uthman Taha';
     /* Use a relative path to the local font file in `url()`. */
     src: url('./UthmanTN_v2-0.ttf') format('ttf');
     font-weight: normal;
@@ -7,14 +7,7 @@
     font-display: swap;
   }
 
-  @font-face {
-    font-family: 'custom font';
-    /* Use a relative path to the local font file in `url()`. */
-    src: url('./UthmanTNB_v2-0.ttf') format('ttf');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
+
 mark {
     background-color: var(--sl-color-accent-low);
     margin-block: -.125rem;
@@ -58,7 +51,7 @@ mark {
     padding-inline-start: 0.5rem;
 }
 :root{
-
+	 --sl-font: 'KFGQPC Uthman Taha', serif;
       .r {
 	    color: var(--sl-color-red);
       }
