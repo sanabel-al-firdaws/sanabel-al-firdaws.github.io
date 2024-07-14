@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'KFGQPC Uthman Taha';
+    font-family: 'KFGQPC-Uthman-Taha';
     /* Use a relative path to the local font file in `url()`. */
     src: url('./UthmanTN_v2-0.ttf') format('ttf');
     font-weight: normal;
@@ -51,7 +51,7 @@ mark {
     padding-inline-start: 0.5rem;
 }
 :root{
-	 --sl-font: 'KFGQPC Uthman Taha', 'KFGQPC Uthman Taha';
+	 
       .r {
 	    color: var(--sl-color-red);
       }
@@ -64,6 +64,8 @@ mark {
       .s {
 	    color: var(--sl-color-text-accent);
       } 
+
+	--sl-font: 'KFGQPC-Uthman-Taha', 'KFGQPC-Uthman-Taha';
 	--sl-text-code-sm: var(--sl-text-base);
 	
 	--sl-color-accent-low: #232424;
