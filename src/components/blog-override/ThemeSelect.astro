@@ -6,12 +6,12 @@ import config from 'virtual:starlight-blog-config'
 import { getBlogPathWithBase } from '../../../node_modules/starlight-blog/libs/page'
 ---
 {/* 
-
-
-*/}
 <div>
   <a href={getBlogPathWithBase('/')}>{config.title}</a>
 </div>
+
+*/}
+
 
 <StarlightThemeSelect {...Astro.props}>
   <slot />
