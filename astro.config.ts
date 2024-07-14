@@ -183,7 +183,7 @@ youtube: 'https://www.youtube.com/@سنابل-الفردوس',
               items: [
                 {
                   label: 'شُبُهَاتُ الْخَوَارِجِ',
-                  link: 'blog/tags/شبهات-الخوارج',
+                  link: 'blog/tags/شبهات_الخوارج',
                 },
               ]
             },],
