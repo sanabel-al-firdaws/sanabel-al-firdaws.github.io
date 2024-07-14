@@ -73,9 +73,10 @@ properties: {
       maxHeadingLevel: 6
     },
     customCss: [
-    // Relative path to your custom CSS file
-    './src/styles/custom.css',
-    './src/fonts/font-face.css'
+      './src/fonts/font-face.css',
+      // Relative path to your custom CSS file
+      './src/styles/custom.css'
+  
   ],
     components: {
       // Override the default `SocialIcons` component.
