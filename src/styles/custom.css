@@ -51,7 +51,7 @@ mark {
     padding-inline-start: 0.5rem;
 }
 :root{
-	 --sl-font: 'KFGQPC Uthman Taha', serif;
+	 --sl-font: 'KFGQPC Uthman Taha', 'KFGQPC Uthman Taha';
       .r {
 	    color: var(--sl-color-red);
       }
