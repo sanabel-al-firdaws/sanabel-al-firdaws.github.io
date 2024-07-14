@@ -28,7 +28,7 @@ mark {
 
 .section_heading::before {
     
-    content: '❀'; 
+    content: '꧂'; 
     width: 20px;
     display: inline-block;
     margin-left: 10px;
@@ -36,7 +36,7 @@ mark {
 }
 .section_heading::after {
     
-    content: '❀'; 
+    content: '꧁ '; 
     width: 20px;
     display: inline-block;
     margin-right: 10px;
