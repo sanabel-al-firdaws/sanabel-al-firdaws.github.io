@@ -29,7 +29,7 @@ mark {
 
 .section_heading::after {
     
-    content: "✵"; 
+    content: url("/anchor.svg"); 
     width: 18px;
     display: inline-block;
     margin-right: 6px;
