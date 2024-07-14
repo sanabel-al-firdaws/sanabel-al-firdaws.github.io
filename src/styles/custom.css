@@ -26,10 +26,17 @@ mark {
   }
 }
 
-
+.section_heading::before {
+    
+    content: '❀'; 
+    width: 18px;
+    display: inline-block;
+    margin-right: 6px;
+    
+}
 .section_heading::after {
     
-    content: url("/anchor.svg"); 
+    content: '❀'; 
     width: 18px;
     display: inline-block;
     margin-right: 6px;
