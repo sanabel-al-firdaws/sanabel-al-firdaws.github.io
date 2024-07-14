@@ -2,7 +2,12 @@ code {
 
 	font-family: var(--sl-font)  !important;
 }
-
+.expressive-code :nth-child(1 of .ec-line) .code {
+    padding-inline-end: calc(2.5rem + var(--ec-codePadInl)) !important;
+}
+main{
+	font-size: 1.3rem;
+}
 mark {
     background-color: var(--sl-color-accent-low);
     /* margin-block: -.125rem; */
@@ -62,15 +67,16 @@ mark {
 	    color: var(--sl-color-text-accent);
       } 
 
-
-	  --sl-content-width: 50rem;
-	  --sl-line-height: 2.2;
-	  --sl-line-height-headings: 2.2 ;
+	  --sl-text-sm: 1rem ;
+	  --sl-text-xs: 1rem ;
+	  --sl-content-width: 60rem;
+	  --sl-line-height: 2;
+	  --sl-line-height-headings: 2 ;
 	
 	/* --sl-font: 'Scheherazade New', serif; */
 	--sl-font: 'UthmanTNB', serif;
 
-	--sl-text-code-sm: var(--sl-text-base);
+	--sl-text-code-sm: 1.3rem ;
 	
 	--sl-color-accent-low: #232424;
 	--sl-color-accent: #666b6a;
