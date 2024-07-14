@@ -113,7 +113,7 @@ properties: {
       baseUrl: 'https://github.com/sanabel-al-firdaws/sanabel-al-firdaws.github.io/edit/main/'
     },
     social: {
-youtube: 'https://www.youtube.com/@%D8%B3%D9%86%D8%A7%D8%A8%D9%84-%D8%A7%D9%84%D9%81%D8%B1%D8%AF%D9%88%D8%B3',
+youtube: 'https://www.youtube.com/@سنابل-الفردوس',
        telegram: 'https://t.me/abdullhakim_alshanqiti',
       github: 'https://github.com/sanabel-al-firdaws/sanabel-al-firdaws.github.io/',
     },
