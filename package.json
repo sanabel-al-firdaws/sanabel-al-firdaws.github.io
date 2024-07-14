@@ -13,6 +13,7 @@
     "@astrojs/check": "^0.8.1",
     "@astrojs/markdown-remark": "^5.1.1",
     "@astrojs/starlight": "^0.25.1",
+    "@fontsource/scheherazade-new": "^5.0.20",
     "@lorenzo_lewis/starlight-utils": "0.1.2",
     "astro": "^4.11.5",
     "culori": "^3.3.0",

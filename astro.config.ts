@@ -75,6 +75,10 @@ properties: {
     customCss: [
       // './src/fonts/font-face.css',
       // Relative path to your custom CSS file
+      '@fontsource/scheherazade-new/400.css',
+      '@fontsource/scheherazade-new/500.css',
+      '@fontsource/scheherazade-new/600.css',
+      '@fontsource/scheherazade-new/700.css',
       './src/styles/custom.css'
   
   ],

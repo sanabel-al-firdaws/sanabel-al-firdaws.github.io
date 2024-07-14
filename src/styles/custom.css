@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'kfgqpc_uthman_taha_naskhRg';
-    src: url('uthmantn_v2-0-webfont.woff2') format('woff2'),
-         url('uthmantn_v2-0-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
-}
 
 
 mark {
@@ -50,6 +43,7 @@ mark {
     margin-inline-start: -0.5rem;
     padding-inline-start: 0.5rem;
 }
+
 :root{
 	 
       .r {
@@ -64,8 +58,8 @@ mark {
       .s {
 	    color: var(--sl-color-text-accent);
       } 
-
-	--sl-font: 'kfgqpc_uthman_taha_naskhRg', kfgqpc_uthman_taha_naskhRg;
+	
+	--sl-font: 'Scheherazade New', serif;
 	--sl-text-code-sm: var(--sl-text-base);
 	
 	--sl-color-accent-low: #232424;
