@@ -73,7 +73,7 @@ properties: {
       maxHeadingLevel: 6
     },
     customCss: [
-      './src/fonts/font-face.css',
+      // './src/fonts/font-face.css',
       // Relative path to your custom CSS file
       './src/styles/custom.css'
   
