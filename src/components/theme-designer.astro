@@ -8,10 +8,7 @@ interface Props {
 	labels: {
 		presets: PresetsProps['labels'];
 		editor: EditorProps['labels'] & { accentColor: string; grayColor: string };
-		preview: Record<
-			'darkMode' | 'lightMode' | 'bodyText' | 'linkText' | 'dimText' | 'inlineCode',
-			string
-		>;
+	
 	};
 }
 const {
