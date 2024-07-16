@@ -8,7 +8,7 @@ import manifest from "./webmanifest.json";
 import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
-import starlightImageZoom from 'starlight-image-zoom';
+// import starlightImageZoom from 'starlight-image-zoom';
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
 
 import d2 from "astro-d2";
@@ -28,9 +28,10 @@ export default defineConfig({
   site: 'https://sanabel-al-firdaws.github.io/',
   integrations: [starlight({
     plugins: [
-      starlightImageZoom({
-        // Configuration options go here.
-      }),
+      // starlightImageZoom({
+      //   // Configuration options go here.
+      //   showCaptions: false
+      // }),
       starlightViewModes({
         // Configuration options go here.
       }), starlightUtils({
