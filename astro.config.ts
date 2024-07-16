@@ -166,7 +166,7 @@ export default defineConfig({
     manifest: (manifest as Partial<ManifestOptions>)
   }), d2(
 
-    {sketch: true,layout: 'dagre', theme: { dark: false, default: '200' } }
+    {sketch: false,layout: 'dagre', theme: { dark: false, default: '200' } }
 
   )]
 });
