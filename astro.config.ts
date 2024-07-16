@@ -28,39 +28,39 @@ export default defineConfig({
   site: 'https://sanabel-al-firdaws.github.io/',
   integrations: [starlight({
     plugins: [
-    starlightImageZoom({
+      starlightImageZoom({
         // Configuration options go here.
       }),
-    starlightViewModes({
-      // Configuration options go here.
-    }), starlightUtils({
-      multiSidebar: {
-        switcherStyle: 'horizontalList'
-      }
-    }), starlightBlog({
-      title: "الْمُدَوَّنَةُ",
-      postCount: 10,
-      authors: {
-        hakkem: {
-          name: 'عبدالحكيم الشنقيطي',
-          title: 'طالب علم',
-          picture: '/maskable-icon-512x512.png',
-          // Images in the `public` directory are supported.
-          url: 'https://github.com/sanabel-al-firdaws'
+      starlightViewModes({
+        // Configuration options go here.
+      }), starlightUtils({
+        multiSidebar: {
+          switcherStyle: 'horizontalList'
         }
-      }
-    })],
+      }), starlightBlog({
+        title: "الْمُدَوَّنَةُ",
+        postCount: 10,
+        authors: {
+          hakkem: {
+            name: 'عبدالحكيم الشنقيطي',
+            title: 'طالب علم',
+            picture: '/maskable-icon-512x512.png',
+            // Images in the `public` directory are supported.
+            url: 'https://github.com/sanabel-al-firdaws'
+          }
+        }
+      })],
     tableOfContents: {
       minHeadingLevel: 1,
       maxHeadingLevel: 6
     },
     customCss: ['./src/fonts/font-face.css',
-    // Relative path to your custom CSS file
-    // '@fontsource/scheherazade-new/400.css',
-    // '@fontsource/scheherazade-new/500.css',
-    // '@fontsource/scheherazade-new/600.css',
-    // '@fontsource/scheherazade-new/700.css',
-    './src/styles/custom.css'],
+      // Relative path to your custom CSS file
+      // '@fontsource/scheherazade-new/400.css',
+      // '@fontsource/scheherazade-new/500.css',
+      // '@fontsource/scheherazade-new/600.css',
+      // '@fontsource/scheherazade-new/700.css',
+      './src/styles/custom.css'],
     components: {
       // Override the default `SocialIcons` component.
       ThemeProvider: './src/components/starlight/ThemeProvider.astro',
@@ -146,7 +146,7 @@ export default defineConfig({
         }]
       }]
     }]
-  }),, AstroPWA({
+  }), , AstroPWA({
     mode: "production",
     ///production
     registerType: "autoUpdate",
@@ -163,5 +163,11 @@ export default defineConfig({
       directoryAndTrailingSlashHandler: true
     },
     manifest: (manifest as Partial<ManifestOptions>)
-  }), d2()]
+  }), d2(
+
+    {sketch: true,layout: 'dagre', theme: { dark: false, default: '200' } }
+
+  )]
 });
+
+
