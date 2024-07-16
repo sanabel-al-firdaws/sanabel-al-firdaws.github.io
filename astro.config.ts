@@ -5,6 +5,8 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
+// import font from "TNB.ttf";
+
 import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
@@ -166,7 +168,13 @@ export default defineConfig({
     manifest: (manifest as Partial<ManifestOptions>)
   }), d2(
 
-    {sketch: true,layout: 'dagre', theme: { dark: false, default: '200' } }
+    {
+     sketch: true,
+     layout: 'dagre', 
+     theme: { dark: false, default: '200' },
+    //  fonts: { regular: './TNB.ttf',  italic: './TNB.ttf',bold: './TNB.ttf'},
+     
+    }
 
   )]
 });

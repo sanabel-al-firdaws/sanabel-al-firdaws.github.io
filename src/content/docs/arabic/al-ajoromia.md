@@ -415,6 +415,7 @@ sidebar:
 
  ```d2 
 direction: left
+
 *: {
     style.font-size: 100
     
