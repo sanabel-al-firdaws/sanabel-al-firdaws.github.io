@@ -42,9 +42,9 @@ properties: {
     starlight({
     plugins: [
 	    
-	    starlightImageZoom({
-          // Configuration options go here.
-        }),
+	    // starlightImageZoom({
+      //     // Configuration options go here.
+      //   }),
 	    starlightViewModes({
                     // Configuration options go here.
                 }),
