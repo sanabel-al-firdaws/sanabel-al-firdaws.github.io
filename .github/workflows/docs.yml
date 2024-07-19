@@ -2,8 +2,7 @@ name: Fetch From Google Docs
 on:
   workflow_dispatch:
 jobs:
-  fetch:
-    name: Fetch From Google Docs
+   fetch:
     runs-on: ubuntu-latest
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
@@ -21,7 +20,7 @@ jobs:
 
           # cache-dependency-path: package-lock.json
       - name: Install Dependency
-        run: bun install 
+        run: bun install --frozen-lockfile 
       - name: Download files
         run:  bun ./scripts/docs-to-md.js
         env:
