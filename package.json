@@ -32,6 +32,7 @@
     "hastscript": "^8.0.0",
     "starlight-view-modes": "^0.6.0",
     "vite-plugin-pwa": "^0.20.0",
-    "workbox-window": "^7.1.0"
+    "workbox-window": "^7.1.0",
+    "docs-markdown": "file:packages/docs-markdown"
   }
 }

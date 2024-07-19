@@ -1,0 +1,28 @@
+name: Fetch From Google Docs
+on:
+  workflow_dispatch:
+jobs:
+  release:
+    name: Fetch Google Docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Download files
+        run:  node ./scripts/docs-to-md.js
+        env:
+          GOOGLE_DOCS_ACCESS: ${{ secrets.GOOGLE_DOCS_ACCESS }}
+          GOOGLE_DOCS_REFRESH: ${{ secrets.GOOGLE_DOCS_REFRESH }}
+          GOOGLE_DOCS_CLIENT_ID: ${{ secrets.GOOGLE_DOCS_CLIENT_ID }}
+          GOOGLE_DOCS_CLIENT_SECRET: ${{ secrets.GOOGLE_DOCS_CLIENT_SECRET }}
+      - name: Commit new data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update Google Docs files"
+          commit_user_name: GitHub Actions
+          commit_user_email: actions@github.com
+          commit_author: GitHub Actions <actions@github.com>
