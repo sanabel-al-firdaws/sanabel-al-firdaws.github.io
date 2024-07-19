@@ -5,6 +5,8 @@ jobs:
   release:
     name: Fetch Google Docs
     runs-on: ubuntu-latest
+    concurrency:
+      cancel-in-progress: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -12,6 +14,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install Dependency
+        run: npm ci
       - name: Download files
         run:  node ./scripts/docs-to-md.js
         env:
