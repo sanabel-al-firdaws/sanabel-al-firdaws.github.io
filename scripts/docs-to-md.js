@@ -1,6 +1,6 @@
 
 import { chdir} from 'process';
-import { fetchGoogleDocsFiles } from "docs-markdown-fork";
+import { fetchGoogleDocsFiles } from "docs-markdow-fork";
 
 const arabic = [
    '1wkEV-zx0AhKC0znVgpgygHF5i4KcJRY64obmrG4JpGI:intro.md',
