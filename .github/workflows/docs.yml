@@ -5,6 +5,10 @@ jobs:
   release:
     name: Fetch Google Docs
     runs-on: ubuntu-latest
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -13,7 +17,7 @@ jobs:
         with:
           node-version: 22
       - name: Install Dependency
-        run: npm i file:./packages/docs-markdown
+        run: npm i file:./packages/docs-markdown -D
       - name: Download files
         run:  node ./scripts/docs-to-md.js
         env:
