@@ -1,9 +1,11 @@
 {
-  "name": "docs-markdow-fork",
+  "name": "docs-markdown-fork",
   "version": "1.2.1",
   "description": "Opinionated starter for Node.js + TypeScript libraries",
   "main": "dist/index.js",
-  "bin": "dist/cli.js",
+  "bin": {
+    "docs-markdown-fork": "dist/cli.js"
+  },
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -17,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sanabel-al-firdaws/docs-markdown.git"
+    "url": "git+https://github.com/sanabel-al-firdaws/docs-markdown.git"
   },
   "keywords": [
     "node.js",
