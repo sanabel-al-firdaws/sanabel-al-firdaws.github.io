@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   release:
-    name: Fetch Google Docs
+    name: Fetch From Google Docs
     runs-on: ubuntu-latest
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
@@ -15,14 +15,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22
-          cache: 'npm'
+          bun-version: latest # or "latest", "canary", <sha>
+
           # cache-dependency-path: package-lock.json
+      - name: Install Dependency
+        run: bun install --frozen-lockfile
       - name: Download files
-        run:  node ./scripts/docs-to-md.js
+        run:  bun ./scripts/docs-to-md.js
         env:
           GOOGLE_DOCS_ACCESS: ${{ secrets.GOOGLE_DOCS_ACCESS }}
           GOOGLE_DOCS_REFRESH: ${{ secrets.GOOGLE_DOCS_REFRESH }}
