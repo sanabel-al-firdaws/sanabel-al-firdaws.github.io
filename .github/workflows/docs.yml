@@ -21,8 +21,6 @@ jobs:
           node-version: 22
           cache: 'npm'
           # cache-dependency-path: package-lock.json
-      - name: Install Dependency
-        run: npm i docs-markdown-fork -D
       - name: Download files
         run:  node ./scripts/docs-to-md.js
         env:
