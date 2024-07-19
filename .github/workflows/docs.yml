@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: 22
       - name: Install Dependency
-        run: npm ci
+        run: npm i
       - name: Download files
         run:  node ./scripts/docs-to-md.js
         env:
