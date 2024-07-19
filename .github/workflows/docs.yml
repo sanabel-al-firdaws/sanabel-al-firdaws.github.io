@@ -22,7 +22,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
       - name: Install Dependency
-        run: npm ci
+        run: npm i 
       - name: Download files
         run:  node ./scripts/docs-to-md.js
         env:
