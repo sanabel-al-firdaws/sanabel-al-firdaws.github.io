@@ -33,6 +33,6 @@
     "starlight-view-modes": "^0.6.0",
     "vite-plugin-pwa": "^0.20.0",
     "workbox-window": "^7.1.0",
-    "docs-markdown": "file:packages/docs-markdown"
+    "docs-markdown-fork": "^1.2.1"
   }
 }
