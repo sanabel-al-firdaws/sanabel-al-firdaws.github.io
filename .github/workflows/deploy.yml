@@ -38,9 +38,7 @@ jobs:
 
       - name: Install d2
         run: |
-          (New-Object System.Net.WebClient).DownloadFile("https://github.com/terrastruct/d2/releases/download/v0.6.5/d2-v0.6.5-linux-amd64.tar.gz","d2-v0.6.5.tar.gz");
-          Expand-Archive .\d2-v0.6.5.tar.gz .;
-          echo "::add-path::./d2-v0.6.5" 
+          echo "::add-path::./d2/bin" 
 
       - name: Install, build, and upload your site
         uses: withastro/action@v2
