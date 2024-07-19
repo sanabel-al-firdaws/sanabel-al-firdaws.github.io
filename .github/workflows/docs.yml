@@ -16,6 +16,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
       - name: Install Dependency
         run: npm i file:./packages/docs-markdown -D
       - name: Download files
