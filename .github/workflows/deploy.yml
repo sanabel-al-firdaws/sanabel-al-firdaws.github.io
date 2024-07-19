@@ -38,7 +38,7 @@ jobs:
 
       - name: Install d2
         run: |
-          echo "/d2/bin" >> $GITHUB_PATH" 
+          echo "/d2/bin" >> $GITHUB_PATH 
 
       - name: Install, build, and upload your site
         uses: withastro/action@v2
