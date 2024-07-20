@@ -20,7 +20,7 @@ jobs:
 
           # cache-dependency-path: package-lock.json
       - name: Install Dependency
-        run: bun install --frozen-lockfile 
+        run: bun install 
       - name: Download files
         run:  bun ./scripts/docs-to-md.js
         env:
