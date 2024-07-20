@@ -6,6 +6,8 @@ sidebar:
 
   order: 6
 
+editUrl: ‘https://docs.google.com/document/d/134HXce5Z_1lSK-nlk_Q3Di2F_psic9_MBtJ2JXLbdtQ/edit?usp=drivesdk’
+
 ---
 
 بِسْمِ اللَّهِ وَالْحَمْدُ لِلَّهِ وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ 
