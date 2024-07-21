@@ -12,6 +12,7 @@ jobs:
       group: fetching
       cancel-in-progress: true
     steps:
+      - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest # or "latest", "canary", <sha>
