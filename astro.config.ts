@@ -12,8 +12,9 @@ import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
 // import starlightImageZoom from 'starlight-image-zoom';
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
-
 import d2 from "astro-d2";
+
+import relativeLinks from "astro-relative-links";
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,39 +31,39 @@ export default defineConfig({
   site: 'https://sanabel-al-firdaws.github.io',
   integrations: [starlight({
     plugins: [
-      // starlightImageZoom({
-      //   // Configuration options go here.
-      //   showCaptions: false
-      // }),
-      starlightViewModes({
-        // Configuration options go here.
-      }), starlightUtils({
-        multiSidebar: {
-          switcherStyle: 'horizontalList'
+    // starlightImageZoom({
+    //   // Configuration options go here.
+    //   showCaptions: false
+    // }),
+    starlightViewModes({
+      // Configuration options go here.
+    }), starlightUtils({
+      multiSidebar: {
+        switcherStyle: 'horizontalList'
+      }
+    }), starlightBlog({
+      title: "الْمُدَوَّنَةُ",
+      postCount: 10,
+      authors: {
+        hakkem: {
+          name: 'عبدالحكيم الشنقيطي',
+          title: 'طالب علم',
+          picture: '/maskable-icon-512x512.png',
+          // Images in the `public` directory are supported.
+          url: 'https://github.com/sanabel-al-firdaws'
         }
-      }), starlightBlog({
-        title: "الْمُدَوَّنَةُ",
-        postCount: 10,
-        authors: {
-          hakkem: {
-            name: 'عبدالحكيم الشنقيطي',
-            title: 'طالب علم',
-            picture: '/maskable-icon-512x512.png',
-            // Images in the `public` directory are supported.
-            url: 'https://github.com/sanabel-al-firdaws'
-          }
-        }
-      })],
+      }
+    })],
     tableOfContents: {
       minHeadingLevel: 1,
       maxHeadingLevel: 6
     },
-    customCss: [  './src/styles/custom.css','./src/fonts/font-face.css',
-      // Relative path to your custom CSS file
-      // '@fontsource/scheherazade-new/400.css',
-      // '@fontsource/scheherazade-new/500.css',
-      // '@fontsource/scheherazade-new/600.css',
-      // '@fontsource/scheherazade-new/700.css',
+    customCss: ['./src/styles/custom.css', './src/fonts/font-face.css'
+    // Relative path to your custom CSS file
+    // '@fontsource/scheherazade-new/400.css',
+    // '@fontsource/scheherazade-new/500.css',
+    // '@fontsource/scheherazade-new/600.css',
+    // '@fontsource/scheherazade-new/700.css',
     ],
     components: {
       // Override the default `SocialIcons` component.
@@ -149,29 +150,34 @@ export default defineConfig({
         }]
       }]
     }]
-  }),
-  
+  })
   , AstroPWA({
-    // mode: "production",
+    mode: "production",
     ///production
-
+    // registerType: "autoUpdate",
+    includeAssets: ["favicon.ico"],
+    workbox: {
+      globPatterns: ['./**'],
+      navigateFallback: '/404'
+    },
     experimental: {
-
       directoryAndTrailingSlashHandler: true
     },
     manifest: (manifest as Partial<ManifestOptions>)
   }),
-   d2(
-
-    {
-     sketch: true,
-     layout: 'dagre', 
-     theme: { dark: false, default: '200' },
-    //  fonts: { regular: './TNB.ttf',  italic: './TNB.ttf',bold: './TNB.ttf'},
-     
+  
+  d2({
+    sketch: true,
+    layout: 'dagre',
+    theme: {
+      dark: false,
+      default: '200'
     }
+    //  fonts: { regular: './TNB.ttf',  italic: './TNB.ttf',bold: './TNB.ttf'},
+  }
+)
 
-  )]
+
+
+]
 });
-
-

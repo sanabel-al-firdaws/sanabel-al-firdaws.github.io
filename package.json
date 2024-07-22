@@ -17,6 +17,7 @@
     "@playwright/test": "^1.45.1",
     "astro": "^4.12.2",
     "astro-d2": "^0.4.0",
+    "astro-relative-links": "^0.3.9",
     "culori": "^3.3.0",
     "rehype-autolink-headings": "^7.1.0",
     "remark-custom-header-id": "file:packages/remark-custom-header-id",
