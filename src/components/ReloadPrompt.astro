@@ -18,6 +18,9 @@ class="sl-flex primary"
     <button id="pwa-refresh">
       تحديث     
     </button>
+    <button id="pwa-close">
+      إغلاق     
+    </button>
 </div>
 
 
@@ -26,12 +29,12 @@ class="sl-flex primary"
 #pwa-toast {
   visibility: hidden;
   position: relative;
-  /* margin-left: 20px; */
-  border: var(--sl-color-gray-4) 1px;
+
+  border: 1px solid var(--sl-color-gray-4) ;
 
 margin-left: 0px !important;
   text-align: right;
-
+z-index: 1;
 }
 #pwa-toast .message {
 
@@ -40,7 +43,7 @@ margin-left: 0px !important;
 #pwa-toast button {
   border: 1px solid var(--sl-color-accent-high);
   cursor: pointer ;
-
+  outline: none;
   border-radius: 2px;
  color: var(--sl-color-accent-high);
  background-color: var(--sl-color-gray-6);
@@ -54,5 +57,5 @@ button#pwa-refresh {
 #pwa-toast.show.refresh button#pwa-refresh {
   display: inline-block;
 }
-}
+
 </style>
