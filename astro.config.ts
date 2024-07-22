@@ -155,10 +155,10 @@ export default defineConfig({
     // mode: "production",
     ///production
 
-    // experimental: {
+    experimental: {
 
-    //   directoryAndTrailingSlashHandler: true
-    // },
+      directoryAndTrailingSlashHandler: true
+    },
     manifest: (manifest as Partial<ManifestOptions>)
   }),
    d2(
