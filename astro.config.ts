@@ -156,6 +156,7 @@ export default defineConfig({
     ///production
 
     // experimental: {
+    
     //   directoryAndTrailingSlashHandler: true
     // },
     manifest: (manifest as Partial<ManifestOptions>)
