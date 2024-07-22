@@ -9,7 +9,7 @@ import Icon from '../../../node_modules/@astrojs/starlight/user-components/Icon.
 ---
 <link rel="icon" href="/favicon.svg" />
 
-<!-- {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />} -->
+{pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
  <!-- 
 <script>
     import { registerSW } from "virtual:pwa-register";

@@ -151,16 +151,16 @@ export default defineConfig({
     }]
   }),
   
-  // , AstroPWA({
-  //   // mode: "production",
-  //   ///production
+  , AstroPWA({
+    // mode: "production",
+    ///production
 
-  //   // experimental: {
+    // experimental: {
 
-  //   //   directoryAndTrailingSlashHandler: true
-  //   // },
-  //   manifest: (manifest as Partial<ManifestOptions>)
-  // }),
+    //   directoryAndTrailingSlashHandler: true
+    // },
+    manifest: (manifest as Partial<ManifestOptions>)
+  }),
    d2(
 
     {
