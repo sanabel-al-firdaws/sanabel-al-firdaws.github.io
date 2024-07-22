@@ -3,7 +3,7 @@ import '@pagefind/default-ui/css/ui.css';
 import Icon from '../../../node_modules/@astrojs/starlight/user-components/Icon.astro'; 
 import project from 'virtual:starlight/project-context';
 import type { Props } from '@astrojs/starlight/props';
-import ReloadPrompt from '../ReloadPrompt.astro';
+
 const { labels } = Astro.props;
 
 const pagefindTranslations = {
@@ -15,7 +15,7 @@ const pagefindTranslations = {
 	),
 };
 ---
-<ReloadPrompt />
+
 <site-search
 	data-translations={JSON.stringify(pagefindTranslations)}
 	data-strip-trailing-slash={project.trailingSlash === 'never'}

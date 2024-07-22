@@ -72,7 +72,8 @@ export default defineConfig({
       ThemeSelect: './src/components/blog-override/ThemeSelect.astro',
       SocialIcons: './src/components/starlight/SocialIcons.astro',
       Pagination: './src/components/starlight/Pagination.astro',
-      Search: './src/components/starlight/Search.astro'
+      Search: './src/components/starlight/Search.astro',
+      Sidebar: './src/components/starlight/Sidebar.astro'
     },
     title: 'سَنَابِلُ الْفِرْدَوْسِ',
     // logo: {
@@ -152,7 +153,7 @@ export default defineConfig({
     }]
   })
   , AstroPWA({
-    mode: "devolopment",
+    mode: "production",
     includeAssets: ["favicon.ico"],
     workbox: {
       globPatterns: ['./**'],
@@ -161,10 +162,10 @@ export default defineConfig({
     experimental: {
       directoryAndTrailingSlashHandler: true
     },
-    devOptions: {
-      enabled: true
-      /* other options */
-    },
+    // devOptions: {
+    //   enabled: true
+    //   /* other options */
+    // },
     manifest: (manifest as Partial<ManifestOptions>)
   }),
   
