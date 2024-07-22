@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import remarkCustomHeaderId from 'remark-custom-header-id';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import AstroPWA from "@vite-pwa/astro";
+// import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
 // import font from "TNB.ttf";
@@ -149,24 +149,27 @@ export default defineConfig({
         }]
       }]
     }]
-  }), , AstroPWA({
-    mode: "production",
-    ///production
-    registerType: "autoUpdate",
-    includeAssets: ["favicon.ico"],
-    workbox: {
-      globPatterns: ['./**'],
-      skipWaiting: true,
-      clientsClaim: true,
-      cleanupOutdatedCaches: true,
-      sourcemap: false,
-      navigateFallback: '/404'
-    },
-    experimental: {
-      directoryAndTrailingSlashHandler: true
-    },
-    manifest: (manifest as Partial<ManifestOptions>)
-  }), d2(
+  }), 
+  
+  // , AstroPWA({
+  //   mode: "production",
+  //   ///production
+  //   registerType: "autoUpdate",
+  //   includeAssets: ["favicon.ico"],
+  //   workbox: {
+  //     globPatterns: ['./**'],
+  //     skipWaiting: true,
+  //     clientsClaim: true,
+  //     cleanupOutdatedCaches: true,
+  //     sourcemap: false,
+  //     navigateFallback: '/404'
+  //   },
+  //   experimental: {
+  //     directoryAndTrailingSlashHandler: true
+  //   },
+  //   manifest: (manifest as Partial<ManifestOptions>)
+  // }),
+   d2(
 
     {
      sketch: true,
