@@ -7,7 +7,7 @@ import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
 // import font from "TNB.ttf";
 
-import starlightBlog from 'starlight-blog';
+import starlightBlog from 'starlight-blog-ar';
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
 // import starlightImageZoom from 'starlight-image-zoom';
@@ -27,7 +27,7 @@ export default defineConfig({
       }
     }]]
   },
-  site: 'https://sanabel-al-firdaws.github.io/',
+  site: 'https://sanabel-al-firdaws.github.io',
   integrations: [starlight({
     plugins: [
       // starlightImageZoom({
