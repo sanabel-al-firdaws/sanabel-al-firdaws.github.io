@@ -4,7 +4,7 @@ import remarkCustomHeaderId from 'remark-custom-header-id';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
-import manifest from "./webmanifest.json";
+// import manifest from "./webmanifest.json";
 // import font from "TNB.ttf";
 
 import starlightBlog from 'starlight-blog';
@@ -52,7 +52,9 @@ export default defineConfig({
             url: 'https://github.com/sanabel-al-firdaws'
           }
         }
-      })],
+      })
+    
+    ],
     tableOfContents: {
       minHeadingLevel: 1,
       maxHeadingLevel: 6
@@ -137,8 +139,7 @@ export default defineConfig({
         collapsed: true,
         autogenerate: {
           directory: 'blog',
-          sort: 'date',
-          order: 'descending'
+      
         }
       }, {
         label: 'الْأَقْسَامُ',
@@ -151,15 +152,16 @@ export default defineConfig({
     }]
   })
   
-  , AstroPWA({
-    // mode: "production",
-    ///production
+  // , AstroPWA({
+  //   // mode: "production",
+  //   // ///production
 
-    experimental: {
-      directoryAndTrailingSlashHandler: true
-    },
-    manifest: (manifest as Partial<ManifestOptions>)
-  }),
+  //   // experimental: {
+  //   //   directoryAndTrailingSlashHandler: true
+  //   // },
+  //   manifest: (manifest as Partial<ManifestOptions>)
+  // }),
+  ,
    d2(
 
     {
