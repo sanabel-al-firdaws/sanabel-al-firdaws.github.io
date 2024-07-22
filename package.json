@@ -10,12 +10,12 @@
     "generate-pwa-assets": "pwa-assets-generator --preset minimal public/favicon.svg"
   },
   "dependencies": {
-    "@astrojs/check": "^0.8.1",
-    "@astrojs/markdown-remark": "^5.1.1",
+    "@astrojs/check": "^0.8.2",
+    "@astrojs/markdown-remark": "^5.2.0",
     "@astrojs/starlight": "^0.25.1",
     "@lorenzo_lewis/starlight-utils": "0.1.2",
     "@playwright/test": "^1.45.1",
-    "astro": "^4.11.5",
+    "astro": "^4.12.2",
     "astro-d2": "^0.4.0",
     "culori": "^3.3.0",
     "rehype-autolink-headings": "^7.1.0",
