@@ -7,7 +7,7 @@ import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
 // import font from "TNB.ttf";
 
-import starlightBlog from 'starlight-blog-ar';
+import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
 // import starlightImageZoom from 'starlight-image-zoom';
@@ -149,18 +149,18 @@ export default defineConfig({
         }]
       }]
     }]
-  })
-  
-  , AstroPWA({
-    // mode: "production",
-    ///production
-
-    // experimental: {
-    
-    //   directoryAndTrailingSlashHandler: true
-    // },
-    manifest: (manifest as Partial<ManifestOptions>)
   }),
+  
+  // , AstroPWA({
+  //   // mode: "production",
+  //   ///production
+
+  //   // experimental: {
+
+  //   //   directoryAndTrailingSlashHandler: true
+  //   // },
+  //   manifest: (manifest as Partial<ManifestOptions>)
+  // }),
    d2(
 
     {

@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "bunx --bun astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "generate-pwa-assets": "pwa-assets-generator --preset minimal public/favicon.svg"
@@ -21,7 +21,7 @@
     "rehype-autolink-headings": "^7.1.0",
     "remark-custom-header-id": "file:packages/remark-custom-header-id",
     "remark-mark-highlight": "^0.1.0",
-    "starlight-blog-ar": "^0.11.2",
+    "starlight-blog": "^0.11.1",
     "starlight-image-zoom": "file:packages/starlight-image-zoom",
     "theme-change": "^2.5.0",
     "typescript": "^5.3.3"
