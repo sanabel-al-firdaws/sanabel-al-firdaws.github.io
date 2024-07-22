@@ -2,7 +2,7 @@
 import config from 'virtual:starlight/user-config';
 import Icon from '../../../node_modules/@astrojs/starlight/user-components/Icon.astro';
 import type { Props } from '@astrojs/starlight/props';
-
+import ReloadPrompt from '../ReloadPrompt.astro';
 type Platform = keyof NonNullable<typeof config.social>;
 type SocialConfig = NonNullable<NonNullable<typeof config.social>[Platform]>;
 const links = Object.entries(config.social || {}) as [Platform, SocialConfig][];
@@ -22,12 +22,13 @@ const links = Object.entries(config.social || {}) as [Platform, SocialConfig][];
 	)
 }
 
+ <ReloadPrompt/>
 <style>
 	a {
 		color: var(--sl-color-text-accent);
 		padding: 0.5em;
 		margin: -0.5em;
-		text-decoration:none
+	
 	}
 	a:hover {
 		opacity: 0.66;

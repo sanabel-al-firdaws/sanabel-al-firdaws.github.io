@@ -1,7 +1,7 @@
 ---
 import type { Props } from '@astrojs/starlight/props';
 import Icon from '../../../node_modules/@astrojs/starlight/user-components/Icon.astro';
-import ReloadPrompt from '../ReloadPrompt.astro';
+
 
 const { dir, labels, pagination } = Astro.props;
 const { prev, next } = pagination;
@@ -53,7 +53,7 @@ const isRtl = dir === 'rtl';
         async>
 </script>
 
-<ReloadPrompt />
+
 
 <style>
 	.pagination-links {

@@ -152,9 +152,7 @@ export default defineConfig({
     }]
   })
   , AstroPWA({
-    mode: "production",
-    ///production
-    // registerType: "autoUpdate",
+    mode: "devolopment",
     includeAssets: ["favicon.ico"],
     workbox: {
       globPatterns: ['./**'],
@@ -162,6 +160,10 @@ export default defineConfig({
     },
     experimental: {
       directoryAndTrailingSlashHandler: true
+    },
+    devOptions: {
+      enabled: true
+      /* other options */
     },
     manifest: (manifest as Partial<ManifestOptions>)
   }),
