@@ -3,7 +3,7 @@ import starlight from '@astrojs/starlight';
 import remarkCustomHeaderId from 'remark-custom-header-id';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 // import AstroPWA from "@vite-pwa/astro";
-import type { ManifestOptions } from "vite-plugin-pwa";
+// import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
 // import font from "TNB.ttf";
 
@@ -57,13 +57,13 @@ export default defineConfig({
       minHeadingLevel: 1,
       maxHeadingLevel: 6
     },
-    customCss: ['./src/fonts/font-face.css',
+    customCss: [  './src/styles/custom.css','./src/fonts/font-face.css',
       // Relative path to your custom CSS file
       // '@fontsource/scheherazade-new/400.css',
       // '@fontsource/scheherazade-new/500.css',
       // '@fontsource/scheherazade-new/600.css',
       // '@fontsource/scheherazade-new/700.css',
-      './src/styles/custom.css'],
+    ],
     components: {
       // Override the default `SocialIcons` component.
       ThemeProvider: './src/components/starlight/ThemeProvider.astro',
