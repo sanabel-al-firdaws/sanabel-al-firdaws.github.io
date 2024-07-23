@@ -165,8 +165,12 @@ export default defineConfig({
 
 
         {
-        handler: 'NetworkFirst',
-        urlPattern: /^\// ,
+        handler: 'NetworkFirst' as const,
+        urlPattern: ({ url }) => {
+          return url.pathname.startsWith("/")
+        }
+          
+          ,
         options: { 
             cacheName: 'pages',
             expiration:  {
