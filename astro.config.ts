@@ -166,7 +166,7 @@ export default defineConfig({
 
         {
         handler: 'NetworkFirst',
-        urlPattern: /\/*.html/,
+        urlPattern: /\//,
         options: { 
             cacheName: 'pages',
             expiration:  {
