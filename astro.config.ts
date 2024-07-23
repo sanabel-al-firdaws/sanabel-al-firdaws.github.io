@@ -171,9 +171,13 @@ export default defineConfig({
             cacheName: 'pages',
             expiration:  {
               maxAgeSeconds: ( 60 * 60 * 24 * 365) 
+            },
+            cacheableResponse: {
+              statuses: [200]
             }
+
         }
-    
+  
       },
       
       {
@@ -183,6 +187,9 @@ export default defineConfig({
             cacheName: 'pagefind',
             expiration:  {
               maxAgeSeconds: ( 60 * 60 * 24 * 365) 
+            },
+            cacheableResponse: {
+              statuses: [200]
             }
         }
     
