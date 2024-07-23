@@ -165,24 +165,31 @@ export default defineConfig({
       runtimeCaching: [
 
 
-        {
-        handler: 'NetworkFirst' as const,
-        urlPattern: ({ url }) => {
-          return url.pathname.startsWith("/")
-        }
+        // {
+        // handler: 'NetworkFirst' as const,
+        // urlPattern: ({ url }) => {
+        //   return url.pathname.startsWith("/")
+        // }
   
-          ,
-        options: { 
-            cacheName: 'pages',
-            expiration:  {
-              maxAgeSeconds: 60 * 60 * 24 * 365 ,
-              maxEntries: 300,
-            },
-            cacheableResponse: {
-              statuses: [0,200]
-            }
+        //   ,
+        // options: { 
+        //     cacheName: 'pages',
+        //     expiration:  {
+        //       maxAgeSeconds: 60 * 60 * 24 * 365 ,
+        //       maxEntries: 300,
+        //     },
+        //     cacheableResponse: {
+        //       statuses: [0,200]
+        //     }
 
-        }
+        // }
+        {
+          urlPattern: ({ request }) => request.destination === 'document',
+          handler: 'NetworkFirst',
+          options: {
+              cacheName: 'html-cache',
+          },
+      },
   
       }
     
