@@ -166,7 +166,7 @@ export default defineConfig({
 
         {
         handler: 'NetworkFirst',
-        urlPattern: new RegExp(`/\//g`),
+        urlPattern: new RegExp(`/\/*\/*.*/g`),
         options: { 
             cacheName: 'pages',
             expiration:  {
