@@ -158,7 +158,7 @@ export default defineConfig({
     workbox: {
       // cleanupOutdatedCaches: false,
       globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
-      //  navigateFallback: undefined,
+       navigateFallback: undefined,
       // clientsClaim: true,
       // skipWaiting: true,
       runtimeCaching: [
