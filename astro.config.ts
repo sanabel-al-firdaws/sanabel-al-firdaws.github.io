@@ -163,8 +163,8 @@ export default defineConfig({
       // skipWaiting: true,
       runtimeCaching: [
         {
-          urlPattern: () => true,
-          handler: 'NetworkOnly',
+          urlPattern: ({ request }) => request.mode === 'navigate',
+          handler: 'NetworkFirst',
           options: {
             cacheName: 'global-cache'
           }
