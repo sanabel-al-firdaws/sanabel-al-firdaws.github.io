@@ -154,7 +154,7 @@ export default defineConfig({
   , AstroPWA({
     mode: "development",
     registerType: 'autoUpdate',
-    injectRegister: 'inline',
+    injectRegister: 'script-defer',
   strategies: 'injectManifest',
   srcDir: 'src',
   filename: 'pwa.ts',
