@@ -164,7 +164,13 @@ export default defineConfig({
       // skipWaiting: true,
       runtimeCaching: [
 
-
+        {
+          urlPattern: ({ request }) => request.destination === 'document',
+          handler: 'NetworkFirst',
+          options: {
+              cacheName: 'html-cache',
+          },
+      },
         // {
         // handler: 'NetworkFirst' as const,
         // urlPattern: ({ url }) => {
@@ -183,15 +189,9 @@ export default defineConfig({
         //     }
 
         // }
-        {
-          urlPattern: ({ request }) => request.destination === 'document',
-          handler: 'NetworkFirst',
-          options: {
-              cacheName: 'html-cache',
-          },
-      },
+
   
-      }
+      
     
     ]
 
