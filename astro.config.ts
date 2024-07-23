@@ -174,7 +174,7 @@ export default defineConfig({
               maxEntries: 300,
             },
             cacheableResponse: {
-              statuses: [200]
+              statuses: [0,200]
             }
 
         }
