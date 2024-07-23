@@ -153,21 +153,21 @@ export default defineConfig({
     }]
   })
   , AstroPWA({
-    mode: "production",
+    // mode: "production",
     // injectRegister: 'script',
     workbox: {
-      cleanupOutdatedCaches: false,
-      globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
-      navigateFallback: '/404',
-      clientsClaim: true,
-      skipWaiting: true,
+      // cleanupOutdatedCaches: false,
+      // globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
+      // navigateFallback: '/404',
+      // clientsClaim: true,
+      // skipWaiting: true,
       runtimeCaching: [
 
 
         {
         handler: 'NetworkFirst' as const,
         urlPattern: ({ url }) => {
-          return url.pathname.startsWith("/")
+          return url.pathname.startsWith("/arabic")
         }
           
           ,
