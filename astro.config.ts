@@ -154,7 +154,7 @@ export default defineConfig({
   })
   , AstroPWA({
     mode: "production",
-
+    injectRegister: 'inline',
     workbox: {
       cleanupOutdatedCaches: false,
       globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
