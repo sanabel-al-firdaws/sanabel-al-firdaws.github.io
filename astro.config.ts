@@ -156,7 +156,7 @@ export default defineConfig({
     mode: "production",
 
     workbox: {
-   
+      cleanupOutdatedCaches: false,
       globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
       navigateFallback: '/404',
       clientsClaim: true,
