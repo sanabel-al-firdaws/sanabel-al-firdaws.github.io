@@ -167,7 +167,7 @@ export default defineConfig({
 
         {
         handler: 'NetworkFirst' as const,
-        urlPattern: new RegExp('/\/.*/g')
+        urlPattern: new RegExp('/\/.*/')
           
           ,
         options: { 
