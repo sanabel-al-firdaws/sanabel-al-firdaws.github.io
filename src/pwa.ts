@@ -1,212 +1,26 @@
-import { cacheNames, clientsClaim } from 'workbox-core'
-import { registerRoute, setCatchHandler, setDefaultHandler } from 'workbox-routing'
-import type { StrategyHandler } from 'workbox-strategies'
-import {
-  NetworkFirst,
-  NetworkOnly,
-  Strategy
-} from 'workbox-strategies'
-import type { ManifestEntry } from 'workbox-build'
+import {registerRoute} from 'workbox-routing';
+import {NetworkFirst} from 'workbox-strategies';
+import {CacheableResponsePlugin} from 'workbox-cacheable-response';
+import {staticResourceCache} from 'workbox-recipes';
 
-// Give TypeScript the correct global.
-declare let self: ServiceWorkerGlobalScope
-declare type ExtendableEvent = any
+staticResourceCache();
 
-const data = {
-  race: false,
-  debug: false,
-  credentials: 'same-origin',
-  networkTimeoutSeconds: 0,
-  fallback: '404.html'
-}
-
-const cacheName = cacheNames.runtime
-
-function buildStrategy(): Strategy {
-  if (race) {
-    class CacheNetworkRace extends Strategy {
-      _handle(request: Request, handler: StrategyHandler): Promise<Response | undefined> {
-        const fetchAndCachePutDone: Promise<Response> = handler.fetchAndCachePut(request)
-        const cacheMatchDone: Promise<Response | undefined> = handler.cacheMatch(request)
-
-        return new Promise((resolve, reject) => {
-          fetchAndCachePutDone.then(resolve).catch((e) => {
-            if (debug)
-              console.log(`Cannot fetch resource: ${request.url}`, e)
-          })
-          cacheMatchDone.then(response => response && resolve(response))
-
-          // Reject if both network and cache error or find no response.
-          Promise.allSettled([fetchAndCachePutDone, cacheMatchDone]).then((results) => {
-            const [fetchAndCachePutResult, cacheMatchResult] = results
-            if (fetchAndCachePutResult.status === 'rejected' && !cacheMatchResult.value)
-              reject(fetchAndCachePutResult.reason)
-          })
-        })
-      }
-    }
-    return new CacheNetworkRace()
-  }
-  else {
-    if (networkTimeoutSeconds > 0)
-      return new NetworkFirst({ cacheName, networkTimeoutSeconds })
-    else
-      return new NetworkFirst({ cacheName })
-  }
-}
-
-const manifest = self.__WB_MANIFEST as Array<ManifestEntry>
-
-const cacheEntries: RequestInfo[] = []
-
-const manifestURLs = manifest.map(
-  (entry) => {
-    const url = new URL(entry.url, self.location)
-    cacheEntries.push(new Request(url.href, {
-      credentials: credentials as any
-    }))
-    return url.href
-  }
-)
-
-self.addEventListener('install', (event: ExtendableEvent) => {
-  event.waitUntil(
-    caches.open(cacheName).then((cache) => {
-      return cache.addAll(cacheEntries)
-    })
-  )
-})
-
-self.addEventListener('activate', (event: ExtendableEvent) => {
-  // - clean up outdated runtime cache
-  event.waitUntil(
-    caches.open(cacheName).then((cache) => {
-      // clean up those who are not listed in manifestURLs
-      cache.keys().then((keys) => {
-        keys.forEach((request) => {
-          debug && console.log(`Checking cache entry to be removed: ${request.url}`)
-          if (!manifestURLs.includes(request.url)) {
-            cache.delete(request).then((deleted) => {
-              if (debug) {
-                if (deleted)
-                  console.log(`Precached data removed: ${request.url || request}`)
-                else
-                  console.log(`No precache found: ${request.url || request}`)
-              }
-            })
-          }
-        })
-      })
-    })
-  )
-})
+const cacheName = 'pages';
+//@ts-ignore
+const matchCallback = ({request}) => request.mode === 'navigate';
+const networkTimeoutSeconds = 3;
 
 registerRoute(
-  ({ url }) => manifestURLs.includes(url.href),
-  buildStrategy()
-)
-
-setDefaultHandler(new NetworkOnly())
-
-// fallback to app-shell for document request
-setCatchHandler(({ event }): Promise<Response> => {
-  switch (event.request.destination) {
-    case 'document':
-      return caches.match(fallback).then((r) => {
-        return r ? Promise.resolve(r) : Promise.resolve(Response.error())
-      })
-    default:
-      return Promise.resolve(Response.error())
-  }
-})
-
-// this is necessary, since the new service worker will keep on skipWaiting state
-// and then, caches will not be cleared since it is not activated
-self.skipWaiting()
-clientsClaim()
-
-
-
-
-
-
-
-// // import { registerSW } from 'virtual:pwa-register'
-
-// // window.addEventListener('load', () => {
-// //   const pwaToast = document.querySelector<HTMLDivElement>('#pwa-toast')!
-// //   const pwaToastMessage = pwaToast.querySelector<HTMLDivElement>('.message #toast-message')!
-// //   const pwaCloseBtn = pwaToast.querySelector<HTMLButtonElement>('#pwa-close')!
-// //   const pwaRefreshBtn = pwaToast.querySelector<HTMLButtonElement>('#pwa-refresh')!
-
-// //   let refreshSW: ((reloadPage?: boolean) => Promise<void>) | undefined
-
-// //   const refreshCallback = () => refreshSW?.(true)
-
-// //   const hidePwaToast = (raf = false) => {
-// //     if (raf) {
-// //       requestAnimationFrame(() => hidePwaToast(false))
-// //       return
-// //     }
-// //     if (pwaToast.classList.contains('refresh'))
-// //       pwaRefreshBtn.removeEventListener('click', refreshCallback)
-
-// //     pwaToast.classList.remove('show', 'refresh')
-// //   }
-// //   const showPwaToast = (offline: boolean) => {
-// //     if (!offline)
-// //       pwaRefreshBtn.addEventListener('click', refreshCallback)
-// //     requestAnimationFrame(() => {
-// //       hidePwaToast(false)
-// //       if (!offline)
-// //         pwaToast.classList.add('refresh')
-// //       pwaToast.classList.add('show')
-// //     })
-// //   }
-
-// //   pwaCloseBtn.addEventListener('click', () => hidePwaToast(true))
-
-// //   refreshSW = registerSW({
-// //     immediate: true,
-// //     onOfflineReady() {
-// //       pwaToastMessage.innerHTML = 'الموقع جاهز للعمل بدون اتصال بالإنترنت'
-// //       showPwaToast(true)
-// //     },
-// //     onNeedRefresh() {
-// //       pwaToastMessage.innerHTML = 'تم إصدار نسخة جديدة من الموقع , إضغط تحديث لتحديثه'
-// //       showPwaToast(false)
-// //     },
-// //     onRegisteredSW(swScriptUrl) {
-// //       console.log('SW registered: ', swScriptUrl)
-// //     }
-// //   })
-// // })
-
-
-
-
-// import {registerRoute} from 'workbox-routing';
-// import {NetworkFirst} from 'workbox-strategies';
-// import {CacheableResponsePlugin} from 'workbox-cacheable-response';
-
-// const cacheName = 'pages';
-// const matchCallback = ({request}) => request.mode === 'navigate';
-// const networkTimeoutSeconds = 3123;
-
-
-
-// registerRoute(
-//   matchCallback,
-//   new NetworkFirst({
-//     networkTimeoutSeconds,
-//     cacheName,
-//     plugins: [
-//       new CacheableResponsePlugin({
-//         statuses: [0, 200],
-//       }),
-//     ],
-//   })
-// );
-
+  matchCallback,
+  new NetworkFirst({
+    networkTimeoutSeconds,
+    cacheName,
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+    ],
+  })
+);
 
 
