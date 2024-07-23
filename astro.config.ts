@@ -166,7 +166,7 @@ export default defineConfig({
 
         {
         handler: 'NetworkFirst',
-        urlPattern: /\//,
+        urlPattern: new RegExp(`/\//g`),
         options: { 
             cacheName: 'pages',
             expiration:  {
@@ -178,21 +178,6 @@ export default defineConfig({
 
         }
   
-      },
-      
-      {
-        handler: 'NetworkFirst',
-        urlPattern: /\/*pagefind*\//,
-        options: { 
-            cacheName: 'pagefind',
-            expiration:  {
-              maxAgeSeconds: ( 60 * 60 * 24 * 365) 
-            },
-            cacheableResponse: {
-              statuses: [200]
-            }
-        }
-    
       }
     
     ]
