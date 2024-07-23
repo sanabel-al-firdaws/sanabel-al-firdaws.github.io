@@ -158,14 +158,14 @@ export default defineConfig({
     workbox: {
       // cleanupOutdatedCaches: false,
       globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
-       navigateFallback: undefined,
+      //  navigateFallback: undefined,
       // clientsClaim: true,
       // skipWaiting: true,
       runtimeCaching: [
-
         {
-          urlPattern: ({ request }) => request.destination === 'document',
-          // urlPattern: new RegExp('\/styles/.*\\.css'),
+          // urlPattern: ({ request }) => request.destination === 'document',
+
+          urlPattern: /./,
           handler: 'NetworkFirst',
           options: {
               cacheName: 'html-cache',
@@ -177,28 +177,6 @@ export default defineConfig({
             }
           },
       },
-        // {
-        // handler: 'NetworkFirst' as const,
-        // urlPattern: ({ url }) => {
-        //   return url.pathname.startsWith("/")
-        // }
-  
-        //   ,
-        // options: { 
-        //     cacheName: 'pages',
-        //     expiration:  {
-        //       maxAgeSeconds: 60 * 60 * 24 * 365 ,
-        //       maxEntries: 300,
-        //     },
-        //     cacheableResponse: {
-        //       statuses: [0,200]
-        //     }
-
-        // }
-
-  
-      
-    
     ]
 
     },
