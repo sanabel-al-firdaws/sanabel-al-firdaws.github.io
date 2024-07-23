@@ -154,7 +154,7 @@ export default defineConfig({
   })
   , AstroPWA({
     mode: "production",
-    injectRegister: 'script',
+    // injectRegister: 'script',
     workbox: {
       cleanupOutdatedCaches: false,
       globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
@@ -170,7 +170,7 @@ export default defineConfig({
         options: { 
             cacheName: 'pages',
             expiration:  {
-              maxAgeSeconds: ( 60 * 60 * 24 * 365) ,
+              maxAgeSeconds: 60 * 60 * 24 * 365 ,
               maxEntries: 300,
             },
             cacheableResponse: {
