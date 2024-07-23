@@ -153,21 +153,14 @@ export default defineConfig({
   })
   , AstroPWA({
     mode: "development",
-    // injectRegister: 'script',
-    // injectRegister: null,
     registerType: 'autoUpdate',
-//  injectRegister: 'script',
+    injectRegister: 'inline',
   strategies: 'injectManifest',
   srcDir: 'src',
   filename: 'pwa.ts',
     experimental: {
       directoryAndTrailingSlashHandler: true
     },
-    
-    // devOptions: {
-    //   enabled: true
-    //   /* other options */
-    // },
     manifest: (manifest as Partial<ManifestOptions>)
   }),
   
