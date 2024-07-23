@@ -156,12 +156,15 @@ export default defineConfig({
     mode: "production",
 
     workbox: {
+     
       globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
       navigateFallback: '/404',
       clientsClaim: true,
       skipWaiting: true,
-      runtimeCaching: [{
-       
+      runtimeCaching: [
+
+
+        {
         handler: 'NetworkFirst',
         urlPattern: /\/*.html/,
         options: { 
@@ -170,8 +173,22 @@ export default defineConfig({
               maxAgeSeconds: ( 60 * 60 * 24 * 365) 
             }
         }
+    
+      },
       
-      }]
+      {
+        handler: 'NetworkFirst',
+        urlPattern: /\/*pagefind*\//,
+        options: { 
+            cacheName: 'pagefind',
+            expiration:  {
+              maxAgeSeconds: ( 60 * 60 * 24 * 365) 
+            }
+        }
+    
+      }
+    
+    ]
 
     },
     registerType: 'autoUpdate',
