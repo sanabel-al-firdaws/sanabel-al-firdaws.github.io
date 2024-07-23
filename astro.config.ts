@@ -14,7 +14,6 @@ import { remarkMark } from 'remark-mark-highlight';
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
 import d2 from "astro-d2";
 
-import relativeLinks from "astro-relative-links";
 
 // https://astro.build/config
 export default defineConfig({
@@ -159,7 +158,7 @@ export default defineConfig({
     workbox: {
       // cleanupOutdatedCaches: false,
       globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
-       navigateFallback: undefined,
+      //  navigateFallback: undefined,
       // clientsClaim: true,
       // skipWaiting: true,
       runtimeCaching: [
