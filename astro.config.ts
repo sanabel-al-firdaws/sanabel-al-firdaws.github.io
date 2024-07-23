@@ -169,6 +169,13 @@ export default defineConfig({
           handler: 'NetworkFirst',
           options: {
               cacheName: 'html-cache',
+              expiration:  {
+              maxAgeSeconds: 60 * 60 * 24 * 365 ,
+              maxEntries: 300,
+            },
+            cacheableResponse: {
+              statuses: [0,200]
+            }
           },
       },
         // {
