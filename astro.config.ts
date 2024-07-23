@@ -155,6 +155,7 @@ export default defineConfig({
   , AstroPWA({
     // mode: "production",
     // injectRegister: 'script',
+    injectRegister: 'null',
     workbox: {
       // cleanupOutdatedCaches: false,
       // globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
@@ -167,7 +168,7 @@ export default defineConfig({
         {
         handler: 'NetworkFirst' as const,
         urlPattern: ({ url }) => {
-          return url.pathname.startsWith("/arabic")
+          return url.pathname.startsWith("/")
         }
           
           ,
