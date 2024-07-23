@@ -154,14 +154,35 @@ export default defineConfig({
   })
   , AstroPWA({
     mode: "production",
-    includeAssets: ["favicon.ico"],
+
     workbox: {
-      globPatterns: ['./**'],
-      navigateFallback: '/404'
+      globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
+      navigateFallback: '/404',
+      clientsClaim: true,
+      skipWaiting: true,
+      runtimeCaching: [{
+       
+        handler: 'NetworkFirst',
+        urlPattern: /\/*.html/,
+        options: { 
+            cacheName: 'pages',
+            expiration:  {
+              maxAgeSeconds: ( 60 * 60 * 24 * 365) 
+            }
+        }
+      
+      }]
+
     },
+    registerType: 'autoUpdate',
+//  injectRegister: 'script',
+//   strategies: 'injectManifest',
+//   srcDir: 'src',
+//   filename: 'pwa.ts',
     experimental: {
       directoryAndTrailingSlashHandler: true
     },
+    
     // devOptions: {
     //   enabled: true
     //   /* other options */

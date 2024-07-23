@@ -7,7 +7,7 @@ import Dropdown from '../../../node_modules/@lorenzo_lewis/starlight-utils/compo
 import HorizontalList from '../../../node_modules/@lorenzo_lewis/starlight-utils/components/HorizontalList.astro'
 import Default from "@astrojs/starlight/components/Sidebar.astro";
 
-import ReloadPrompt from "../ReloadPrompt.astro";
+// import ReloadPrompt from "../ReloadPrompt.astro";
 export type SidebarData = {
   isCurrentSidebar: boolean;
   starlightProps: Props;
@@ -80,7 +80,6 @@ if (
         <Dropdown starlightProps={strippedProps} {multiSidebarData} />
       )}
       {config.multiSidebar.switcherStyle === "horizontalList" && (
-         <ReloadPrompt/>
         <HorizontalList starlightProps={strippedProps} {multiSidebarData} />
       
       )}
