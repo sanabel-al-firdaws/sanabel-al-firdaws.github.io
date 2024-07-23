@@ -167,9 +167,7 @@ export default defineConfig({
 
         {
         handler: 'NetworkFirst' as const,
-        urlPattern: ({ url }) => {
-          return url.pathname.startsWith("/")
-        }
+        urlPattern: new RegExp('/\/.*/')
           
           ,
         options: { 
