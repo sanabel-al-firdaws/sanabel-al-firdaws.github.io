@@ -156,8 +156,8 @@ export default defineConfig({
     mode: "production",
 
     workbox: {
-     
-      globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
+   
+      globPatterns: ['**/*.{html,js,css,png,svg,ico,ttf}'],
       navigateFallback: '/404',
       clientsClaim: true,
       skipWaiting: true,
