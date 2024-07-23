@@ -163,21 +163,31 @@ export default defineConfig({
       // skipWaiting: true,
       runtimeCaching: [
         {
-          // urlPattern: ({ request }) => request.destination === 'document',
-
-          urlPattern: /./,
-          handler: 'NetworkFirst',
+          urlPattern: () => true,
+          handler: 'NetworkOnly',
           options: {
-              cacheName: 'html-cache',
-              expiration:  {
-              maxAgeSeconds: 60 * 60 * 24 * 365 ,
-            },
-            cacheableResponse: {
-              statuses: [0,200]
-            }
-          },
-      },
-    ]
+            cacheName: 'global-cache'
+          }
+        }
+
+      ]
+      //   {
+      //     // urlPattern: ({ request }) => request.destination === 'document',
+
+      //     urlPattern: ({ request }) => request.destination === 'document',
+      //     // urlPattern: new RegExp('\/styles/.*\\.css'),
+      //     handler: 'NetworkFirst',
+      //     options: {
+      //         cacheName: 'html-cache',
+      //         expiration:  {
+      //         maxAgeSeconds: 60 * 60 * 24 * 365 ,
+      //       },
+      //       cacheableResponse: {
+      //         statuses: [0,200]
+      //       }
+      //     },
+      // },
+
 
     },
     registerType: 'autoUpdate',
