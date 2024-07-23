@@ -155,46 +155,11 @@ export default defineConfig({
     mode: "development",
     // injectRegister: 'script',
     // injectRegister: null,
-    workbox: {
-      // cleanupOutdatedCaches: false,
-      globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
-      //  navigateFallback: undefined,
-      // clientsClaim: true,
-      // skipWaiting: true,
-      runtimeCaching: [
-        {
-          urlPattern: ({ request }) => request.mode === 'navigate',
-          handler: 'NetworkFirst',
-          options: {
-            cacheName: 'global-cache'
-          }
-        }
-
-      ]
-      //   {
-      //     // urlPattern: ({ request }) => request.destination === 'document',
-
-      //     urlPattern: ({ request }) => request.destination === 'document',
-      //     // urlPattern: new RegExp('\/styles/.*\\.css'),
-      //     handler: 'NetworkFirst',
-      //     options: {
-      //         cacheName: 'html-cache',
-      //         expiration:  {
-      //         maxAgeSeconds: 60 * 60 * 24 * 365 ,
-      //       },
-      //       cacheableResponse: {
-      //         statuses: [0,200]
-      //       }
-      //     },
-      // },
-
-
-    },
     registerType: 'autoUpdate',
 //  injectRegister: 'script',
-//   strategies: 'injectManifest',
-//   srcDir: 'src',
-//   filename: 'pwa.ts',
+  strategies: 'injectManifest',
+  srcDir: 'src',
+  filename: 'pwa.ts',
     experimental: {
       directoryAndTrailingSlashHandler: true
     },
@@ -221,3 +186,46 @@ export default defineConfig({
 
 ]
 });
+
+
+
+// , AstroPWA({
+//   mode: "development",
+//   // injectRegister: 'script',
+//   // injectRegister: null,
+//   workbox: {
+//     // cleanupOutdatedCaches: false,
+//     globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
+//     //  navigateFallback: undefined,
+//     // clientsClaim: true,
+//     // skipWaiting: true,
+//     runtimeCaching: [
+//       {
+//         urlPattern: ({ request }) => request.mode === 'navigate',
+//         handler: 'NetworkFirst',
+//         options: {
+//           cacheName: 'global-cache'
+//         }
+//       }
+
+//     ]
+//     //   {
+
+
+
+//   },
+//   registerType: 'autoUpdate',
+// //  injectRegister: 'script',
+// //   strategies: 'injectManifest',
+// //   srcDir: 'src',
+// //   filename: 'pwa.ts',
+//   experimental: {
+//     directoryAndTrailingSlashHandler: true
+//   },
+  
+//   // devOptions: {
+//   //   enabled: true
+//   //   /* other options */
+//   // },
+//   manifest: (manifest as Partial<ManifestOptions>)
+// }),
