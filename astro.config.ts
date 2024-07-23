@@ -6,7 +6,7 @@ import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
 // import font from "TNB.ttf";
-import RouteMatchCallback from 'workbox-core'
+
 import starlightBlog from 'starlight-blog';
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from 'remark-mark-highlight';
@@ -159,7 +159,7 @@ export default defineConfig({
     workbox: {
       // cleanupOutdatedCaches: false,
       globPatterns: ['**/*.{js,css,png,svg,ico,ttf}'],
-       navigateFallback: null,
+       navigateFallback: undefined,
       // clientsClaim: true,
       // skipWaiting: true,
       runtimeCaching: [
