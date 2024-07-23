@@ -152,7 +152,7 @@ export default defineConfig({
     }]
   })
   , AstroPWA({
-    // mode: "production",
+    mode: "development",
     // injectRegister: 'script',
     // injectRegister: null,
     workbox: {
