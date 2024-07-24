@@ -32,7 +32,14 @@ navigator.serviceWorker.addEventListener('message', async event => {
   </script>
 
 
-
+<script type="module">
+    await import('/pagefind/pagefind-highlight.js');
+    new PagefindHighlight({ highlightParam: "highlight" ,addStyles: false ,markOptions:{
+		className: "pagefind-highlight",
+		exclude: ["[data-pagefind-ignore]", "[data-pagefind-ignore] *"],
+		accuracy: "complementary"
+	}});
+</script>
 
 
 

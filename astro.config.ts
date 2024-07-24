@@ -157,13 +157,11 @@ export default defineConfig({
     useCredentials: true,
     injectManifest: {
       globPatterns: ['**/*.{js,css,htm,svg,jsonl}'],
+      injectionPoint: undefined
     },
     mode: "production",
     registerType: 'autoUpdate',
     injectRegister: null ,
-    injectManifest: {
-      injectionPoint: undefined
-    },
   strategies: 'injectManifest',
   srcDir: 'src',
   filename: 'pwa.ts',
