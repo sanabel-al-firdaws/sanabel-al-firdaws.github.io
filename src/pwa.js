@@ -4,6 +4,10 @@ import {CacheableResponsePlugin} from 'workbox-cacheable-response';
 import { clientsClaim } from 'workbox-core'
 import {setCatchHandler} from 'workbox-routing';
 const pageFallback = 'index.html';
+import {setDefaultHandler} from 'workbox-routing';
+import {NetworkOnly} from 'workbox-strategies';
+
+setDefaultHandler(new NetworkOnly());
 
 self.addEventListener('install', event => {
   const files = [pageFallback];
