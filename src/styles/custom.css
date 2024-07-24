@@ -58,7 +58,10 @@ mark {
     margin-inline-start: -0.5rem;
     padding-inline-start: 0.5rem;
 }
+.pagefind-highlight {
 
+	border:2px solid var(--sl-color-gray-2);
+}
 :root{
 	 
       .r {

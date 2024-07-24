@@ -6,6 +6,7 @@ import { clientsClaim } from 'workbox-core'
 import { setCatchHandler } from 'workbox-routing';
 import { setDefaultHandler } from 'workbox-routing';
 import { NetworkOnly } from 'workbox-strategies';
+import {ExpirationPlugin} from 'workbox-expiration';
 
 declare let self: ServiceWorkerGlobalScope
 const urls =["/offline.html","/index.html","/theme.html","/intro.html"];
@@ -18,6 +19,10 @@ const strategy = new StaleWhileRevalidate({
     // new BrodcastUpdatePlugin ()
     new BroadcastUpdatePlugin({
      headersToCheck: ['Last-Modified']
+    }),
+
+    new ExpirationPlugin({
+      maxAgeSeconds: 365 * 24 * 60 * 60,
     }),
     
   ] 
@@ -81,6 +86,9 @@ registerRoute(
       new BroadcastUpdatePlugin({
        headersToCheck: ['Last-Modified']
       }),
+      new ExpirationPlugin({
+        maxAgeSeconds: 365 * 24 * 60 * 60,
+      }),
       
     ] 
 
@@ -102,6 +110,9 @@ registerRoute(
       // new BrodcastUpdatePlugin ()
       new BroadcastUpdatePlugin({
        headersToCheck: ['Last-Modified']
+      }),
+      new ExpirationPlugin({
+        maxAgeSeconds: 365 * 24 * 60 * 60,
       }),
       
     ] 
