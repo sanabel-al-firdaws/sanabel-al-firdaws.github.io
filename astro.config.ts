@@ -137,10 +137,8 @@ export default defineConfig({
         label: 'أَحْدَثُ الْمَقَالَاتِ',
         collapsed: true,
         autogenerate: {
-          directory: 'blog',
-          sort: 'date',
-          order: 'descending'
-        }
+          directory: 'blog'     
+          }
       }, {
         label: 'الْأَقْسَامُ',
         collapsed: true,
@@ -152,12 +150,19 @@ export default defineConfig({
     }]
   })
   , AstroPWA({
-    mode: "development",
+    devOptions: {
+      enabled: true,
+      type: 'module',
+    },
+    mode: "production",
     registerType: 'autoUpdate',
-    injectRegister: false ,
+    injectRegister: null ,
+    injectManifest: {
+      injectionPoint: undefined
+    },
   strategies: 'injectManifest',
   srcDir: 'src',
-  filename: 'pwa.ts',
+  filename: 'pwa.js',
     experimental: {
       directoryAndTrailingSlashHandler: true
     },

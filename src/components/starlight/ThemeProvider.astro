@@ -11,11 +11,11 @@ import { pwaInfo } from "virtual:pwa-info";
 
 
   <script>
-    if('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/pwa.js', { scope: '/' })
-      })
-    }
+	import { registerSW } from 'virtual:pwa-register';
+
+if ('serviceWorker' in navigator) {
+  registerSW();
+}
   </script>
 
 
