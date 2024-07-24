@@ -11,8 +11,14 @@ import { pwaInfo } from "virtual:pwa-info";
 
 
   <script  >
-	 navigator.storage.persist()
-	 
+// From a page:
+persist() 
+async function persist() {
+  return await navigator.storage && navigator.storage.persist ?
+    navigator.storage.persist() :
+    undefined;
+}
+
 	import { registerSW } from 'virtual:pwa-register';
 
 if ('serviceWorker' in navigator) {

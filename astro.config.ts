@@ -156,10 +156,10 @@ export default defineConfig({
     },
     useCredentials: true,
     injectManifest: {
-      globPatterns: ['**/*.{js,css,htm,svg,jsonl}'],
-      injectionPoint: undefined
+      globPatterns: ['**/*.{js,css,html,svg,json}'],
+
     },
-    mode: "production",
+    mode: "development",
     registerType: 'autoUpdate',
     injectRegister: null ,
   strategies: 'injectManifest',
