@@ -20,10 +20,6 @@ const strategy = new StaleWhileRevalidate({
     new BroadcastUpdatePlugin({
      headersToCheck: ['Last-Modified']
     }),
-
-    new ExpirationPlugin({
-      maxAgeSeconds: 365 * 24 * 60 * 60,
-    }),
     
   ] 
 })
@@ -86,9 +82,7 @@ registerRoute(
       new BroadcastUpdatePlugin({
        headersToCheck: ['Last-Modified']
       }),
-      new ExpirationPlugin({
-        maxAgeSeconds: 365 * 24 * 60 * 60,
-      }),
+
       
     ] 
 
@@ -111,9 +105,7 @@ registerRoute(
       new BroadcastUpdatePlugin({
        headersToCheck: ['Last-Modified']
       }),
-      new ExpirationPlugin({
-        maxAgeSeconds: 365 * 24 * 60 * 60,
-      }),
+
       
     ] 
 

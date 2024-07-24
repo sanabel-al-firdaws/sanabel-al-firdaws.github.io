@@ -11,6 +11,8 @@ import { pwaInfo } from "virtual:pwa-info";
 
 
   <script  >
+	 navigator.storage.persist()
+	 
 	import { registerSW } from 'virtual:pwa-register';
 
 if ('serviceWorker' in navigator) {
