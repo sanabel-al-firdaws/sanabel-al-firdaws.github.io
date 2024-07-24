@@ -156,8 +156,8 @@ export default defineConfig({
     },
     useCredentials: true,
     injectManifest: {
-      globPatterns: ['**/*.{js,css,html,svg,json}'],
-
+      // globPatterns: ['**\/*.{js,css,html,svg,json}'],
+      injectionPoint: undefined
     },
     mode: "development",
     registerType: 'autoUpdate',
