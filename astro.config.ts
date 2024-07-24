@@ -154,18 +154,19 @@ export default defineConfig({
       enabled: true,
       type: 'module',
     },
+    useCredentials: true,
+    injectManifest: {
+      globPatterns: ['**/*.{js,css,htm,svg,jsonl}'],
+    },
     mode: "production",
     registerType: 'autoUpdate',
     injectRegister: null ,
-    injectManifest: {
-      injectionPoint: undefined
-    },
+    // injectManifest: {
+    //   injectionPoint: undefined
+    // },
   strategies: 'injectManifest',
   srcDir: 'src',
-  filename: 'pwa.js',
-    experimental: {
-      directoryAndTrailingSlashHandler: true
-    },
+  filename: 'pwa.ts',
     manifest: (manifest as Partial<ManifestOptions>)
   }),
   

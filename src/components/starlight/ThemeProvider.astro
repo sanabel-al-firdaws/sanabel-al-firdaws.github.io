@@ -10,12 +10,25 @@ import { pwaInfo } from "virtual:pwa-info";
  {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
 
 
-  <script>
+  <script  >
 	import { registerSW } from 'virtual:pwa-register';
 
 if ('serviceWorker' in navigator) {
   registerSW();
 }
+navigator.serviceWorker.addEventListener('message', async event => {
+  // Optional: ensure the message came from workbox-broadcast-update
+  if (event.data.meta === 'workbox-broadcast-update') {
+    const {cacheName, updatedURL} = event.data.payload;
+
+    // Do something with cacheName and updatedURL.
+    // For example, get the cached content and update
+    // the content on the page.
+    const cache = await caches.open(cacheName);
+    const updatedResponse = await cache.match(updatedURL);
+    const updatedText = await updatedResponse?.text();
+  }
+});
   </script>
 
 
