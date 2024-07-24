@@ -161,9 +161,9 @@ export default defineConfig({
     mode: "production",
     registerType: 'autoUpdate',
     injectRegister: null ,
-    // injectManifest: {
-    //   injectionPoint: undefined
-    // },
+    injectManifest: {
+      injectionPoint: undefined
+    },
   strategies: 'injectManifest',
   srcDir: 'src',
   filename: 'pwa.ts',
