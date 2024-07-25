@@ -15,7 +15,16 @@ import { pwaInfo } from "virtual:pwa-info";
 import { registerSW } from 'virtual:pwa-register';
 
 if ('serviceWorker' in navigator) {
-  registerSW();
+  registerSW({
+  immediate: true,
+  onRegisteredSW(swScriptUrl) {
+    console.log("SW registered: ", swScriptUrl);
+  },
+  onOfflineReady() {
+    console.log("PWA application ready to work offline");
+  },
+});
+
 }
 navigator.serviceWorker.addEventListener('message', async event => {
   // Optional: ensure the message came from workbox-broadcast-update
@@ -52,7 +61,7 @@ navigator.serviceWorker.addEventListener('message', async event => {
     }
 	}});
 </script>
-ُ  ٌ ْ 
+
 
 
 {/* This is intentionally inlined to avoid FOUC. */}
