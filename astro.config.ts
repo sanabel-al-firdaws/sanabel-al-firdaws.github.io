@@ -154,17 +154,45 @@ export default defineConfig({
       enabled: true,
       type: 'module',
     },
-    useCredentials: true,
-    injectManifest: {
-      // globPatterns: ['**\/*.{js,css,html,svg,json}'],
-      injectionPoint: undefined
+    
+    workbox: {
+      skipWaiting: true,
+      clientsClaim: true,
+      navigateFallback: "/offline",
+      navigateFallbackAllowlist: [/(^\/\?highlight=.*$|^\/$|^\/.*\?ts=.*$)/],
+      globPatterns: ['**/*.{html,js,css,svg,json,ttf,pf_fragment,pf_index,pf_meta,pagefind,wasm}'],
+    //   runtimeCaching: [
+    //     {
+    //       urlPattern: /.*/i ,
+    //       handler: 'NetworkFirst',
+    //       options: {
+    //           cacheName: 'global-cache',
+    //           expiration:  {
+    //           maxAgeSeconds: 60 * 60 * 24 * 365 ,
+    //         },
+    //         cacheableResponse: {
+    //           statuses: [0,200]
+    //         },
+    //         networkTimeoutSeconds: 10,
+    //       },
+    //   },
+    // ]
     },
-    mode: "development",
+    // useCredentials: true,
+
+     experimental: {
+      directoryAndTrailingSlashHandler: true,
+    },
+    mode: "production",
     registerType: 'autoUpdate',
     injectRegister: null ,
-  strategies: 'injectManifest',
-  srcDir: 'src',
-  filename: 'pwa.ts',
+      // injectManifest: {
+    //   globPatterns: ['**/*.{js,css,svg,json}'],
+    //   // injectionPoint: undefined
+    // },
+  // strategies: 'injectManifest',
+  // srcDir: 'src',
+  // filename: 'pwa.ts',
     manifest: (manifest as Partial<ManifestOptions>)
   }),
   

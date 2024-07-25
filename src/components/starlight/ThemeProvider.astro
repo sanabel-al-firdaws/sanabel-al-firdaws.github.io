@@ -12,14 +12,7 @@ import { pwaInfo } from "virtual:pwa-info";
 
   <script  >
 // From a page:
-persist() 
-async function persist() {
-  return await navigator.storage && navigator.storage.persist ?
-    navigator.storage.persist() :
-    undefined;
-}
-
-	import { registerSW } from 'virtual:pwa-register';
+import { registerSW } from 'virtual:pwa-register';
 
 if ('serviceWorker' in navigator) {
   registerSW();
@@ -46,11 +39,20 @@ navigator.serviceWorker.addEventListener('message', async event => {
 		className: "pagefind-highlight",
 		exclude: ["[data-pagefind-ignore]", "[data-pagefind-ignore] *"],
 		accuracy: { "value": "complementary",
-        "limiters": [",", ".",":"]
+        "limiters": [",","",".",":","`","'",'"',";","؛","[","]","ّ","َ","ً","ُ","ٌ","‘","ـ","ِ","ٍ","ْ","’"]
+    },
+    acrossElements: true,
+    synonyms: {
+      "ا": "أ",
+      "ء": "أ",
+      "ئ": "أ",
+      "ؤ": "أ",
+      "آ": "أ",
+      "ى": "أ",
     }
 	}});
 </script>
-
+ُ  ٌ ْ 
 
 
 {/* This is intentionally inlined to avoid FOUC. */}

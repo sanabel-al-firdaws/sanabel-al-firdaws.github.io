@@ -124,7 +124,7 @@
 
 // // this is necessary, since the new service worker will keep on skipWaiting state
 // // and then, caches will not be cleared since it is not activated
-
+import { NavigationRoute, registerRoute } from 'workbox-routing';
 import { clientsClaim } from 'workbox-core'
 import {
   pageCache,
@@ -134,17 +134,10 @@ import {
 } from 'workbox-recipes';
 declare let self: ServiceWorkerGlobalScope
 
-pageCache({//       new ExpirationPlugin({
-  //         maxAgeSeconds: 365 * 24 * 60 * 60,
-  //       }),
-  });
+import { createHandlerBoundToURL, precacheAndRoute } from 'workbox-precaching'
 
-
-staticResourceCache();
-
-imageCache();
-
-offlineFallback();
+precacheAndRoute(self.__WB_MANIFEST, { directoryIndex: 'index.html', cleanURLs: true })
+// registerRoute(new NavigationRoute(createHandlerBoundToURL('404.html')))
 
 
 self.skipWaiting()
