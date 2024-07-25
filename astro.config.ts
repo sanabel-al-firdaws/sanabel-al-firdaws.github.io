@@ -159,7 +159,7 @@ export default defineConfig({
       skipWaiting: true,
       clientsClaim: true,
       navigateFallback: "/offline",
-      navigateFallbackAllowlist: [/(^\/\?highlight=.*$|^\/$|^\/.*\?ts=.*$)/],
+      navigateFallbackAllowlist: [/(^\/\?highlight=.*$|^\/$|^\/pagefind-entry\.json\?ts=.*$)/],
       globPatterns: ['**/*.{html,js,css,svg,json,ttf,pf_fragment,pf_index,pf_meta,pagefind,wasm}'],
     //   runtimeCaching: [
     //     {
