@@ -1,6 +1,12 @@
 name: Fetch From Google Docs
 on:
   workflow_dispatch:
+  # single message type
+  telegram_bot:
+    event: text
+    token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+# multiple message types
+
 jobs:
    fetch:
     runs-on: ubuntu-latest
