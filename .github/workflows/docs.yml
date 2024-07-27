@@ -2,9 +2,13 @@ name: Fetch From Google Docs
 on:
   workflow_dispatch:
   # single message type
+  telegram_bot:
+    event: text
+    token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 # multiple message types
 
 jobs:
+
    fetch:
     runs-on: ubuntu-latest
     permissions:
@@ -15,6 +19,9 @@ jobs:
       group: fetching
       cancel-in-progress: true
     steps:
+      - name: Actionsflow Action
+      - uses: actionsflow/actionsflow-action@v1
+      
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
         with:
