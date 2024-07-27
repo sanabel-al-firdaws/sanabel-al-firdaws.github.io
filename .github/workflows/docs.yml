@@ -1,12 +1,10 @@
 name: Fetch From Google Docs
 on:
   workflow_dispatch:
-  # single message type
-# multiple message types
+  repository_dispatch:
 
 jobs:
-
-   fetch:
+  fetch:
     runs-on: ubuntu-latest
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
@@ -16,9 +14,6 @@ jobs:
       group: fetching
       cancel-in-progress: true
     steps:
-      - name: Actionsflow Action
-      - uses: actionsflow/actionsflow-action@v1
-      
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
         with:
