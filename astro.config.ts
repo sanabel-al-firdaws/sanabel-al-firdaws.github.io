@@ -29,6 +29,13 @@ export default defineConfig({
     }]]
   },
   site: "https://sanabel-al-firdaws.github.io",
+  server: {
+    headers: {
+         'Cache-Control' : 'no-cache'
+    }
+ 
+  
+  },
   // trailingSlash: "always",
 
   integrations: [starlight({
@@ -78,10 +85,6 @@ export default defineConfig({
       Sidebar: "./src/components/starlight/Sidebar.astro"
     },
     title: "سَنَابِلُ الْفِرْدَوْسِ",
-    // logo: {
-    //   src: './src/assets/my-logo.svg',
-    // replacesTitle: true,
-    //  },
     credits: true,
     lastUpdated: true,
     description: "المنهج السلفي بأسلوب سلس ومبسط",
@@ -152,38 +155,25 @@ export default defineConfig({
       }]
     }]
   }), AstroPWA({
-    strategies: "injectManifest",
-    srcDir: "src",
-    filename: "sw.ts",
-    useCredentials: true,
-    devOptions: {
-      enabled: true,
-      type: "module"
-    },
-    injectManifest: {
-      globPatterns: ["**/*.{js,css,png,svg,json,woff2,woff,pf_fragment,pf_index,pf_meta,pagefind,wasm}"],
-      maximumFileSizeToCacheInBytes: 15000000
-    },
-    // workbox: {
-    //   skipWaiting: true,
-    //   clientsClaim: true,
-
-    //   navigateFallback: "/404",
-    //   ignoreURLParametersMatching: [/./],
-    //   globPatterns: ["**/*.{js,css,png,svg,json,woff2,woff,pf_fragment,pf_index,pf_meta,pagefind,wasm}"],
-    //       runtimeCaching: [
-    //       {
-    //         urlPattern: /./,
-    //         handler: 'NetworkFirst',
-    //         options: {
-    //           cacheName: "pages"
-    //         }
-
-    //         //   networkTimeoutSeconds: 5,
-    //         // },
-    //       },
-    //     ]
+    // strategies: "injectManifest",
+    // srcDir: "src",
+    // filename: "sw.ts",
+    // useCredentials: true,
+    // devOptions: {
+    //   enabled: true,
+    //   type: "module"
     // },
+    // injectManifest: {
+    //   globPatterns: ["**/*.{js,css,png,svg,json,woff2,woff,pf_fragment,pf_index,pf_meta,pagefind,wasm}"],
+    //   maximumFileSizeToCacheInBytes: 15000000
+    // },
+    workbox: {
+      skipWaiting: true,
+      clientsClaim: true,
+      navigateFallback: "/404",
+      ignoreURLParametersMatching: [/./],
+      globPatterns: ["**/*.{html,js,css,png,svg,json,woff2,woff,pf_fragment,pf_index,pf_meta,pagefind,wasm}"],
+    },
     experimental: {
       directoryAndTrailingSlashHandler: true
     },

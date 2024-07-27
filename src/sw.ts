@@ -5,10 +5,25 @@ import {offlineFallback, pageCache} from 'workbox-recipes';
 declare let self: ServiceWorkerGlobalScope
 import {CacheableResponsePlugin} from 'workbox-cacheable-response';
 import { ExpirationPlugin } from 'workbox-expiration';
+import {BackgroundSyncPlugin} from 'workbox-background-sync'
+//SET VERSION
+// const version = Date.now();
+// const staticCacheName = version + 'staticfiles';
+
+//INSTALL
+// self.addEventListener('active', function(event) {
+//   event.waitUntil(
+//     caches.open('pages').then(function(cache) {
+//       console.log(cache);
+//         return cache.addAll([]);
+//     }
+//   )
+// )
+// });
 
 
 precacheAndRoute([{url:'/404',revision: null}])
-offlineFallback({pageFallback: '/offline'});
+offlineFallback({pageFallback: '/offline',});
 pageCache({
     warmCache: ['/','/theme','/intro'],
     cacheName: 'pages',
@@ -19,7 +34,7 @@ pageCache({
             new ExpirationPlugin({
               maxAgeSeconds: 60 * 60 * 24 * 365 
             }),
-            ],
+
 })
 
 async function cacheKeyWillBeUsed({request, mode}) {
