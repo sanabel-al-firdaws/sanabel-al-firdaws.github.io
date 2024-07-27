@@ -1,6 +1,11 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/base",
+  "include": ["env.d.ts","global.d.ts", "src/**/*"],
   "compilerOptions": {
-    "lib": ["ESNext", "DOM", "WebWorker"]
+    "lib": ["ESNext", "DOM", "WebWorker"],
+    "types": [
+      "vite-plugin-pwa/info.d.ts",
+      "vite-plugin-pwa/client.d.ts"
+    ]
   }
 }

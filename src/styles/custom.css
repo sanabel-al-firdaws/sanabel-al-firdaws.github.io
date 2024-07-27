@@ -5,6 +5,9 @@ code {
 .expressive-code :nth-child(1 of .ec-line) .code {
     padding-inline-end: calc(2.5rem + var(--ec-codePadInl)) !important;
 }
+a {
+    text-decoration: none;
+}
 main{
 	font-size: 1.3rem;
 }
@@ -22,7 +25,7 @@ mark {
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
+	background-color: var(--sl-color-bg-inline-code);
   }
 }
 
@@ -44,8 +47,8 @@ mark {
 }
 .sl-markdown-content code:not(:where(.not-content *)) {
     background-color: var(--sl-color-bg-inline-code);
-    margin-block: -0.125rem;
-    padding: 0.125rem 0.375rem;
+	margin-top: 10px !important;
+    padding: 0rem 0.2rem !important; 
     font-size: var(--sl-text-code-sm);
     color: var(--sl-color-gray-1);
 	font-family: var(--sl-font)
@@ -80,11 +83,10 @@ mark {
 	  --sl-text-sm: 1rem ;
 	  --sl-text-xs: 1rem ;
 	  --sl-content-width: 60rem;
-	  --sl-line-height: 2;
+	  --sl-line-height: 3rem;
 	  --sl-line-height-headings: 2 ;
 	
-	/* --sl-font: 'Scheherazade New', serif; */
-	--sl-font: 'UthmanTNB', serif;
+	--sl-font: 'Scheherazade New', serif;
 
 	--sl-text-code-sm: 1.3rem ;
 	

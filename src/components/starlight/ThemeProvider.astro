@@ -10,7 +10,7 @@ import { pwaInfo } from "virtual:pwa-info";
  {pwaInfo && <Fragment set:html={pwaInfo.webManifest.linkTag} />}
 
 
-  <script  >
+  <script   >
 // From a page:
 import { registerSW } from 'virtual:pwa-register';
 
@@ -22,27 +22,31 @@ if ('serviceWorker' in navigator) {
   },
   onOfflineReady() {
     console.log("PWA application ready to work offline");
+   
   },
 });
 
 }
-navigator.serviceWorker.addEventListener('message', async event => {
-  // Optional: ensure the message came from workbox-broadcast-update
-  if (event.data.meta === 'workbox-broadcast-update') {
-    const {cacheName, updatedURL} = event.data.payload;
 
-    // Do something with cacheName and updatedURL.
-    // For example, get the cached content and update
-    // the content on the page.
-    const cache = await caches.open(cacheName);
-    const updatedResponse = await cache.match(updatedURL);
-    const updatedText = await updatedResponse?.text();
-  }
-});
+
+
+// navigator.serviceWorker.addEventListener('message', async event => {
+//   // Optional: ensure the message came from workbox-broadcast-update
+//   if (event.data.meta === 'workbox-broadcast-update') {
+//     const {cacheName, updatedURL} = event.data.payload;
+
+//     // Do something with cacheName and updatedURL.
+//     // For example, get the cached content and update
+//     // the content on the page.
+//     const cache = await caches.open(cacheName);
+//     const updatedResponse = await cache.match(updatedURL);
+//     const updatedText = await updatedResponse?.text();
+//   }
+// });
   </script>
 
 
-<script type="module">
+<script is:inline type="module">
     await import('/pagefind/pagefind-highlight.js');
     new PagefindHighlight({ highlightParam: "highlight" ,addStyles: false ,markOptions:{
 		className: "pagefind-highlight",
