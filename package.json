@@ -11,9 +11,9 @@
     "generate-pwa-assets": "pwa-assets-generator --preset minimal public/favicon.svg"
   },
   "dependencies": {
-    "@astrojs/check": "^0.8.2",
+    "@astrojs/check": "^0.8.3",
     "@astrojs/markdown-remark": "^5.2.0",
-    "@astrojs/starlight": "^0.25.1",
+    "@astrojs/starlight": "^0.25.2",
     "@fontsource/scheherazade-new": "^5.0.20",
     "@lorenzo_lewis/starlight-utils": "0.1.2",
     "@playwright/test": "^1.45.1",
