@@ -4,10 +4,11 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && npm run pagefind-fix",
+    "build": "npm run rename && astro build && npm run pagefind-fix",
     "preview": "astro preview",
     "astro": "astro",
     "pagefind-fix": "sed -i 's/?ts=${Date.now()}//g' dist/pagefind/pagefind.js",
+    "rename": "sed -i 's/الترتيب/sidebar:  \\n  order/g'  src/content/docs/**/*.md src/content/docs/*.mdx && sed -i 's/العنوان/title/g'  src/content/docs/**/*.md src/content/docs/*.mdx && sed -i 's/التاريخ/date/g'  src/content/docs/**/*.md src/content/docs/*.mdx && sed -i 's/الملخص/excerpt/g'  src/content/docs/**/*.md src/content/docs/*.mdx && sed -i 's/الأقسام/tags/g'  src/content/docs/**/*.md src/content/docs/*.mdx && sed -i 's/آخر تعديل/lastUpdated/g'  src/content/docs/**/*.md src/content/docs/*.mdx",
     "generate-pwa-assets": "pwa-assets-generator --preset minimal public/favicon.svg"
   },
   "dependencies": {

@@ -150,7 +150,7 @@ export default defineConfig({
         collapsed: true,
         items: [{
           label: "شُبُهَاتُ الْخَوَارِجِ",
-          link: "blog/tags/شبهات_الخوارج"
+          link: "blog/tags/شبهات-الخوارج"
         }]
       }]
     }]
