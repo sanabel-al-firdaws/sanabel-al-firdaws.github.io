@@ -48,32 +48,32 @@ async function main() {
      for (const file of pages) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename;
+    rename();
     chdir('arabic');
      for (const file of arabic) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename;
+    rename();
     chdir('../aqida');
      for (const file of aqida) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename;
+    rename();
     chdir('../blog');
      for (const file of blog) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename;
+    rename();
     chdir('../quran');
      for (const file of quran) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename;
+    rename();
     chdir('../raqaiq');
      for (const file of raqaiq) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename;
+    rename();
 }
 
 
