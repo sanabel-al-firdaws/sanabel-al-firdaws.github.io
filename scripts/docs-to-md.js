@@ -2,14 +2,13 @@
 import { chdir} from 'process';
 import { fetchGoogleDocsFiles } from "docs-markdown-fork";
 import { exec }  from "child_process";
-const rename =     exec(`
-  sed -i -e 's/الترتيب/sidebar:  \\n  order/g'  *.md *.mdx 
+const rename =     `sed -i -e 's/الترتيب/sidebar:  \\n  order/g'  *.md *.mdx 
   && sed -i -e 's/العنوان/title/g'  *.md *.mdx 
   && sed -i -e 's/التاريخ/date/g'  *.md *.mdx 
   && sed -i -e 's/الملخص/excerpt/g'  *.md *.mdx 
   && sed -i -e 's/الأقسام/tags/g'  *.md *.mdx
   && sed -i -e 's/آخر تعديل/lastUpdated/g'  *.md *.mdx 
-  && sed -i -e 's/مسودة/draft: true/g'  *.md *.mdx`);
+  && sed -i -e 's/مسودة/draft: true/g'  *.md *.mdx`;
 
 const arabic = [
    '1wkEV-zx0AhKC0znVgpgygHF5i4KcJRY64obmrG4JpGI:intro.md',
@@ -48,32 +47,32 @@ async function main() {
      for (const file of pages) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename();
+    exec(rename);
     chdir('arabic');
      for (const file of arabic) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename();
+    exec(rename);
     chdir('../aqida');
      for (const file of aqida) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename();
+    exec(rename);
     chdir('../blog');
      for (const file of blog) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename();
+    exec(rename);
     chdir('../quran');
      for (const file of quran) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename();
+    exec(rename);
     chdir('../raqaiq');
      for (const file of raqaiq) {
       await fetchGoogleDocsFiles([file]);
     }
-    rename();
+    exec(rename);
 }
 
 
