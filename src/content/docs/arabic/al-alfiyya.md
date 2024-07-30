@@ -1,4 +1,7 @@
+---  
 
+    title: أَلْفِيَّةُ ابْنِ مَالِكٍ
+    editUrl: https://docs.google.com/document/d/1zanjfl_kNMuhggLsDzhezOQOMNoxViwHAwM6s9l4BzQ/edit
 
 sidebar:  
   order: 3
