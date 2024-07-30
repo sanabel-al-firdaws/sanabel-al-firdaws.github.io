@@ -33,7 +33,11 @@ exports.fetchGoogleDocsFiles = async (files) => {
     }
 };
 exports.googleDocsToMarkdown = (file) => {
-    let text = ``;
+    let text = `---  
+
+    title: ${file.title}
+    editUrl: https://docs.google.com/document/d/${file.documentId}/edit
+    `;
     ((file.body || {}).content || []).forEach((item) => {
         if (item.paragraph && item.paragraph.elements) {
             const styleType = ((item.paragraph || {}).paragraphStyle || {})
