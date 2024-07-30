@@ -1,7 +1,7 @@
 {
     "name": "starlight-view-modes",
     "author": "trueberryless (https://trueberryless.org)",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "license": "MIT",
     "description": "Starlight plugin adding view mode capabilities to your documentation website.",
     "type": "module",
@@ -9,8 +9,7 @@
         ".": "./index.ts",
         "./overrides/PageSidebar.astro": "./overrides/PageSidebar.astro",
         "./components/ViewModes.astro": "./components/ViewModes.astro",
-        "./components/DeactivationButtons.astro": "./components/DeactivationButtons.astro",
-        "./package.json": "./package.json"
+        "./components/DeactivationButtons.astro": "./components/DeactivationButtons.astro"
     },
     "scripts": {},
     "devDependencies": {
