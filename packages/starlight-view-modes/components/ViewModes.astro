@@ -1,0 +1,237 @@
+<nav aria-labelledby="starlight__on-this-page" id="view-modes-activation" style="display: none">
+  <h2 id="view-modes-activation-heading">المظهر</h2>
+  <ul id="view-modes-activation-list">
+    <li>
+      <a id="view-modes-zen-mode-on" style="display: none">
+        <svg fill="currentColor" height="14" width="14" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+            viewBox="0 0 512 512" xml:space="preserve">
+        <g>
+          <g>
+            <path d="M256,94.609c-21.478,0-38.957,17.478-38.957,38.957s17.478,38.956,38.957,38.956s38.957-17.478,38.957-38.956
+              C294.957,112.088,277.478,94.609,256,94.609z"/>
+          </g>
+        </g>
+        <g>
+          <g>
+            <path d="M256,0C114.843,0,0,114.843,0,256s114.843,256,256,256s256-114.843,256-256S397.157,0,256,0z M256,417.391
+              c-21.478,0-38.957-17.478-38.957-38.957s17.478-38.956,38.957-38.956s38.957,17.478,38.957,38.956
+              C294.957,399.912,277.478,417.391,256,417.391z M256,239.304c-75.185,0-136.348,61.163-136.348,136.348
+              c0,25.278,7.038,48.888,19.074,69.206C75.616,405.521,33.391,335.684,33.391,256c0-122.744,99.865-222.609,222.609-222.609
+              c56.772,0,102.957,46.185,102.957,102.957C358.957,193.12,312.772,239.304,256,239.304z"/>
+          </g>
+        </g>
+        </svg>
+        <span id="view-modes-zen-mode-on-text">تشغيل وضع القراءة</span>
+      </a>
+    </li>
+    <li>
+      <a id="view-modes-presentation-mode-on" style="display: none">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2H22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M9 10.5L10.2929 9.20711C10.6262 8.87377 10.7929 8.70711 11 8.70711C11.2071 8.70711 11.3738 8.87377 11.7071 9.20711L12.2929 9.79289C12.6262 10.1262 12.7929 10.2929 13 10.2929C13.2071 10.2929 13.3738 10.1262 13.7071 9.79289L15 8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M12 21L12 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M10 22L12 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M14 22L12 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M4 2V10.5C4 13.5641 4 15.0962 5.00421 16.0481C6.00841 17 7.62465 17 10.8571 17H13.1429C16.3753 17 17.9916 17 18.9958 16.0481C20 15.0962 20 13.5641 20 10.5V10M20 2V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          Activate Presentation Mode
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  
+<style is:global>
+:root {
+  --starlight-view-modes-animation-duration: 300ms;
+}
+
+body.view-modes-zen-mode {
+  overflow-x: hidden;
+}
+/* -------------------------------------------------------------------- Header -------------------------------------------------------------------- */
+body.view-modes-zen-mode.view-modes-zen-mode-header-disabled header.header {
+  display: none;
+}
+body.view-modes-zen-mode.view-modes-zen-mode-header-disabled nav {
+  top: 0;
+}
+body.view-modes-zen-mode.view-modes-zen-mode-header-enabled.view-modes-zen-mode-table-of-contents-disabled.view-modes-zen-mode-sidebar-disabled.view-modes-zen-mode-template-doc header.header > div {
+  grid-template-columns: minmax(calc(var(--__sidebar-width) + var(--__main-column-fr) - var(--sl-nav-gap) / 4), auto) 1fr auto;
+}
+body.view-modes-zen-mode.view-modes-zen-mode-header-enabled.view-modes-zen-mode-table-of-contents-disabled.view-modes-zen-mode-sidebar-enabled.view-modes-zen-mode-template-doc header.header > div {
+  --sl-nav-gap: 1rem;
+  grid-template-columns: minmax(calc(var(--__sidebar-width) + max(0rem, (100vw - var(--sl-sidebar-width) - var(--sl-content-width) - var(--sl-nav-gap)) / 2 - var(--sl-nav-gap))), auto) 1fr auto;
+}
+body.view-modes-zen-mode.view-modes-zen-mode-header-enabled.view-modes-zen-mode-table-of-contents-enabled.view-modes-zen-mode-sidebar-disabled.view-modes-zen-mode-template-doc header.header > div {
+  grid-template-columns: minmax(calc(var(--__sidebar-width) + max(0rem, 100vw - (var(--sl-sidebar-width) + (100vw - var(--sl-content-width) - var(--sl-sidebar-width)) / 2) - var(--sl-content-width) - var(--sl-sidebar-width) - var(--sl-content-pad-x) * 2)), auto) 1fr auto;
+}
+/* -------------------------------------------------------------------- Sidebar ------------------------------------------------------------------- */
+body.view-modes-zen-mode.view-modes-zen-mode-sidebar-disabled nav {
+  inset-inline-start: 0;
+}
+@media (min-width: 50rem) {
+  body.view-modes-zen-mode.view-modes-zen-mode-sidebar-disabled #starlight__sidebar {
+    display: none;
+  }
+}
+body.view-modes-zen-mode.view-modes-zen-mode-sidebar-disabled.view-modes-zen-mode-table-of-contents-disabled.view-modes-zen-mode-template-doc main {
+  width: calc(100vw - var(--sl-sidebar-pad-x));
+}
+body.view-modes-zen-mode.view-modes-zen-mode-sidebar-disabled.view-modes-zen-mode-table-of-contents-enabled.view-modes-zen-mode-template-doc main {
+  width: 100vw;
+}
+@media (min-width: 72rem) {
+  body.view-modes-zen-mode.view-modes-zen-mode-sidebar-disabled.view-modes-zen-mode-table-of-contents-enabled.view-modes-zen-mode-template-doc main {
+    width: calc(100vw - (var(--sl-sidebar-width) + (100vw - var(--sl-content-width) - var(--sl-sidebar-width)) / 2));
+  }
+}
+body.view-modes-zen-mode.view-modes-zen-mode-sidebar-disabled.view-modes-zen-mode-table-of-contents-enabled.view-modes-zen-mode-template-doc .main-frame {
+  padding-inline: 0;
+}
+body.view-modes-zen-mode.view-modes-zen-mode-sidebar-enabled.view-modes-zen-mode-header-disabled .sidebar-pane {
+  inset-block-start: 0;
+}
+/* --------------------------------------------------------------- Table of Contents -------------------------------------------------------------- */
+body.view-modes-zen-mode.view-modes-zen-mode-table-of-contents-disabled {
+  --sl-mobile-toc-height: 0rem;
+}
+body.view-modes-zen-mode.view-modes-zen-mode-table-of-contents-disabled .right-sidebar-container {
+  display: none;
+}
+body.view-modes-zen-mode.view-modes-zen-mode-table-of-contents-disabled.view-modes-zen-mode-template-doc main .sl-container {
+  margin: 0 auto;
+}
+body.view-modes-zen-mode.view-modes-zen-mode-table-of-contents-disabled.view-modes-zen-mode-template-doc .main-frame {
+  padding-inline: 0;
+}
+@media (min-width: 50rem) {
+  body.view-modes-zen-mode.view-modes-zen-mode-table-of-contents-disabled.view-modes-zen-mode-sidebar-enabled.view-modes-zen-mode-template-doc main {
+    width: calc(100vw - var(--sl-sidebar-width) - var(--sl-sidebar-pad-x));
+    margin-left: var(--sl-sidebar-width);
+  }
+}
+/* -------------------------------------------------------------------- Footer -------------------------------------------------------------------- */
+body.view-modes-zen-mode.view-modes-zen-mode-footer-disabled footer {
+  display: none;
+}
+</style>
+
+<style>
+#view-modes-activation {
+  margin-top: 0.83em;
+}
+
+#view-modes-activation-list {
+  padding: 0;
+  list-style: none;
+}
+
+:is(#view-modes-zen-mode-on, #view-modes-presentation-mode-on) {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+:is(#view-modes-zen-mode-on, #view-modes-presentation-mode-on) svg {
+  transform: translateY(0.15em);
+  transition: transform var(--starlight-view-modes-animation-duration) cubic-bezier(0.4, 0, 0.2, 1);
+}
+:is(#view-modes-zen-mode-on, #view-modes-presentation-mode-on) :is(#view-modes-zen-mode-on-text, #view-modes-presentation-mode-on-text) {
+  padding-left: 0.25rem;
+}
+
+body.view-modes-zen-mode-table-of-contents-disabled :is(#view-modes-zen-mode-on, #view-modes-presentation-mode-on):hover > svg {
+  transform: rotate(180deg) translateY(-0.15em);
+}
+
+body.view-modes-zen-mode.view-modes-zen-mode-table-of-contents-enabled :is(#view-modes-zen-mode-on, #view-modes-presentation-mode-on) > svg {
+  transform: rotate(180deg) translateY(-0.15em);
+}
+</style>
+  
+<script>
+  import config from 'virtual:starlight-view-modes-config';
+  import { deactivateAllModes, activateZenMode, activatePresentationMode, deactivateZenMode } from '../libs/SharedMethods';
+
+  function isAnyModeEnabledAndShownInTOC(config: any) {
+    const modes = [
+        { enabled: config.zenModeEnabled, showInTOC: config.zenModeShowSwitchInTableOfContents },
+        { enabled: config.presentationModeEnabled, showInTOC: config.presentationModeShowSwitchInTableOfContents },
+    ];
+
+    return modes.some(mode => mode.enabled && mode.showInTOC);
+}
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const modes = document.getElementById('view-modes-activation');
+    const zenModeOn = document.getElementById('view-modes-zen-mode-on');
+    const presentationModeOn = document.getElementById('view-modes-presentation-mode-on');
+    
+    const zenMode = sessionStorage.getItem('viewModesZenMode') === 'true';
+    const presentationMode = sessionStorage.getItem('viewModesPresentationMode') === 'true';
+
+    if (isAnyModeEnabledAndShownInTOC(config)) {
+      modes?.style.setProperty('display', 'block');
+    }
+
+    if (config.zenModeEnabled && config.zenModeShowSwitchInTableOfContents) {
+      zenModeOn?.style.setProperty('display', 'block');
+      zenModeOn?.addEventListener('click', () => {
+        if (document.body.classList.contains('view-modes-zen-mode')) {
+            deactivateZenMode();
+        }
+        else {
+            activateZenMode(); 
+        }
+      });
+    }
+
+    if (config.presentationModeEnabled && config.presentationModeShowSwitchInTableOfContents) {
+      presentationModeOn?.style.setProperty('display', 'block');
+      presentationModeOn?.addEventListener('click', () => {
+        deactivateAllModes();
+        activatePresentationMode();
+      });
+    }
+
+    // Session storage
+    if (zenMode) {
+      activateZenMode();
+    }
+    if (presentationMode) {
+      activatePresentationMode();
+    }    
+
+    if (config.zenModeShowFooter) {
+        document.body.classList.add("view-modes-zen-mode-footer-enabled");
+    } else {
+        document.body.classList.add("view-modes-zen-mode-footer-disabled");
+    }
+
+    if (config.zenModeShowHeader) {
+        document.body.classList.add("view-modes-zen-mode-header-enabled");
+    } else {
+        document.body.classList.add("view-modes-zen-mode-header-disabled");
+    }
+
+    if (config.zenModeShowSidebar) {
+        document.body.classList.add("view-modes-zen-mode-sidebar-enabled");
+    } else {
+        document.body.classList.add("view-modes-zen-mode-sidebar-disabled");
+    }
+
+    if (config.zenModeShowTableOfContents) {
+        document.body.classList.add("view-modes-zen-mode-table-of-contents-enabled");
+    } else {
+        document.body.classList.add("view-modes-zen-mode-table-of-contents-disabled");
+    }
+
+    if (document.documentElement.dataset.hasSidebar === undefined) {
+        document.body.classList.add("view-modes-zen-mode-template-splash");
+    } else {
+        document.body.classList.add("view-modes-zen-mode-template-doc");
+    }
+  });
+</script>

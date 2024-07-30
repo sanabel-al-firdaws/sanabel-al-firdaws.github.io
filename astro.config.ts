@@ -44,9 +44,7 @@ export default defineConfig({
     //   // Configuration options go here.
     //   showCaptions: false
     // }),
-    starlightViewModes({
-      // Configuration options go here.
-    }), starlightUtils({
+    starlightViewModes(), starlightUtils({
       multiSidebar: {
         switcherStyle: "horizontalList"
       }
