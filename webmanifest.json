@@ -34,5 +34,32 @@
       "type": "image/png",
       "purpose": "maskable"
     }
+  ],
+  "shortcuts": [
+    {
+       "name": "المدونة",
+       "url": "/blog",
+       "description": "مقالات منوعة مفيدة ونافعة"
+    },
+    {
+      "name": "اللغة العربية",
+      "url": "/arabic/intro",
+      "description": "تعلم اللغة العربية"
+   },
+   {
+    "name": "القرآن الكريم",
+    "url": "/quran/intro",
+    "description": "تعلم القراءة الصحيحة للقرآن الكريم"
+ },
+ {
+  "name": "العقيدة",
+  "url": "/aqida/intro",
+  "description": "تعلم العقيدة الصحيحة لأهل السنة و الجماعة"
+},
+ {
+  "name": "الرقائق و الآداب",
+  "url": "/raqaiq/intro",
+  "description": "تعلم أخلاقيات المسلم السليمة"
+}
   ]
 }
