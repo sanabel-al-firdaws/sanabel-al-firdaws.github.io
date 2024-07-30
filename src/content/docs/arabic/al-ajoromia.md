@@ -2,7 +2,8 @@
 
 title: الْآجُرُومِيَّةُ
 
-sidebar:   order: 2
+sidebar:  
+  order: 2
 
 ---
 
