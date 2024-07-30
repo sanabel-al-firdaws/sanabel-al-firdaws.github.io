@@ -1,6 +1,6 @@
 {
   "name": "docs-markdown-fork",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Opinionated starter for Node.js + TypeScript libraries",
   "main": "dist/index.js",
   "bin": {
