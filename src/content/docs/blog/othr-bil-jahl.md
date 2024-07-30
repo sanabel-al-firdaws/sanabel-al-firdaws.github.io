@@ -1,7 +1,6 @@
----  
-
-    title: العذر بالجهل في الشرك الأكبر عند أئمة السلف المتقدمين
-    editUrl: https://docs.google.com/document/d/1F087SRbpwDUfmWPNs4yA54oEpqZkfdUzxbahZkDEiBY/edit
+---
+title: العذر بالجهل في الشرك الأكبر عند أئمة السلف المتقدمين
+editUrl: https://docs.google.com/document/d/1F087SRbpwDUfmWPNs4yA54oEpqZkfdUzxbahZkDEiBY/edit
 
 date: 2019-03-02
 

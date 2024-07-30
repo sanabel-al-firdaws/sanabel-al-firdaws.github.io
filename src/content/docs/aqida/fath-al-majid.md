@@ -1,7 +1,7 @@
----  
+---
+title: فَتْحُ الْمَجِيدِ شَرْحُ كِتَابِ التَّوْحِيدِ
+editUrl: https://docs.google.com/document/d/1SwVMA-nYOn6JgYlDOMmrU0sFV0BBr7qcaQ1xLqRfN9I/edit
 
-    title: فَتْحُ الْمَجِيدِ شَرْحُ كِتَابِ التَّوْحِيدِ
-    editUrl: https://docs.google.com/document/d/1SwVMA-nYOn6JgYlDOMmrU0sFV0BBr7qcaQ1xLqRfN9I/edit
     sidebar:  
   order :2
 

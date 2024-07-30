@@ -1,7 +1,6 @@
----  
-
-    title: حُرْمَةُ الْإِنْكَارِ الْعَلَنِيِّ عَلَى وُلَاةِ الْأُمُورِ
-    editUrl: https://docs.google.com/document/d/15azTT_OD1Tl1Gth-IrujKp2ILdcPkAXdTtPZZ0AsQsE/edit
+---
+title: حُرْمَةُ الْإِنْكَارِ الْعَلَنِيِّ عَلَى وُلَاةِ الْأُمُورِ
+editUrl: https://docs.google.com/document/d/15azTT_OD1Tl1Gth-IrujKp2ILdcPkAXdTtPZZ0AsQsE/edit
 
 date: 2024-06-02
 

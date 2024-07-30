@@ -1,7 +1,6 @@
----  
-
-    title: الْآجُرُومِيَّةُ
-    editUrl: https://docs.google.com/document/d/1YOtsFhx9RjBK-xgyeSlGaEp3QlcGKDizV5eyIm6d2PQ/edit
+---
+title: الْآجُرُومِيَّةُ
+editUrl: https://docs.google.com/document/d/1YOtsFhx9RjBK-xgyeSlGaEp3QlcGKDizV5eyIm6d2PQ/edit
 
 sidebar:  
   order: 2

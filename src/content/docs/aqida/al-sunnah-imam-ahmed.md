@@ -1,7 +1,7 @@
----  
+---
+title: أُصُولُ السُّنَّةِ لِلْإِمَامِ أَحْمَدَ
+editUrl: https://docs.google.com/document/d/17jzutUJX4CqVkREE2eOsd0DBrPiTUmcczbHam0cQA0U/edit
 
-    title: أُصُولُ السُّنَّةِ لِلْإِمَامِ أَحْمَدَ
-    editUrl: https://docs.google.com/document/d/17jzutUJX4CqVkREE2eOsd0DBrPiTUmcczbHam0cQA0U/edit
     sidebar:  
   order: 4
 
