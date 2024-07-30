@@ -1,10 +1,5 @@
----
-
-title: مَدَارِجُ السَّالِكِينَ
-
-sidebar:
-
-  order: 1
+sidebar:  
+  order: 2
 
 ---
 

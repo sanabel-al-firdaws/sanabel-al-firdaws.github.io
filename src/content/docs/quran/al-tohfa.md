@@ -1,9 +1,4 @@
----
-
-title: تُحْفَةُ الْأَطْفَالِ 
-
-sidebar:
-
+sidebar:  
   order: 2
 
 --- 

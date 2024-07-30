@@ -1,9 +1,6 @@
----
 
-title: الصَّرْفُ الصَّغِيرُ
 
-sidebar:
-
+sidebar:  
   order: 4
 
 ---

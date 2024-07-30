@@ -1,6 +1,4 @@
----
 
-title: الْآجُرُومِيَّةُ
 
 sidebar:  
   order: 2

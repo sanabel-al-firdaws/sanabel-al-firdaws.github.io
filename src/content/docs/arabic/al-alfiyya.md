@@ -1,9 +1,6 @@
----
 
-title: أَلْفِيَّةُ ابْنِ مَالِكٍ
 
-sidebar:
-
+sidebar:  
   order: 3
 
 ---
