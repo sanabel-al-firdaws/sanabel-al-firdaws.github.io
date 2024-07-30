@@ -27,16 +27,15 @@
     "remark-mark-highlight": "^0.1.0",
     "starlight-blog": "^0.11.1",
     "starlight-image-zoom": "file:packages/starlight-image-zoom",
+    "starlight-view-modes": "^0.6.0",
     "theme-change": "^2.5.0",
-    "typescript": "^5.3.3" ,
-    "starlight-view-modes": "file:packages/starlight-view-modes"
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@vite-pwa/assets-generator": "^0.2.2",
     "@vite-pwa/astro": "^0.4.0",
     "docs-markdown-fork": "^1.2.4",
     "hastscript": "^8.0.0",
-
     "vite-plugin-pwa": "^0.20.0",
     "workbox-build": "^7.1.1",
     "workbox-core": "^7.1.0",
