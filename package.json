@@ -35,7 +35,7 @@
     "@vite-pwa/astro": "^0.4.0",
     "docs-markdown-fork": "^1.2.4",
     "hastscript": "^8.0.0",
-    "starlight-view-modes": "^0.6.0",
+    "starlight-view-modes": "file:packages/starlight-view-modes",
     "vite-plugin-pwa": "^0.20.0",
     "workbox-build": "^7.1.1",
     "workbox-core": "^7.1.0",
