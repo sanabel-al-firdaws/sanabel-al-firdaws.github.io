@@ -39,27 +39,62 @@
     {
        "name": "المدونة",
        "url": "/blog",
-       "description": "مقالات منوعة مفيدة ونافعة"
+       "description": "مقالات منوعة مفيدة ونافعة",
+       "icons": [
+        {
+          "src": "pwa-64x64.png",
+          "sizes": "64x64",
+          "type": "image/png"
+        }
+       ]
     },
     {
       "name": "اللغة العربية",
       "url": "/arabic/intro",
-      "description": "تعلم اللغة العربية"
+      "description": "تعلم اللغة العربية",
+      "icons": [
+        {
+          "src": "pwa-64x64.png",
+          "sizes": "64x64",
+          "type": "image/png"
+        }
+       ]
    },
    {
     "name": "القرآن الكريم",
     "url": "/quran/intro",
-    "description": "تعلم القراءة الصحيحة للقرآن الكريم"
+    "description": "تعلم القراءة الصحيحة للقرآن الكريم",
+    "icons": [
+      {
+        "src": "pwa-64x64.png",
+        "sizes": "64x64",
+        "type": "image/png"
+      }
+     ]
  },
  {
   "name": "العقيدة",
   "url": "/aqida/intro",
-  "description": "تعلم العقيدة الصحيحة لأهل السنة و الجماعة"
+  "description": "تعلم العقيدة الصحيحة لأهل السنة و الجماعة",
+  "icons": [
+    {
+      "src": "pwa-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+   ]
 },
  {
   "name": "الرقائق و الآداب",
   "url": "/raqaiq/intro",
-  "description": "تعلم أخلاقيات المسلم السليمة"
+  "description": "تعلم أخلاقيات المسلم السليمة",
+  "icons": [
+    {
+      "src": "pwa-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+   ]
 }
   ]
 }
