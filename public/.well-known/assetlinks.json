@@ -2,7 +2,7 @@
       "relation": ["delegate_permission/common.handle_all_urls"],
       "target": {
         "namespace": "android_app",
-        "package_name": "sanabel_al_firdaws.twa",
-        "sha256_cert_fingerprints": ["12:2A:E2:51:DF:8E:EA:4E:B1:F5:56:9A:62:79:46:C0:9F:81:98:2A:EB:D4:C5:5B:D8:EE:0F:3D:75:68:BD:8F"]
+        "package_name": "io.github.sanabel_al_firdaws.twa",
+        "sha256_cert_fingerprints": ["B5:96:ED:A5:EF:15:9F:59:25:17:F1:C7:34:C1:CD:3B:88:7E:D1:19:F0:D0:32:64:1A:91:B9:73:F9:9F:FC:06"]
       }
     }]
