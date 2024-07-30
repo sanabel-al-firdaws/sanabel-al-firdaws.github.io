@@ -1,8 +1,7 @@
 ---
 title: تُحْفَةُ الْأَطْفَالِ
 editUrl: https://docs.google.com/document/d/1uLh-Gv0SAVzoMlibnb-kcbobuCw6oGmOQVvhFTJZDt0/edit
-
-    sidebar:  
+sidebar:  
   order: 2
 
 --- 

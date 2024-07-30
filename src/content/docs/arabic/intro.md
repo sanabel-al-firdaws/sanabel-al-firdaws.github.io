@@ -1,8 +1,7 @@
 ---
 title: أَهَمِّيَّةُ تَعَلُّمِ اللُّغَةِ الْعَرَبِيَّةِ لِطَالِبِ الْعِلْمِ
 editUrl: https://docs.google.com/document/d/1wkEV-zx0AhKC0znVgpgygHF5i4KcJRY64obmrG4JpGI/edit
-
-    sidebar:  
+sidebar:  
   order: 1
 
 ---

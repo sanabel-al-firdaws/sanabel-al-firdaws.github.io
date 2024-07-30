@@ -1,8 +1,7 @@
 ---
 title: أَهَمِّيَّةُ تَعَلُّمِ الْقِرَاءَةِ الصَّحِيحَةِ لِلْقُرْآنِ
 editUrl: https://docs.google.com/document/d/120YJOnTvDJgS9s4D0Ejk3PM4LtN-UagMikJyIfThOSE/edit
-
-    sidebar:  
+sidebar:  
   order: 1
 
 ---
