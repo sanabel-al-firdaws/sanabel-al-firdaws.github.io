@@ -5,12 +5,13 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
-// import font from "TNB.ttf";
 
 import starlightBlog from "starlight-blog";
 import starlightViewModes from "starlight-view-modes";
+
 import { remarkMark } from "remark-mark-highlight";
-// import starlightImageZoom from 'starlight-image-zoom';
+// import { remarkCode } from "remark-code";
+
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
 import d2 from "astro-d2";
 
@@ -19,14 +20,17 @@ import compress from "astro-compress";
 // https://astro.build/config
 export default defineConfig({
   markdown: {
-    remarkPlugins: [remarkCustomHeaderId, remarkMark],
+
     rehypePlugins: [[rehypeAutolinkHeadings, {
       // Wrap the heading text in a link.
       behavior: "wrap",
       properties: {
         className: ["section_heading"]
       }
-    }]]
+    }]],
+
+    remarkPlugins: [remarkCustomHeaderId, remarkMark
+  ],
   },
   site: "https://sanabel-al-firdaws.github.io",
   server: {
