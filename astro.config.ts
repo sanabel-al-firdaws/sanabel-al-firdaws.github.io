@@ -84,7 +84,8 @@ export default defineConfig({
       SocialIcons: "./src/components/starlight/SocialIcons.astro",
       Pagination: "./src/components/starlight/Pagination.astro",
       Search: "./src/components/starlight/Search.astro",
-      Sidebar: "./src/components/starlight/Sidebar.astro"
+      Sidebar: "./src/components/starlight/Sidebar.astro",
+      PageFrame: "./src/components/starlight/PageFrame.astro"
     },
     title: "سَنَابِلُ الْفِرْدَوْسِ",
     credits: true,
