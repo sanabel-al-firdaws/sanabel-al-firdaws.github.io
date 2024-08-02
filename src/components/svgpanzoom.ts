@@ -11,21 +11,14 @@ document.querySelectorAll(".beoe").forEach((container) => {
 
 // for content images
 document
-  .querySelectorAll(
-    ".sl-markdown-content > img" +
-      ".sl-markdown-content > p > img," +
-      // for development environment
-      ".sl-markdown-content > img[src$='f=svg' i]," +
-      ".sl-markdown-content > img[src$='f=svg' i]"
-  )
+  .querySelectorAll("img")
   .forEach((element) => {
     if (element.parentElement?.tagName === "PICTURE") {
       element = element.parentElement;
     }
     const container = document.createElement("figure");
-    container.classList.add("beoe", "not-content");
+    container.classList.add("beoe");
     element.replaceWith(container);
     container.append(element);
-    // @ts-expect-error
     new PanZoomUi({ element, container }).on();
   });
