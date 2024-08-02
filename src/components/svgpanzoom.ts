@@ -12,8 +12,8 @@ document.querySelectorAll(".beoe").forEach((container) => {
 // for content images
 document
   .querySelectorAll(
-    ".sl-markdown-content > img[src$='.svg' i]," +
-      ".sl-markdown-content > p > img[src$='.svg' i]," +
+    ".sl-markdown-content > img" +
+      ".sl-markdown-content > p > img," +
       // for development environment
       ".sl-markdown-content > img[src$='f=svg' i]," +
       ".sl-markdown-content > img[src$='f=svg' i]"
