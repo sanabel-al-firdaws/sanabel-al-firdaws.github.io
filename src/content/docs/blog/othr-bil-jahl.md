@@ -12,7 +12,7 @@ excerpt: العذر بالجهل في الشرك الأكبر عند أئمة ا
 
 # العذر بالجهل في الشرك الأكبر عند أئمة السلف المتقدمين
 
-[رابط المقال الأصلي 🎯](https://kushifalshabahaat.blogspot.com/2019/03/aledhrbaljhl.html?m==1)
+[رابط المقال الأصلي 🎯](https://kushifalshabahaat.blogspot.com/2019/03/aledhrbaljhl.html?m=1)
 
 بسم الله الرحمن الرحيم
 
