@@ -30,7 +30,7 @@ jobs:
           GOOGLE_DOCS_CLIENT_ID: ${{ secrets.GOOGLE_DOCS_CLIENT_ID }}
           GOOGLE_DOCS_CLIENT_SECRET: ${{ secrets.GOOGLE_DOCS_CLIENT_SECRET }}
       - name: Rename files
-        run: "cd src/content/docs ;find ./ -type f | xargs sed -i  's/=/==/'  ;find ./ -type f | xargs sed -i  's/+/`/'  ; find ./ -type f | xargs sed -i  's/الترتيب/sidebar:  \\n  order/'  ;find ./ -type f | xargs sed  -i  's/التاريخ/date/' ;find ./ -type f | xargs sed -i  's/الملخص/excerpt/' ;find ./ -type f | xargs sed -i  's/الأقسام/tags/'  ;find ./ -type f | xargs sed -i  's/آخر تعديل/lastUpdated/'  ;find ./ -type f | xargs sed -i  's/مسودة/draft: true/' "
+        run: "cd src/content/docs ;find ./ -type f | xargs sed -i  's/الترتيب/sidebar:  \\n  order/'  ;find ./ -type f | xargs sed  -i  's/التاريخ/date/' ;find ./ -type f | xargs sed -i  's/الملخص/excerpt/' ;find ./ -type f | xargs sed -i  's/الأقسام/tags/'  ;find ./ -type f | xargs sed -i  's/آخر تعديل/lastUpdated/'  ;find ./ -type f | xargs sed -i  's/مسودة/draft: true/' "
       - name: Commit new data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
