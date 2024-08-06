@@ -6,7 +6,7 @@ draft: true
 ---
 # بعض نصوص ائمة السلف المتقدمين في التفريق بين النوع والعين وفي عذر اعيان الواقعين بالشرك الأكبر بالجهل
 
-[رابط المقال الأصلي 🎯](https://kushifalshabahaat.blogspot.com/2020/10/altafriqbaynalnawewaleayn.html?m=1)
+[رابط المقال الأصلي 🎯](https://kushifalshabahaat.blogspot.com/2020/10/altafriqbaynalnawewaleayn.html?m==1)
 
 
 بسم الله الرحمن الرحيم

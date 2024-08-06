@@ -9,7 +9,7 @@ draft: true
 # اجماع ائمة الدعوة النجدية على العذر بالجهل والتأويل في الشرك الأكبر وعلى التفريق بين النوع والعين بالنصوص والبراهين والبراءة من منهج الخوارج
 
 
-[رابط المقال الأصلي 🎯](https://kushifalshabahaat.blogspot.com/2019/05/munhijalamam.html?m=1)
+[رابط المقال الأصلي 🎯](https://kushifalshabahaat.blogspot.com/2019/05/munhijalamam.html?m==1)
 
 
 بسم الله الرحمن الرحيم
