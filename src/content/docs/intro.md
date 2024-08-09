@@ -1,8 +1,8 @@
-***
+---
 title: عَنِ الْمَوْقِعِ
 editUrl: https://docs.google.com/document/d/1PlRCeRVIEgDnRQOKNHbL-QZ2r7TZeFuIKuALqC5PfVI/edit
 
-***
+---
 
 بِسْمِ اللَّهِ وَالْحَمْدُ لِلّٰهِ وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللّٰه .
 
