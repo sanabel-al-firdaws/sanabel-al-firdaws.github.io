@@ -5,22 +5,20 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import AstroPWA from "@vite-pwa/astro";
 import type { ManifestOptions } from "vite-plugin-pwa";
 import manifest from "./webmanifest.json";
-
 import starlightBlog from "starlight-blog";
 import starlightViewModes from "starlight-view-modes";
-
 import { remarkMark } from "remark-mark-highlight";
 // import { remarkCode } from "remark-code";
 
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
 import d2 from "astro-d2";
-
 import compress from "astro-compress";
+
+import markdoc from "@astrojs/markdoc";
 
 // https://astro.build/config
 export default defineConfig({
   markdown: {
-
     rehypePlugins: [[rehypeAutolinkHeadings, {
       // Wrap the heading text in a link.
       behavior: "wrap",
@@ -28,17 +26,13 @@ export default defineConfig({
         className: ["section_heading"]
       }
     }]],
-
-    remarkPlugins: [remarkCustomHeaderId, remarkMark
-  ],
+    remarkPlugins: [remarkCustomHeaderId, remarkMark]
   },
   site: "https://sanabel-al-firdaws.github.io",
   server: {
     headers: {
-         'Cache-Control' : 'no-cache'
+      'Cache-Control': 'no-cache'
     }
- 
-  
   },
   // trailingSlash: "always",
 
@@ -175,7 +169,7 @@ export default defineConfig({
       clientsClaim: true,
       navigateFallback: "/404",
       ignoreURLParametersMatching: [/./],
-      globPatterns: ["**/*.{html,js,css,png,svg,json,woff2,woff,pf_fragment,pf_index,pf_meta,pagefind,wasm}"],
+      globPatterns: ["**/*.{html,js,css,png,svg,json,woff2,woff,pf_fragment,pf_index,pf_meta,pagefind,wasm}"]
     },
     experimental: {
       directoryAndTrailingSlashHandler: true
@@ -191,7 +185,7 @@ export default defineConfig({
       default: "200"
     }
     //  fonts: { regular: './TNB.ttf',  italic: './TNB.ttf',bold: './TNB.ttf'},
-  }), compress()]
+  }), compress(), markdoc()]
 });
 
 // , AstroPWA({
