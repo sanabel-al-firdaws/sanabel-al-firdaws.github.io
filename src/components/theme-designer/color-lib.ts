@@ -23,18 +23,18 @@ export function getPalettes(config: {
 	return {
 		dark: {
 			// Accents
-			'accent-low': oklchToHex(25.94, ac / 3, ah),
+			'accent-low': oklchToHex(30.94, ac / 3, ah),
 			accent: oklchToHex(52.28, ac, ah),
 			'accent-high': oklchToHex(83.38, ac / 3, ah),
 			// Grays
-			white: oklchToHex(100, 0, 0),
-			'gray-1': oklchToHex(94.77, gc / 2.5, gh),
-			'gray-2': oklchToHex(81.34, gc / 2, gh),
+			white: oklchToHex(97.77, gc / 2.5, gh),
+			'gray-1': oklchToHex(97.77, gc / 2.5, gh),
+			'gray-2': oklchToHex(96.77, gc / 2.5, gh),
 			'gray-3': oklchToHex(63.78, gc, gh),
 			'gray-4': oklchToHex(46.01, gc, gh),
 			'gray-5': oklchToHex(34.09, gc, gh),
 			'gray-6': oklchToHex(27.14, gc, gh),
-			black: oklchToHex(20.94, gc / 2, gh),
+			black: oklchToHex(20.94, gc / 2.5, gh),
 		},
 		light: {
 			// Accents

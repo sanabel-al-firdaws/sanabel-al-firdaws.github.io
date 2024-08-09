@@ -42,7 +42,9 @@ export default defineConfig({
     //   // Configuration options go here.
     //   showCaptions: false
     // }),
-    starlightViewModes(), starlightUtils({
+    starlightViewModes({
+      zenModeCloseButtonPosition: 'top-left'
+    }), starlightUtils({
       multiSidebar: {
         switcherStyle: "horizontalList"
       }
@@ -82,6 +84,7 @@ export default defineConfig({
       PageFrame: "./src/components/starlight/PageFrame.astro"
     },
     title: "سَنَابِلُ الْفِرْدَوْسِ",
+  
     credits: true,
     lastUpdated: true,
     description: "المنهج السلفي بأسلوب سلس ومبسط",
