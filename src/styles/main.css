@@ -386,7 +386,7 @@ body {
 .tiptap p.is-editor-empty:first-child::before {
   color: #79b8f6;
   content: attr(data-placeholder);
-  float: left;
+  float: right;
   height: 0;
   pointer-events: none;
 }
@@ -413,6 +413,7 @@ body {
   margin: 30px;
 }
 .tiptap {
+  align-content: start;
   :first-child {
     margin-top: 0;
   }
@@ -799,5 +800,16 @@ textarea::-webkit-scrollbar-thumb:hover {
 
   .content {
     color: #fef2f2;
+  }
+}
+
+.details {
+  border: 3px solid rgb(220, 38, 127) !important;
+  color: #ffffff;
+  border-radius: 12px;
+  > button {
+    color: white;
+    cursor: pointer;
+    border: 2px solid rgb(220, 38, 127);
   }
 }

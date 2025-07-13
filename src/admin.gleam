@@ -695,20 +695,64 @@ fn notebook_editor_view(model: Model) {
         )
       }
     },
-    html.div(class([]), [attribute.class("menu")], [
-      html.button(
-        class([]),
-        [
-          attribute.attribute(
-            "onclick",
-            "editor.chain().focus().setDetails().run()",
-          ),
-        ],
-        [html.text("H1")],
-      ),
-    ]),
-    lustre_element.unsafe_raw_html("", "div", [attribute.class("editor")], ""),
+    lustre_element.unsafe_raw_html(
+      "",
+      "div",
+      [attribute.class("editor")],
+      floating_menu(),
+    ),
   ])
+}
+
+fn floating_menu() {
+  html.div(class([]), [attribute.class("menu")], [
+    html.button(
+      class([
+        css.z_index(200),
+        css.display("flex"),
+        css.align_items("center"),
+        css.justify_content("center"),
+        css.width(length.rem(2.0)),
+        css.height(length.rem(2.0)),
+        css.background(
+          "linear-gradient(135deg, rgba(220, 38, 127, 0.9), rgba(180, 28, 100, 0.9))",
+        ),
+        css.border("1px solid rgb(61, 61, 142)"),
+        css.color("#ffffff"),
+        css.border_radius(length.px(12)),
+        css.cursor("pointer"),
+        css.font_size(length.rem(1.0)),
+        css.font_weight("600"),
+        css.letter_spacing("0.5px"),
+        css.transition("all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"),
+        css.box_shadow(
+          "0 6px 20px rgba(220, 38, 127, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
+        ),
+        css.hover([
+          css.background(
+            "linear-gradient(135deg, rgba(220, 38, 127, 1), rgba(240, 48, 140, 1))",
+          ),
+          css.transform([
+            transform.translate_y(length.px(-3)),
+            transform.scale(1.02, 1.08),
+          ]),
+          css.box_shadow(
+            "0 10px 30px rgba(220, 38, 127, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.35)",
+          ),
+          css.border("1px solid rgb(61, 61, 142)"),
+        ]),
+        css.active([css.transform([transform.translate_y(length.px(-1))])]),
+      ]),
+      [
+        attribute.attribute(
+          "onclick",
+          "editor.chain().focus().setDetails().run()",
+        ),
+      ],
+      [html.text("▶")],
+    ),
+  ])
+  |> lustre_element.to_string
 }
 
 @external(javascript, "./js/editor.ts", "make_drop_target")
@@ -758,15 +802,9 @@ fn check_password(password: String) -> Effect(Msg) {
     case result {
       Ok(_) -> {
         dispatch(PasswordIsValid(password))
-        let assert Ok(local_storage) = storage.local()
-        let _ = storage.set_item(local_storage, "github_token", password)
-
-        Nil
       }
       Error(_) -> {
         dispatch(DisplayErrorToast("كلمة السر غير صحيحة"))
-        let assert Ok(local_storage) = storage.local()
-        storage.remove_item(local_storage, "github_token")
       }
     }
   })

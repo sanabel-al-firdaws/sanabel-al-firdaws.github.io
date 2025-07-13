@@ -124,9 +124,10 @@ export async function check_password(
 
   try {
     const { data } = await octokit.rest.users.getAuthenticated();
-
+    localStorage.setItem("github_token", password);
     on_password_checked(new Ok(nil));
   } catch (error) {
+    localStorage.removeItem("github_token");
     on_password_checked(new Error(nil));
     console.error("Token is invalid:", error);
   }
@@ -282,9 +283,9 @@ export async function init_tiptap(doc: LoroDoc) {
         Placeholder.configure({
           placeholder: ({ node }) => {
             if (node.type.name === "heading") {
-              return "What’s the title?";
+              return "ما هو العنوان ?";
             }
-            return "Write Something...";
+            return "ابدأ الكتابة";
           },
         }),
         StarterKit.configure({
@@ -294,9 +295,7 @@ export async function init_tiptap(doc: LoroDoc) {
       editor = new Editor({
         content: `
      
-         <p>
-          This is still the text editor you’re used to, but enriched with node views.
-        </p>
+      
  
 
       
