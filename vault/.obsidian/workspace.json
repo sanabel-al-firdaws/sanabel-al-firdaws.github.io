@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "أًصول أهل السنة والجماعة/العقيدة.md",
+                "file": "عن الموقع.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "العقيدة"
+              "title": "عن الموقع"
             }
           }
         ]
@@ -170,8 +170,8 @@
   },
   "active": "faf0fb254735e0f3",
   "lastOpenFiles": [
-    "عن الموقع.md",
     "أًصول أهل السنة والجماعة/العقيدة.md",
+    "عن الموقع.md",
     "file.md",
     "أًصول أهل السنة والجماعة",
     "Welcome.md",

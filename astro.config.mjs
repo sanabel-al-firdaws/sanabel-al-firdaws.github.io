@@ -35,7 +35,7 @@ export default defineConfig({
         }),
       ],
       customCss: ["./src/styles/starlight.css"],
-      title: "سَنَابِلُ الْفِرْدَوْسِ",
+      title: "سنابل الفردوس",
       locales: {
         root: {
           dir: "rtl",
