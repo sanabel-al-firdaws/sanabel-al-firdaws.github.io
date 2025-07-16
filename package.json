@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "pnpm md && astro build",
     "preview": "astro preview",
     "md": "tsx  ./md.ts ",
     "astro": "astro"
@@ -15,6 +15,7 @@
     "@astrojs/starlight": "^0.35.0",
     "@astrojs/starlight-markdoc": "^0.5.0",
     "@atlaskit/pragmatic-drag-and-drop": "^1.7.4",
+    "@chouquette/gleam": "^1.11.1",
     "@flowdegree/arabic-strings": "^2.0.0",
     "@fontsource/scheherazade-new": "^5.2.6",
     "@tiptap/core": "^3.0.1",
