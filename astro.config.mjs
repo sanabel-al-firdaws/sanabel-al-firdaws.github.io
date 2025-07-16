@@ -2,21 +2,15 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import markdoc from "@astrojs/markdoc";
-import wasm from "vite-plugin-wasm";
-import gleam from "vite-gleam";
 import starlightViewModes from "starlight-view-modes";
 import { remarkMark } from "remark-mark-highlight";
 import starlightAutoSidebar from "starlight-auto-sidebar";
 import starlightThemeRapide from "starlight-theme-rapide";
 import starlightThemeObsidian from "starlight-theme-obsidian";
+import starlightObsidian, { obsidianSidebarGroup } from "starlight-obsidian";
+
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    build: {
-      target: "esnext", // This enables top-level await support
-    },
-    plugins: [gleam(), wasm()],
-  },
   // markdown: {
   //   remarkPlugins: [remarkMark],
   // },
@@ -33,6 +27,9 @@ export default defineConfig({
           graph: false,
           backlinks: false,
         }),
+        starlightObsidian({
+          vault: "./vault",
+        }),
       ],
       customCss: ["./src/styles/starlight.css"],
       title: "سَنَابِلُ الْفِرْدَوْسِ",
@@ -43,6 +40,7 @@ export default defineConfig({
           lang: "ar", // lang is required for root locales
         },
       },
+      sidebar: [obsidianSidebarGroup],
       // components: {
       //   PageTitle: "./src/components/PageTitle.astro",
       //   SocialIcons: "./src/components/SocialIcons.astro",
