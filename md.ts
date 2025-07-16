@@ -7,24 +7,19 @@ import {
   LoroTree,
   type TreeID,
 } from "loro-crdt";
-import path from "path";
+import * as path from "path";
+import * as arabicStrings from "@flowdegree/arabic-strings";
 import { Editor, getSchema } from "@tiptap/core";
 import {
   ATTRIBUTES_KEY,
   CHILDREN_KEY,
   createNodeFromLoroObj,
-  LoroCursorPlugin,
-  LoroSyncPlugin,
-  LoroUndoPlugin,
   NODE_NAME_KEY,
 } from "loro-prosemirror";
-import TableOfContents from "@tiptap/extension-table-of-contents";
-import { Placeholder } from "@tiptap/extensions";
-import StarterKit from "@tiptap/starter-kit";
 
-// import { generateHTML } from "@tiptap/html/server";
 import { renderToMarkdown } from "@tiptap/static-renderer/pm/markdown";
-import TurndownService from "turndown";
+import { render_options, tiptapExtensions } from "./src/js/extensions";
+import { get_all_update_files } from "./src/js/extensions";
 type LoroChildrenListType = LoroList<LoroMap<LoroNodeContainerType> | LoroText>;
 type LoroNodeContainerType = {
   [CHILDREN_KEY]: LoroChildrenListType;
@@ -33,45 +28,33 @@ type LoroNodeContainerType = {
 };
 type LoroNode = LoroMap<LoroNodeContainerType>;
 
-let extensions = [
-  TableOfContents,
-  // DragHandle,
-  Placeholder.configure({
-    placeholder: ({ node }) => {
-      if (node.type.name === "heading") {
-        return "What’s the title?";
-      }
-      return "Write Something...";
-    },
-  }),
-  StarterKit.configure({
-    undoRedo: false, // Disable built-in undo/redo since we're using collaboration
-  }),
-];
+let schema = getSchema(tiptapExtensions);
 
-let schema = getSchema(extensions);
+let files = await get_all_update_files(process.env.GITHUB_TOKEN_CMS);
 
-// Convert to HTML
-async function loadSnapshot(filePath: PathLike | fs.FileHandle) {
-  try {
-    // Read file as buffer
-    const buffer = await fs.readFile(filePath);
+let array_files = files?.map((updateString) => {
+  if (updateString) {
+    const binaryString = atob(updateString);
+    const snapshot = new Uint8Array(binaryString.length);
+    for (let i = 0; i < binaryString.length; i++) {
+      snapshot[i] = binaryString.charCodeAt(i);
+    }
 
-    // Convert buffer to Uint8Array
-    const snapshot = new Uint8Array(buffer);
-
-    return snapshot;
-  } catch (error) {
-    console.error("Error loading file:", error);
-    throw error;
+    return [...snapshot];
   }
-}
-
-// Usage
-await loadSnapshot("./MyNoteBookFile.bin").then((snapshot) => {
-  let doc = LoroDoc.fromSnapshot(snapshot);
+});
+if (array_files) {
+  let doc = new LoroDoc();
+  //@ts-ignore
+  doc.importBatch(array_files);
   let tree = doc.getTree("tree");
   let data = tree.toArray()[0];
+
+  // Remove all existing .mdoc files before creating new structure
+  const contentDir = "./src/content/docs/";
+  console.log("Removing existing .mdoc files...");
+  await removeMdocFiles(contentDir);
+  console.log("Cleanup complete. Creating new structure...");
 
   // Create folders and files recursively
   async function createStructure(
@@ -95,11 +78,11 @@ await loadSnapshot("./MyNoteBookFile.bin").then((snapshot) => {
     let name = node.meta.get("name") as string;
     let trimmed_name = name.trim();
 
-    let name_slug = trimmed_name.replace(/\s+/g, "-");
-
-    const currentPath = path.join(basePath, name_slug);
-
     if (node.meta.get("item_type") === "folder") {
+      // let name_trimmed = trimmed_name.replace(/\s+/g, "_");
+      let name_slug = arabicStrings.removeTashkel(trimmed_name);
+
+      let currentPath = path.join(basePath, name_slug);
       try {
         await fs.mkdir(currentPath, { recursive: true });
         console.log(`Created folder: ${currentPath}`);
@@ -114,14 +97,25 @@ await loadSnapshot("./MyNoteBookFile.bin").then((snapshot) => {
         console.error(`Error creating folder ${currentPath}:`, error);
       }
     } else {
+      // let name_trimmed = trimmed_name.replace(/\s+/g, "_");
+      let name_slug = arabicStrings.removeTashkel(trimmed_name);
+
+      let currentPath = path.join(basePath, name_slug);
+
+      if (node.meta.get("draft")) {
+        console.warn("Skipping node that is a draft:", node.meta.entries());
+        return;
+      }
       try {
         // Ensure parent directory exists before creating file
         await fs.mkdir(path.dirname(currentPath), { recursive: true });
+
         const filePath = "./" + currentPath + ".mdoc";
-        console.log(basePath, "basePath");
+        // console.log(basePath, "basePath");
         console.log(filePath, "filePath");
-        let is_at_root = isAtBasePath(filePath, basePath);
-        console.log("is file at basePath : " + is_at_root);
+        // let slug = filePath.slice(19).replace(/.mdoc/g, "");
+        // let is_at_root = isAtBasePath(filePath, basePath);
+        // console.log("is file at basePath : " + is_at_root);
         // let tree = doc.getTree("tree");
         // let tree_doc = tree.getNodeByID(node.id as TreeID)!;
 
@@ -132,14 +126,10 @@ await loadSnapshot("./MyNoteBookFile.bin").then((snapshot) => {
         );
         let markdown = renderToMarkdown({
           content: prosemirrorNode.toJSON(),
-          extensions,
+          extensions: tiptapExtensions, //@ts-ignore
+          options: render_options,
         });
-        // For Node.js
 
-        // var turndownService = new TurndownService({ headingStyle: "atx" });
-        // var markdown = turndownService.turndown(html);
-
-        // console.log(test);
         let name = node.meta.get("name") as string;
         let trimmed_name = name.trim();
 
@@ -147,25 +137,9 @@ await loadSnapshot("./MyNoteBookFile.bin").then((snapshot) => {
           filePath,
           `---
 title: ${trimmed_name}      
-slug: ${
-            //@ts-ignore
-            trimmed_name.toLowerCase().replace(/\s+/g, "-")
-          }      
-
 ---
 
-
-${
-  markdown
-  // .replace(
-  //   /<div class="bn-block-content" data-content-type="toggleListItem">\s*<p class="([^"]*)">(.*?)<\/p>\s*<\/div>\s*(<div class="bn-block-group"[\s\S]*?<\/div>\s*<\/div>\s*<\/div>)/gs,
-  //   `<details>\n  <summary class="$1">$2</summary>\n$3\n</details>`
-  // )
-}
-          
-          
-
-
+${markdown}
 `
         );
 
@@ -236,4 +210,45 @@ ${
       console.error("Error creating folder structure:", error);
     }
   })();
-});
+}
+
+async function loadSnapshot(filePath: PathLike | fs.FileHandle) {
+  try {
+    // Read file as buffer
+    const buffer = await fs.readFile(filePath);
+
+    // Convert buffer to Uint8Array
+    const snapshot = new Uint8Array(buffer);
+
+    return snapshot;
+  } catch (error) {
+    console.error("Error loading file:", error);
+    throw error;
+  }
+}
+
+// Function to recursively find and remove all .mdoc files in a directory
+async function removeMdocFiles(dirPath: string) {
+  try {
+    const entries = await fs.readdir(dirPath, { withFileTypes: true });
+
+    for (const entry of entries) {
+      const fullPath = path.join(dirPath, entry.name);
+
+      if (entry.isDirectory()) {
+        // Recursively process subdirectories
+        await removeMdocFiles(fullPath);
+      } else if (entry.isFile() && entry.name.endsWith(".mdoc")) {
+        // Remove .mdoc files
+        await fs.unlink(fullPath);
+        console.log(`Removed file: ${fullPath}`);
+      }
+    }
+  } catch (error) {
+    // If directory doesn't exist, that's okay - we'll create it later
+    //@ts-ignore
+    if (error.code !== "ENOENT") {
+      console.error(`Error processing directory ${dirPath}:`, error);
+    }
+  }
+}

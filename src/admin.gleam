@@ -134,10 +134,29 @@ pub opaque type Msg {
   DownloadNoteBook
   PasswordSumbitted(List(#(String, String)))
   PasswordIsValid(String)
+  MakeItemPublished(String)
+  MakeItemDraft(String)
 }
 
 fn update(model: Model, msg: Msg) -> #(Model, Effect(Msg)) {
   case msg {
+    MakeItemPublished(item_id) -> {
+      case model.loro_doc {
+        Some(loro_doc) -> {
+          #(model, change_draft_state(loro_doc, item_id, False))
+        }
+        None -> #(model, effect.none())
+      }
+    }
+    MakeItemDraft(item_id) -> {
+      case model.loro_doc {
+        Some(loro_doc) -> {
+          #(model, change_draft_state(loro_doc, item_id, True))
+        }
+        None -> #(model, effect.none())
+      }
+    }
+
     PasswordIsValid(password) -> {
       #(
         Model(..model, password_form: form.new(), password: Some(password)),
@@ -407,7 +426,7 @@ fn notebook_editor_view(model: Model) {
             css.background("rgb(26 26 46)"),
             css.border_radius(length.px(16)),
             css.backdrop_filter("blur(16px)"),
-            css.border("1px solid rgb(61, 61, 142)"),
+            css.border("1px solid  rgb(61, 61, 142)"),
             css.z_index(100),
           ]),
           [],
@@ -429,10 +448,8 @@ fn notebook_editor_view(model: Model) {
                     css.justify_content("center"),
                     css.width(length.rem(3.0)),
                     css.height(length.rem(3.0)),
-                    css.background(
-                      "linear-gradient(135deg, rgba(220, 38, 127, 0.9), rgba(180, 28, 100, 0.9))",
-                    ),
-                    css.border("1px solid rgb(61, 61, 142)"),
+                    css.background(" rgb(61, 61, 142)"),
+                    css.border("1px solid  rgb(61, 61, 142)"),
                     css.color("#ffffff"),
                     css.border_radius(length.px(12)),
                     css.cursor("pointer"),
@@ -440,20 +457,11 @@ fn notebook_editor_view(model: Model) {
                     css.font_weight("600"),
                     css.letter_spacing("0.5px"),
                     css.transition("all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"),
-                    css.box_shadow(
-                      "0 6px 20px rgba(220, 38, 127, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
-                    ),
                     css.hover([
-                      css.background(
-                        "linear-gradient(135deg, rgba(220, 38, 127, 1), rgba(240, 48, 140, 1))",
-                      ),
                       css.transform([
                         transform.translate_y(length.px(-3)),
                         transform.scale(1.02, 1.08),
                       ]),
-                      css.box_shadow(
-                        "0 10px 30px rgba(220, 38, 127, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.35)",
-                      ),
                       css.border("1px solid rgb(61, 61, 142)"),
                     ]),
                     css.active([
@@ -661,9 +669,7 @@ fn notebook_editor_view(model: Model) {
             css.justify_content("center"),
             css.width(length.rem(3.0)),
             css.height(length.rem(3.0)),
-            css.background(
-              "linear-gradient(135deg, rgba(220, 38, 127, 0.9), rgba(180, 28, 100, 0.9))",
-            ),
+            css.background("rgb(61, 61, 142)"),
             css.border("2px solid rgb(61, 61, 142)"),
             css.color("#ffffff"),
             css.border_radius(length.px(10)),
@@ -672,20 +678,11 @@ fn notebook_editor_view(model: Model) {
             css.font_weight("600"),
             css.letter_spacing("1px"),
             css.transition("all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"),
-            css.box_shadow(
-              "0 4px 15px rgba(220, 38, 127, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
-            ),
             css.hover([
-              css.background(
-                "linear-gradient(135deg, rgba(220, 38, 127, 1), rgba(240, 48, 140, 1))",
-              ),
               css.transform([
                 transform.translate_y(length.px(-2)),
                 transform.scale(1.0, 1.05),
               ]),
-              css.box_shadow(
-                "0 8px 25px rgba(220, 38, 127, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
-              ),
               css.border("2px solid rgb(61, 61, 142)"),
             ]),
             css.active([css.transform([transform.translate_y(length.px(0))])]),
@@ -695,6 +692,27 @@ fn notebook_editor_view(model: Model) {
         )
       }
     },
+    html.div(
+      class([
+        css.z_index(90),
+        css.position("fixed"),
+        css.display("flex"),
+        css.top(length.rem(2.0)),
+        css.right(length.rem(5.5)),
+      ]),
+      [],
+      [
+        floating_menu_button(
+          text: "أحمر",
+          on_click: "editor.chain().focus().toggleHighlight({ color: 'var(--sl-color-accent-low)' }).run()",
+        ),
+        floating_menu_button(
+          text: "رمادي",
+          on_click: "editor.chain().focus().toggleHighlight({ color: 'var(--sl-color-gray-5)' }).run()",
+        ),
+        floating_menu_button(text: "رابط", on_click: "window.create_link()"),
+      ],
+    ),
     lustre_element.unsafe_raw_html(
       "",
       "div",
@@ -706,53 +724,70 @@ fn notebook_editor_view(model: Model) {
 
 fn floating_menu() {
   html.div(class([]), [attribute.class("menu")], [
-    html.button(
-      class([
-        css.z_index(200),
-        css.display("flex"),
-        css.align_items("center"),
-        css.justify_content("center"),
-        css.width(length.rem(2.0)),
-        css.height(length.rem(2.0)),
-        css.background(
-          "linear-gradient(135deg, rgba(220, 38, 127, 0.9), rgba(180, 28, 100, 0.9))",
-        ),
-        css.border("1px solid rgb(61, 61, 142)"),
-        css.color("#ffffff"),
-        css.border_radius(length.px(12)),
-        css.cursor("pointer"),
-        css.font_size(length.rem(1.0)),
-        css.font_weight("600"),
-        css.letter_spacing("0.5px"),
-        css.transition("all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"),
-        css.box_shadow(
-          "0 6px 20px rgba(220, 38, 127, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
-        ),
-        css.hover([
-          css.background(
-            "linear-gradient(135deg, rgba(220, 38, 127, 1), rgba(240, 48, 140, 1))",
-          ),
-          css.transform([
-            transform.translate_y(length.px(-3)),
-            transform.scale(1.02, 1.08),
-          ]),
-          css.box_shadow(
-            "0 10px 30px rgba(220, 38, 127, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.35)",
-          ),
-          css.border("1px solid rgb(61, 61, 142)"),
-        ]),
-        css.active([css.transform([transform.translate_y(length.px(-1))])]),
-      ]),
-      [
-        attribute.attribute(
-          "onclick",
-          "editor.chain().focus().setDetails().run()",
-        ),
-      ],
-      [html.text("▶")],
+    floating_menu_button(
+      text: "اقتباس",
+      on_click: "editor.chain().focus().insertContent(`<quote-view source='' link=''> </quote-view>`).run()",
+    ),
+    floating_menu_button(
+      text: "مسألة",
+      on_click: "editor.chain().focus().setDetails().run()",
+    ),
+    floating_menu_button(
+      text: "ملاحظة",
+      on_click: "editor.chain().focus().insertContent(`<aside-view> </aside-view>`).run()",
+    ),
+    floating_menu_button(
+      text: "تنبيه",
+      on_click: "editor.chain().focus().insertContent(`<aside-view type='caution' title='انتبه'> </aside-view>`).run()",
+    ),
+    floating_menu_button(
+      text: "تحذير",
+      on_click: "editor.chain().focus().insertContent(`<aside-view type='danger' title='احذر'> </aside-view>`).run()",
     ),
   ])
   |> lustre_element.to_string
+}
+
+fn floating_menu_button(text text: String, on_click on_click: String) {
+  html.button(
+    class([
+      css.z_index(90),
+      css.display("flex"),
+      css.align_items("center"),
+      css.justify_content("center"),
+      css.height(length.rem(2.0)),
+      css.background(
+        "linear-gradient(135deg, rgba(220, 38, 127, 0.9), rgba(180, 28, 100, 0.9))",
+      ),
+      css.border("1px solid rgb(61, 61, 142)"),
+      css.color("#ffffff"),
+      css.border_radius(length.px(12)),
+      css.cursor("pointer"),
+      css.font_size(length.rem(1.0)),
+      css.font_weight("600"),
+      css.letter_spacing("0.5px"),
+      css.transition("all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"),
+      css.box_shadow(
+        "0 6px 20px rgba(220, 38, 127, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
+      ),
+      css.hover([
+        css.background(
+          "linear-gradient(135deg, rgba(220, 38, 127, 1), rgba(240, 48, 140, 1))",
+        ),
+        css.transform([
+          transform.translate_y(length.px(-3)),
+          transform.scale(1.02, 1.08),
+        ]),
+        css.box_shadow(
+          "0 10px 30px rgba(220, 38, 127, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.35)",
+        ),
+        css.border("1px solid rgb(61, 61, 142)"),
+      ]),
+      css.active([css.transform([transform.translate_y(length.px(-1))])]),
+    ]),
+    [attribute.attribute("onclick", on_click)],
+    [html.text(text)],
+  )
 }
 
 @external(javascript, "./js/editor.ts", "make_drop_target")
@@ -808,6 +843,14 @@ fn check_password(password: String) -> Effect(Msg) {
       }
     }
   })
+}
+
+@external(javascript, "./js/editor.ts", "change_draft_state")
+fn do_change_draft_state(loro_doc: LoroDoc, item_id: String, draft: Bool) -> Nil
+
+fn change_draft_state(loro_doc: LoroDoc, item_id: String, draft: Bool) {
+  use _ <- effect.from
+  do_change_draft_state(loro_doc, item_id, draft)
 }
 
 pub type Node {
@@ -1049,10 +1092,15 @@ fn get_expand_icon(item_type: String, is_expanded: Bool) -> String {
   }
 }
 
-fn get_item_icon(item_type: String) -> String {
+fn get_item_icon(item_type: String, is_draft: Bool) -> String {
   case item_type {
     "folder" -> "📁"
-    "file" -> "📄"
+    "file" -> {
+      case is_draft {
+        True -> "📄"
+        False -> "📕"
+      }
+    }
     _ -> panic
   }
 }
@@ -1084,6 +1132,17 @@ fn tree_item_view(
         }
       }
       Error(_) -> "بلا عنوان"
+    }
+  }
+  let is_draft = {
+    case item.meta |> dict.get("draft") {
+      Ok(draft) -> {
+        case decode.run(draft, decode.bool) {
+          Ok(name) -> name
+          Error(_) -> False
+        }
+      }
+      Error(_) -> False
     }
   }
 
@@ -1127,22 +1186,45 @@ fn tree_item_view(
       )
     }
     "file" -> {
-      case item.parent {
-        Some(parent_id) -> {
-          event.stop_propagation(
-            event.on("click", {
-              use y <- decode.field("clientY", decode.int)
-
-              let y = int.to_string(y)
-
-              decode.success(DisplayFileSystemMenu(parent_id, y))
-            }),
-          )
-        }
-        None -> attribute.none()
-      }
+      attribute.none()
     }
     _ -> attribute.none()
+  }
+  let item_action = {
+    case item_type {
+      "folder" -> {
+        html.button(
+          class([]),
+          [attribute.class("edit-button"), file_system_menu_handler],
+          [html.text("➕")],
+        )
+      }
+      "file" -> {
+        case is_draft {
+          True -> {
+            html.button(
+              class([]),
+              [
+                attribute.class("edit-button"),
+                event.on_click(MakeItemPublished(item.id)),
+              ],
+              [html.text("📕")],
+            )
+          }
+          False -> {
+            html.button(
+              class([]),
+              [
+                attribute.class("edit-button"),
+                event.on_click(MakeItemDraft(item.id)),
+              ],
+              [html.text("📄")],
+            )
+          }
+        }
+      }
+      _ -> element.none()
+    }
   }
 
   html.div(
@@ -1200,7 +1282,7 @@ fn tree_item_view(
             }
           },
           html.span(class([]), [attribute.class("tree-icon")], [
-            html.text(get_item_icon(item_type)),
+            html.text(get_item_icon(item_type, is_draft)),
           ]),
           {
             let default_item =
@@ -1264,11 +1346,7 @@ fn tree_item_view(
                 }
                 False ->
                   element.fragment([
-                    html.button(
-                      class([]),
-                      [attribute.class("edit-button"), file_system_menu_handler],
-                      [html.text("➕")],
-                    ),
+                    item_action,
                     html.button(
                       class([]),
                       [
@@ -1294,11 +1372,7 @@ fn tree_item_view(
             }
             None ->
               element.fragment([
-                html.button(
-                  class([]),
-                  [attribute.class("edit-button"), file_system_menu_handler],
-                  [html.text("➕")],
-                ),
+                item_action,
                 html.button(
                   class([]),
                   [

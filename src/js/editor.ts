@@ -138,29 +138,29 @@ export function save_document() {
 }
 
 export async function save_function(room_id: string, doc: LoroDoc) {
-  // let files = await get_all_update_files();
+  let files = await get_all_update_files();
 
-  // let array_files = files?.map((updateString) => {
-  //   if (updateString) {
-  //     const binaryString = atob(updateString);
-  //     const snapshot = new Uint8Array(binaryString.length);
-  //     for (let i = 0; i < binaryString.length; i++) {
-  //       snapshot[i] = binaryString.charCodeAt(i);
-  //     }
+  let array_files = files?.map((updateString) => {
+    if (updateString) {
+      const binaryString = atob(updateString);
+      const snapshot = new Uint8Array(binaryString.length);
+      for (let i = 0; i < binaryString.length; i++) {
+        snapshot[i] = binaryString.charCodeAt(i);
+      }
 
-  //     return [...snapshot];
-  //   }
-  // });
-  // if (array_files) {
-  //   console.log(array_files);
-  //   //@ts-ignore
-  //   doc.importBatch(array_files);
-  // }
+      return [...snapshot];
+    }
+  });
+  if (array_files) {
+    console.log(array_files);
+    //@ts-ignore
+    doc.importBatch(array_files);
+  }
 
   const snapshot = doc.export({ mode: "snapshot" });
   await save_loro_doc(room_id, snapshot);
 
-  // sync_to_repo(snapshot);
+  sync_to_repo(snapshot);
 
   const messageEvent = new CustomEvent("state_saved");
   document.dispatchEvent(messageEvent);
@@ -197,223 +197,119 @@ import { Placeholder } from "@tiptap/extensions";
 import TableOfContents from "@tiptap/extension-table-of-contents";
 import Aside from "./extensions/Aside";
 import { renderToMarkdown } from "@tiptap/static-renderer/pm/markdown";
-
+import Highlight from "@tiptap/extension-highlight";
 import {
   Details,
   DetailsSummary,
   DetailsContent,
 } from "@tiptap/extension-details";
 import FloatingMenu from "@tiptap/extension-floating-menu";
-export function serializeChildrenToHTMLString(
-  children?: string | string[]
-): string {
-  return ([] as string[])
-    .concat(children || "")
-    .filter(Boolean)
-    .join("");
-}
+
+import {
+  get_all_update_files,
+  render_options,
+  tiptapExtensions,
+} from "./extensions";
+
 export async function init_tiptap(doc: LoroDoc) {
   let editor: Editor | undefined;
   let room_id = "noter";
   const config = { appId: "sakwdakwdakowdapkwdpkwdkemonas" };
-  const room = joinRoom(config, "errgaeaerrgf");
+  const room = joinRoom(config, "errgagrgdrdrgrgddrgeaerrgf");
 
   const awareness = new CursorAwareness(doc.peerIdStr);
 
   const mainApp = document.querySelector("#main-app");
 
-  let selected_document = localStorage.getItem("last-selected-note" + room_id);
+  let selected_document = localStorage.getItem("last-selected-note");
   let tiptapEditor;
   document.addEventListener("save_doc", () => {
     save_function(room_id, doc);
   });
   let render_editor = () => {
-    // let tree = doc.getTree("tree");
-    // let tree_doc = tree
-    //   .getNodeByID(selected_document as TreeID)!
-    //   .data.getOrCreateContainer("content", new LoroMap());
+    let tree = doc.getTree("tree");
+    let tree_doc = tree
+      .getNodeByID(selected_document as TreeID)!
+      .data.getOrCreateContainer("content", new LoroMap());
 
-    // const LoroPlugins = Extension.create({
-    //   name: "loro-plugins",
-    //   addProseMirrorPlugins() {
-    //     return [
-    //       LoroSyncPlugin({
-    //         //@ts-ignore
-    //         doc,
-    //         containerId: tree_doc.id,
-    //       }),
-    //       LoroUndoPlugin({ doc }),
-    //       LoroCursorPlugin(awareness, {
-    //         user: {
-    //           name: getRandomAnimalName(),
-    //           color: getRandomColor(),
-    //         },
-    //       }),
-    //       keymap({ "Mod-z": undo, "Mod-y": redo, "Mod-Shift-z": redo }),
-    //     ];
-    //   },
-    // });
+    const LoroPlugins = Extension.create({
+      name: "loro-plugins",
+      addProseMirrorPlugins() {
+        return [
+          LoroSyncPlugin({
+            //@ts-ignore
+            doc,
+            containerId: tree_doc.id,
+          }),
+          LoroUndoPlugin({ doc }),
+          LoroCursorPlugin(awareness, {
+            user: {
+              name: getRandomAnimalName(),
+              color: getRandomColor(),
+            },
+          }),
+          keymap({ "Mod-z": undo, "Mod-y": redo, "Mod-Shift-z": redo }),
+        ];
+      },
+    });
 
-    let menu = document.querySelector(".menu")!;
     // menu.classList.add("menu");
     // menu.innerHTML = "Menu go br";
+
+    let menu = document.querySelector(".menu")!;
+
     let extensions = [
-        FloatingMenu.configure({
-          options: {
-            strategy: "absolute",
-            placement: "left",
-            inline: false,
-            // hide: true,
-          },
-          //@ts-ignore
-          element: menu,
-        }),
-        Details.configure({
-          persist: true,
-          HTMLAttributes: {
-            class: "details",
-          },
-        }),
-        DetailsSummary,
-        DetailsContent,
-        Aside,
-        // LoroPlugins,
-        TableOfContents,
-        // DragHandle,
-        Placeholder.configure({
-          placeholder: ({ node }) => {
-            if (node.type.name === "heading") {
-              return "ما هو العنوان ?";
-            }
-            return "ابدأ الكتابة";
-          },
-        }),
-        StarterKit.configure({
-          undoRedo: false, // Disable built-in undo/redo since we're using collaboration
-        }),
-      ],
-      editor = new Editor({
-        content: `
-     
-      
- 
-
-      
-
-         
-      `,
-        extensions,
-
-        onCreate(props) {
-          props.editor?.setEditable(true);
+      LoroPlugins,
+      FloatingMenu.configure({
+        options: {
+          strategy: "absolute",
+          placement: "left",
+          inline: false,
+          // hide: true,
         },
-        element: document.querySelector(".editor")!,
-        editable: false,
-      });
+        //@ts-ignore
+        element: menu,
+      }),
+      ...tiptapExtensions,
+    ];
+
+    if (editor) {
+      editor.destroy();
+    }
+    editor = new Editor({
+      // content: ``,
+      extensions,
+
+      onCreate(props) {
+        props.editor?.setEditable(true);
+      },
+      element: document.querySelector(".editor")!,
+      editable: false,
+    });
     //@ts-ignore
     window.editor = editor;
-    let editor_mapping = editor.state.schema.nodes;
-    console.log(
-      renderToMarkdown({
-        content: editor.getJSON(),
-        extensions,
-        options: {
-          nodeMapping: {
-            orderedList({ children }) {
-              return `\n${serializeChildrenToHTMLString(children)}`;
-            },
-            listItem({ node, children, parent }) {
-              if (parent?.type.name === "bulletList") {
-                return `- ${serializeChildrenToHTMLString(children).trim()}\n`;
-              }
-              if (parent?.type.name === "orderedList") {
-                let number = parent.attrs.start || 1;
+    //@ts-ignore
+    window.create_link = () => {
+      const url = window.prompt("URL");
 
-                parent.forEach((parentChild, _offset, index) => {
-                  if (node === parentChild) {
-                    number = index + 1;
-                  }
-                });
+      if (url) {
+        editor!.commands.setLink({ href: url, target: "_blank" });
+      }
+    };
 
-                return `${number}. ${serializeChildrenToHTMLString(
-                  children
-                ).trim()}\n`;
-              }
+    // {
+    //
 
-              return serializeChildrenToHTMLString(children);
-            },
-            paragraph({ children }) {
-              return `\n${serializeChildrenToHTMLString(children)}\n`;
-            },
-            heading({ node, children }) {
-              const level = node.attrs.level as number;
+    document.querySelector(".editor")!.addEventListener("click", () => {
+      console.log(
+        renderToMarkdown({
+          content: editor!.getJSON(),
+          extensions, //@ts-ignore
+          options: render_options,
+        })
+      );
+    });
 
-              return `${new Array(level).fill("#").join("")} ${children}\n`;
-            },
-            codeBlock({ node, children }) {
-              return `\n\`\`\`${
-                node.attrs.language
-              }\n${serializeChildrenToHTMLString(children)}\n\`\`\`\n`;
-            },
-            blockquote({ children }) {
-              return `\n${serializeChildrenToHTMLString(children)
-                .trim()
-                .split("\n")
-                .map((a) => `> ${a}`)
-                .join("\n")}`;
-            },
-            image({ node }) {
-              return `![${node.attrs.alt}](${node.attrs.src})`;
-            },
-            hardBreak() {
-              return "\n";
-            },
-            horizontalRule() {
-              return "\n---\n";
-            },
-            table({ children, node }) {
-              if (!Array.isArray(children)) {
-                return `\n${serializeChildrenToHTMLString(children)}\n`;
-              }
-
-              return `\n${serializeChildrenToHTMLString(
-                children[0]
-              )}| ${new Array(node.childCount - 2)
-                .fill("---")
-                .join(" | ")} |\n${serializeChildrenToHTMLString(
-                children.slice(1)
-              )}\n`;
-            },
-            tableRow({ children }) {
-              if (Array.isArray(children)) {
-                return `| ${children.join(" | ")} |\n`;
-              }
-              return `${serializeChildrenToHTMLString(children)}\n`;
-            },
-            tableHeader({ children }) {
-              return serializeChildrenToHTMLString(children).trim();
-            },
-            tableCell({ children }) {
-              return serializeChildrenToHTMLString(children).trim();
-            },
-            Aside: (node) => {
-              const type = node.node.attrs.type;
-              const title = node.node.attrs.type;
-              // console.log(attrs);
-
-              // Extract the content from the node
-              const children = serializeChildrenToHTMLString(
-                node.children
-              ).trim();
-
-              return `\n{% aside type="${type}" title="${title}" %}\n
-      ${children}
-    \n{% /aside %}\n`;
-            },
-          },
-        },
-      })
-    );
     // let root = tree.getNodeByID(ROOT_DOC_KEY);
     // let json = JSON.stringify(editor.state.schema);
 
@@ -421,29 +317,16 @@ export async function init_tiptap(doc: LoroDoc) {
   };
   document.addEventListener("user-selected-note", (e) => {
     //@ts-ignore
-    localStorage.setItem("last-selected-note" + room_id, e.detail);
-    if (editor) {
-      editor.destroy();
+    localStorage.setItem("last-selected-note", e.detail);
 
-      //@ts-ignore
-      selected_document = e.detail;
+    //@ts-ignore
+    selected_document = e.detail;
 
-      render_editor();
-    } else {
-      //@ts-ignore
-      selected_document = e.detail;
-
-      render_editor();
-    }
+    render_editor();
   });
 
   if (selected_document) {
-    if (editor) {
-      editor.destroy();
-      render_editor();
-    } else {
-      render_editor();
-    }
+    render_editor();
   }
 
   const [sendUpdate, getUpdate] = room.makeAction("update");
@@ -614,7 +497,6 @@ export async function init_tiptap(doc: LoroDoc) {
   //   }
   // });
 }
-
 export async function sync_to_repo(update: Uint8Array) {
   let device_id = localStorage.getItem("github_device_id");
 
@@ -633,8 +515,8 @@ export async function sync_to_repo(update: Uint8Array) {
     let sha;
     try {
       const existingFile = await octokit.rest.repos.getContent({
-        owner: "kemo-1",
-        repo: "test_repo",
+        owner: "sanabel-al-firdaws",
+        repo: "sanabel-al-firdaws-cms",
         // branch: "p2p-notebook",
         path: filePath,
       });
@@ -653,9 +535,9 @@ export async function sync_to_repo(update: Uint8Array) {
 
     // Create or update the file
     const response = await octokit.rest.repos.createOrUpdateFileContents({
-      owner: "kemo-1",
+      owner: "sanabel-al-firdaws",
       // branch: "p2p-notebook",
-      repo: "test_repo",
+      repo: "sanabel-al-firdaws-cms",
       content: btoa(String.fromCharCode(...update)),
       path: filePath,
       message: "uploaded snapshot",
@@ -667,55 +549,6 @@ export async function sync_to_repo(update: Uint8Array) {
     console.error("Upload failed:", error);
   }
 }
-
-export async function get_all_update_files() {
-  let github_token = localStorage.getItem("github_token");
-  const octokit = new Octokit({ auth: github_token });
-
-  try {
-    const response = await octokit.rest.git.getTree({
-      owner: "kemo-1",
-      repo: "test_repo",
-      tree_sha: "HEAD",
-    });
-
-    const updateFiles = response.data.tree.filter(
-      (item) => item.type === "blob" && item.path?.endsWith("update.bin")
-    );
-
-    const filesWithContent = await Promise.all(
-      updateFiles.map(async (file) => {
-        try {
-          const content = await octokit.rest.repos.getContent({
-            owner: "kemo-1",
-            repo: "test_repo",
-            // branch: "p2p-notebook",
-
-            path: file.path!,
-          });
-
-          if (!Array.isArray(content.data) && content.data.type === "file") {
-            // Decode base64 content to Uint8Array
-            const base64Content = content.data.content;
-
-            return base64Content;
-          }
-        } catch (error) {
-          console.error(`Failed to get content for ${file.path}:`, error);
-          return null;
-        }
-      })
-    );
-
-    // Filter out any failed requests
-    const validFiles = filesWithContent.filter((file) => file !== null);
-    return validFiles;
-  } catch (error) {
-    console.error(`Failed to get content for `);
-    return null;
-  }
-}
-
 export function delete_db() {
   indexedDB.deleteDatabase("matrix-js-sdk::matrix-sdk-crypto");
 }
@@ -898,7 +731,7 @@ export async function create_loro_doc(room_id: string) {
       // }
 
       doc = LoroDoc.fromSnapshot(existingFile.content);
-      doc.setRecordTimestamp(true);
+      // doc.setRecordTimestamp(true);
       return doc;
     } else {
       // Create new document with default content (a tree with a root document that dosen't have any children)
@@ -912,7 +745,7 @@ export async function create_loro_doc(room_id: string) {
       }
 
       doc = LoroDoc.fromSnapshot(snapshot);
-      doc.setRecordTimestamp(true);
+      // doc.setRecordTimestamp(true);
       // Save the initial document to Dexie with room_id as the key
       await db.files.put({
         id: room_id,
@@ -950,13 +783,23 @@ export async function save_loro_doc(room_id: string, snapshot: Uint8Array) {
     throw error;
   }
 }
+export function change_draft_state(
+  doc: LoroDoc,
+  item_id: TreeID,
+  draft: Boolean
+) {
+  let tree: LoroTree = doc.getTree("tree");
 
+  let note = tree.getNodeByID(item_id);
+  note!.data.set("draft", draft);
+}
 export function create_new_note(doc: LoroDoc, item_id: TreeID) {
   let tree: LoroTree = doc.getTree("tree");
 
   try {
     let note = tree.createNode(item_id);
     note.data.set("item_type", "file");
+    note.data.set("draft", true);
     // note.data.set("name", "Untitled");
 
     doc.commit();

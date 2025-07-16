@@ -22,7 +22,7 @@ export default Node.create({
         },
       },
       title: {
-        default: null,
+        // default: null,
         parseHTML: (element) => element.getAttribute("title"),
         renderHTML: (attributes) => {
           if (!attributes.title) {
@@ -50,31 +50,43 @@ export default Node.create({
 
   addNodeView() {
     return ({ node, editor, getPos }) => {
-      let type = node.attrs.type;
-      let title = node.attrs.title;
-
       const dom = document.createElement("div");
-      dom.className = "aside-view " + type;
+      dom.className = "aside-view " + node.attrs.type;
 
       const label = document.createElement("label");
-
-      // Set the label text - use custom title if available, otherwise use default
-      if (title) {
-        label.innerHTML = title;
-      } else if (type === "note") {
-        label.innerHTML = "ملاحظة";
-      } else if (type === "caution") {
-        label.innerHTML = "انتبه";
-      } else if (type === "danger") {
-        label.innerHTML = "احذر";
-      }
-
       label.contentEditable = "false";
       label.style.cursor = "pointer";
 
+      // Helper function to get the display title
+      const getDisplayTitle = (nodeAttrs) => {
+        if (nodeAttrs.title) {
+          return nodeAttrs.title;
+        }
+
+        // Default Arabic titles
+        switch (nodeAttrs.type) {
+          case "note":
+            return "ملاحظة";
+          case "caution":
+            return "انتبه";
+          case "danger":
+            return "احذر";
+          default:
+            return "ملاحظة"; // fallback
+        }
+      };
+
+      // Set initial label text
+      const updateLabel = (nodeAttrs) => {
+        label.innerHTML = getDisplayTitle(nodeAttrs);
+      };
+
+      // Initialize label
+      updateLabel(node.attrs);
+
       // Add click handler for editing title
       label.addEventListener("click", () => {
-        const currentTitle = node.attrs.title || label.innerHTML;
+        const currentTitle = node.attrs.title || getDisplayTitle(node.attrs);
         const newTitle = prompt("قم بكتابة العنوان :", currentTitle);
 
         if (newTitle !== null && newTitle !== currentTitle) {
@@ -86,7 +98,6 @@ export default Node.create({
               title: newTitle,
             });
             editor.view.dispatch(tr);
-            console.log(editor.getJSON());
           }
         }
       });
@@ -106,18 +117,17 @@ export default Node.create({
             return false;
           }
 
-          // Update the label text if title attribute changed
-          const newTitle = updatedNode.attrs.title;
-          const newType = updatedNode.attrs.type;
+          // Check if title or type changed
+          const titleChanged = updatedNode.attrs.title !== node.attrs.title;
+          const typeChanged = updatedNode.attrs.type !== node.attrs.type;
 
-          if (newTitle) {
-            label.innerHTML = newTitle;
-          } else if (newType === "note") {
-            label.innerHTML = "ملاحظة";
-          } else if (newType === "caution") {
-            label.innerHTML = "انتبه";
-          } else if (newType === "danger") {
-            label.innerHTML = "احذر";
+          if (titleChanged || typeChanged) {
+            updateLabel(updatedNode.attrs);
+          }
+
+          // Update the class if type changed
+          if (typeChanged) {
+            dom.className = "aside-view " + updatedNode.attrs.type;
           }
 
           // Update the node reference

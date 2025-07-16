@@ -1,5 +1,7 @@
 ---
 // Import CSS in frontmatter (this works)
+
+title: "محرر المحتوى";
 ---
 
 <!doctype html>
@@ -13,7 +15,12 @@
   <body>
     <div id="app"></div>
     <script>
-      import "../../styles/main.css";
+      import "/src/styles/main.css";
+      import "@fontsource/scheherazade-new";
+      import "@fontsource/scheherazade-new/400.css";
+      import "@fontsource/scheherazade-new/500.css";
+      import "@fontsource/scheherazade-new/600.css";
+      import "@fontsource/scheherazade-new/700.css";
       //@ts-ignore
       import { main } from "/src/admin.gleam";
       const dispatch = main({});
