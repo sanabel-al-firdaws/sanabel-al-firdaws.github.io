@@ -34,6 +34,8 @@ jobs:
 
       - name: Get Documents Then Convert Them
         run: pnpm md
+        env:
+          TOKEN_CMS: ${{ secrets.TOKEN_CMS }}
 
       - name: Commit changes
         run: |
