@@ -22,9 +22,9 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         with:
-          TOKEN_CMS: ${{ secrets.TOKEN_CMS }}
           node-version: 22
-          # package-manager: pnpm
+        env:
+          TOKEN_CMS: ${{ secrets.TOKEN_CMS }}
 
       - name: Commit changes
         run: |
