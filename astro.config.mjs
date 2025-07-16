@@ -34,15 +34,7 @@ export default defineConfig({
           backlinks: false,
         }),
       ],
-      customCss: [
-        "@fontsource/scheherazade-new",
-        "@fontsource/scheherazade-new/400.css",
-        "@fontsource/scheherazade-new/500.css",
-        "@fontsource/scheherazade-new/600.css",
-        "@fontsource/scheherazade-new/700.css",
-        // "@fontsource/scheherazade-new/arabic.css",
-        "./src/styles/starlight.css",
-      ],
+      customCss: ["./src/styles/starlight.css"],
       title: "سَنَابِلُ الْفِرْدَوْسِ",
       locales: {
         root: {
