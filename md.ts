@@ -30,7 +30,7 @@ type LoroNode = LoroMap<LoroNodeContainerType>;
 
 let schema = getSchema(tiptapExtensions);
 
-let files = await get_all_update_files(process.env.GITHUB_TOKEN_CMS);
+let files = await get_all_update_files(process.env.TOKEN_CMS);
 
 let array_files = files?.map((updateString) => {
   if (updateString) {

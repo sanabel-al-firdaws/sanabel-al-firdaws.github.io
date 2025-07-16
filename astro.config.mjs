@@ -20,6 +20,7 @@ export default defineConfig({
   // markdown: {
   //   remarkPlugins: [remarkMark],
   // },
+  site: "https://sanabel-al-firdaws.github.io",
   integrations: [
     markdoc({ allowHTML: true }),
     starlight({
