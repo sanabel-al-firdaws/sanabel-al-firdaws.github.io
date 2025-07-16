@@ -23,16 +23,7 @@ jobs:
         uses: withastro/action@v3
         with:
           node-version: 22
-        env:
-          TOKEN_CMS: ${{ secrets.TOKEN_CMS }}
 
-      - name: Commit changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git diff --staged --quiet || git commit -m "Auto-update: Run pnpm md [skip ci]"
-          git push
   deploy:
     needs: build
     runs-on: ubuntu-latest

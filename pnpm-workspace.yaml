@@ -1,7 +1,0 @@
-onlyBuiltDependencies:
-  - '@chouquette/gleam'
-  - '@firebase/util'
-  - '@swc/core'
-  - esbuild
-  - protobufjs
-  - sharp

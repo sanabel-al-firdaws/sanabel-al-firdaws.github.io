@@ -28,6 +28,9 @@ export default defineConfig({
           backlinks: false,
         }),
         starlightObsidian({
+          copyFrontmatter: "starlight",
+          tableOfContentsOverview: "title",
+          output: "",
           vault: "./vault",
         }),
       ],
@@ -40,7 +43,7 @@ export default defineConfig({
           lang: "ar", // lang is required for root locales
         },
       },
-      sidebar: [obsidianSidebarGroup],
+      // sidebar: [obsidianSidebarGroup],
       // components: {
       //   PageTitle: "./src/components/PageTitle.astro",
       //   SocialIcons: "./src/components/SocialIcons.astro",
