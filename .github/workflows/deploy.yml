@@ -19,18 +19,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
         with:
           node-version: 22
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: latest
-
-      - name: Install dependencies
-        run: pnpm install
+          package-manager: pnpm@latest
 
       - name: Get Documents Then Convert Them
         run: pnpm md
@@ -44,13 +37,6 @@ jobs:
           git add .
           git diff --staged --quiet || git commit -m "Auto-update: Run pnpm md [skip ci]"
           git push
-
-      - name: Install, build, and upload your site
-        uses: withastro/action@v3
-        with:
-          node-version: 22
-          package-manager: pnpm@latest
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
