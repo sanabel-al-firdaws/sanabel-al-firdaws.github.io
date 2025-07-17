@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "عن الموقع.md",
+                "file": "سنابل الفردوس/عن الموقع.md",
                 "mode": "source",
                 "source": false
               },
@@ -165,15 +165,21 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "system3-relay:Relay": false
     }
   },
   "active": "faf0fb254735e0f3",
   "lastOpenFiles": [
-    "أًصول أهل السنة والجماعة/العقيدة.md",
-    "عن الموقع.md",
-    "file.md",
+    "سنابل الفردوس/أًصول أهل السنة والجماعة/العقيدة.md",
+    "سنابل الفردوس/عن الموقع.md",
+    "سنابل الفردوس/عن الموقع.md",
     "أًصول أهل السنة والجماعة",
+    "test.md",
+    "سنابل الفردوس",
+    "test",
+    "file.md",
+    "سنابل الفردوس/أًصول أهل السنة والجماعة",
     "Welcome.md",
     "untitled 2.md",
     "Hf.md",
