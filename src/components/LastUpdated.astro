@@ -1,0 +1,25 @@
+---
+const { lang, lastUpdated } = Astro.locals.starlightRoute;
+---
+
+{
+  lastUpdated && (
+    <p>
+      {Astro.locals.t("page.lastUpdated")}{" "}
+      <time datetime={lastUpdated.toISOString()}>
+        {new Intl.DateTimeFormat("ar-SA", {
+          calendar: "islamic",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        }).format(lastUpdated)}
+      </time>
+    </p>
+  )
+}
+
+<style>
+  p {
+    /* font-size: medium !important; */
+  }
+</style>

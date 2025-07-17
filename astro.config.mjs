@@ -18,6 +18,7 @@ export default defineConfig({
   integrations: [
     markdoc({ allowHTML: true }),
     starlight({
+      lastUpdated: true,
       tableOfContents: {
         minHeadingLevel: 1,
         maxHeadingLevel: 6,
@@ -44,7 +45,9 @@ export default defineConfig({
         },
       },
       // sidebar: [obsidianSidebarGroup],
-      // components: {
+      components: {
+        LastUpdated: "./src/components/LastUpdated.astro",
+      },
       //   PageTitle: "./src/components/PageTitle.astro",
       //   SocialIcons: "./src/components/SocialIcons.astro",
       //   TableOfContents: "./src/components/TableOfContents.astro",

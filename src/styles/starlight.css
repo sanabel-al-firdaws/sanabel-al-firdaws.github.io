@@ -9,7 +9,6 @@ mark {
   padding-bottom: 0.5rem;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-  /* background-color: #bab9b9 !important; */
 }
 @font-face {
   font-family: Kitab;
@@ -68,6 +67,10 @@ a {
   --sl-color-accent-high: #67bc97;
 }
 
+.sl-markdown-content blockquote:not(:where(.not-content *)) {
+  border-inline-start: 5px solid var(--sl-color-gray-5);
+  padding-inline-start: 1rem;
+}
 [data-theme="dark"] {
   --sl-color-accent-low: #4e2e2e;
 }
